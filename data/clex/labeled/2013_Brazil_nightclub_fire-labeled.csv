@@ -1,0 +1,1001 @@
+id,tweet_id,text,tag,date,partition
+0,295360333374173185,#santamaria tomando con mi esposito que amo y me hace tan feliz <USR> ,Not related,Sun Jan 27 02:39:25 +0000 2013,train
+1,295415706579767296,"um parceiro foi na kiss pra ver , diz que houveram mortos , feridos e ainda tem uma gurizada presa dentro da boate , por fa . . . ",Related - but not informative,Sun Jan 27 06:19:27 +0000 2013,train
+2,295447407125209088,"incêndio na boate kiss - hospitais de santa maria requisitam ajuda de voluntários : médicos , enfermeiros e técnicos . . . http . . . ",Related and informative,Sun Jan 27 08:25:25 +0000 2013,train
+3,295460048749096960,"incêndio na boate kiss , em santa maria , deixa dezenas de feridos . segundo a brigada militar , há mortos no local . ",Related and informative,Sun Jan 27 09:15:39 +0000 2013,train
+4,295474292601270272,polícia civil confirma pelo menos 90 mortos em incêndio na boate kiss . ,Related and informative,Sun Jan 27 10:12:15 +0000 2013,train
+5,295483536855670784,"fire in nightclub in southern #brazil city of santa maria leaves at least 70 dead , local media report <URL> ",Related and informative,Sun Jan 27 10:48:59 +0000 2013,train
+6,295485986312421376,"at least 90 people die in a nightclub fire in southern brazil , local media says : remarque importante à . . . <URL> <USR> ",Related and informative,Sun Jan 27 10:58:43 +0000 2013,train
+7,295486871306379265,bandnews deuagora todos destaquesmdo dia e nada da tragédia na boate kiss . que lixo ,Related - but not informative,Sun Jan 27 11:02:14 +0000 2013,train
+8,295487575974617088,dozens killed in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 11:05:02 +0000 2013,train
+9,295489928979173376,"brazil : at least 90 killed in fire in nightclub kiss , santa maria . fire started at 2.00am local . diario de santa maria . . . ",Related and informative,Sun Jan 27 11:14:23 +0000 2013,train
+10,295490147078774785,brazil nightclub fire : ' ninety ' killed <URL> ,Related and informative,Sun Jan 27 11:15:15 +0000 2013,train
+11,295494710481539072,"at least 90 killed in brazil nightclub fire : a fire swept through a nightclub in southern brazil , killing at lea . . . <URL> ",Related and informative,Sun Jan 27 11:33:23 +0000 2013,train
+12,295495582875807744,caminhão chega à boate kiss para buscar mais corpos . será a terceira viagem . ,Related and informative,Sun Jan 27 11:36:51 +0000 2013,train
+13,295495670977155074,local media : brazil nightclub fire kills at least 90 : sao paulo ( reuters ) - at least 90 people were killed in a . . . <URL> ,Related and informative,Sun Jan 27 11:37:12 +0000 2013,train
+14,295497231237251073,another lesson to nightclub owners ; place safety first not revenue . brazil nightclub fire likely killed more than 200 . <URL> ,Related and informative,Sun Jan 27 11:43:24 +0000 2013,train
+15,295497277403963392,official : 90 killed in brazil nightclub fire <URL> #letsdiscussit ,Related and informative,Sun Jan 27 11:43:35 +0000 2013,train
+16,295498963493208064,deus conforte os familiares das vitimas do incêndio da boate kiss em santa monica . #lutobrasil #luto ,Related - but not informative,Sun Jan 27 11:50:17 +0000 2013,train
+17,295501731754831872,at least 90 people killed in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 12:01:17 +0000 2013,train
+18,295502214103986176,brazil nightclub fire kills more than 200 : police - reuters : afpbrazil nightclub fire kills mor . . . <URL> #headlines #news ,Related and informative,Sun Jan 27 12:03:12 +0000 2013,train
+19,295505041035497473,"no fb da boate kiss , subiram uma foto que , supostamente , é do momento em que os efeitos pirotécnicos começaram : https :/ . . . ",Related - but not informative,Sun Jan 27 12:14:26 +0000 2013,train
+20,295505053622616064,<USR> boate kiss de sm pego fogo ,Related - but not informative,Sun Jan 27 12:14:29 +0000 2013,train
+21,295505150108381185,"#luto pelos falecidos na tragédia na #boatekiss que deus console os familiares , amigos e conhecidos ! ",Related - but not informative,Sun Jan 27 12:14:52 +0000 2013,train
+22,295505384972623873,já passa de 180 o número de mortos em incêndio em santa maria #tragediaemsm <URL> ,Related and informative,Sun Jan 27 12:15:48 +0000 2013,train
+23,295505628263227392,#nepalnews brazil nightclub fire likely killed more than 200 : police : brasilia : a nightclub fire in southern bra . . . <URL> ,Related and informative,Sun Jan 27 12:16:46 +0000 2013,train
+24,295507243070271488,"dying in a fire on a night out clubbing , is not a way to exit this world . rip #santamaria 180 . ",Related - but not informative,Sun Jan 27 12:23:11 +0000 2013,train
+25,295507821880016897,at least 90 killed in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 12:25:29 +0000 2013,train
+26,295508098704109569,a tragédia em santa maria entristece o domingo dos brasileiros . ao menos 180 mortos na boate kiss <URL> ,Related and informative,Sun Jan 27 12:26:35 +0000 2013,train
+27,295508362920095744,at least 90 killed in brazil nightclub fire - <URL> <URL> ,Related and informative,Sun Jan 27 12:27:38 +0000 2013,train
+28,295509344395603969,como tinha show na boate se alvará ? ? #tragediaemsm ,Related - but not informative,Sun Jan 27 12:31:32 +0000 2013,train
+29,295509889684484096,at least 90 killed in brazil nightclub fire : a fire swept through a popular nightclub in the southern brazilian . . . <URL> ,Related and informative,Sun Jan 27 12:33:42 +0000 2013,train
+30,295510896296460289,club was fiyahhhh rt <USR> : breaking : police say at least 90 people dead in nightclub fire in southern brazil ,Related and informative,Sun Jan 27 12:37:42 +0000 2013,train
+31,295511420567711744,at least 90 killed in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 12:39:47 +0000 2013,train
+32,295511873581891585,traumatizante esse vídeo da boate kiss ,Related - but not informative,Sun Jan 27 12:41:35 +0000 2013,train
+33,295513412870496257,santa maria : houve um incêndio na boate kiss de santa maria / rs e o número de mortos já ultrapassa de 250 pessoas . #porquetts ,Related and informative,Sun Jan 27 12:47:42 +0000 2013,train
+34,295513509331091456,"no fb da boate kiss , subiram uma foto que , supostamente , é do momento em que os efeitos pirotécnicos começaram : https :/ . . . ",Related - but not informative,Sun Jan 27 12:48:05 +0000 2013,train
+35,295513878463393792,"just in : officials now confirm with <USR> that at least 220 people have been killed in the nightclub #fire in santa maria , #brazil #cnn ",Related and informative,Sun Jan 27 12:49:33 +0000 2013,train
+36,295514062979215361,jeebus rt <USR> : 90 dead in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 12:50:17 +0000 2013,train
+37,295515245777154048,estão estimando 240 mortos #tragediaemsm ,Related and informative,Sun Jan 27 12:54:59 +0000 2013,train
+38,295515522601218048,"<USR> santa maria , na boate kiss ",Not related,Sun Jan 27 12:56:05 +0000 2013,train
+39,295515719758651393,"breaking : fire sweeps through brazil nightclub , officials say 180 dead ",Related and informative,Sun Jan 27 12:56:52 +0000 2013,train
+40,295516063683182592,gente vcs viram o incêndio da boate kiss mais de 240 mortos meus deus que tragedia e diz que os seguranças nao abriram as portas ,Related and informative,Sun Jan 27 12:58:14 +0000 2013,train
+41,295517544255717377,"de tudo que ouvi , o relato que mais me partiu o coração : os celulares dos mortos não param de tocar . #santamaria ",Related - but not informative,Sun Jan 27 13:04:07 +0000 2013,train
+42,295518139851091970,"death toll climbs to 220 in brazil nightclub fire , official says . <URL> ",Related and informative,Sun Jan 27 13:06:29 +0000 2013,train
+43,295519012278906880,"quero ver quem vai postar agora . partiu , boate kiss . ",Not related,Sun Jan 27 13:09:57 +0000 2013,train
+44,295519641416105984,"número de mortos na boate kiss , em santa maria , pode chegar a 205 #tragediaemsm <URL> ",Related and informative,Sun Jan 27 13:12:27 +0000 2013,train
+45,295519674983120896,"<USR> : just in : fire sweeps through brazil nightclub , officials say at least 180 dead and 200 injured <URL> damn ! ",Related and informative,Sun Jan 27 13:12:35 +0000 2013,train
+46,295520367051689984,"meu deus ! rt <USR> : número de mortos na boate kiss , em santa maria , pode chegar a 205 #tragediaemsm <URL> ",Related and informative,Sun Jan 27 13:15:20 +0000 2013,train
+47,295520836809551872,【 news 】 timeline : fire in nightclub kills about 200 in brazil - reuters <URL> ,Related and informative,Sun Jan 27 13:17:12 +0000 2013,train
+48,295521314947612674,"death toll in #brazil nightclub fire rises to 180 , police in southern city of santa maria say <URL> ",Related and informative,Sun Jan 27 13:19:06 +0000 2013,train
+49,295521365266677760,um dono da boate kiss se apresentou à polícia . paradeiro dos integrantes das bandas ainda desconhecido . <USR> ,Related and informative,Sun Jan 27 13:19:18 +0000 2013,train
+50,295521788912365568,at least 180 people dead in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 13:20:59 +0000 2013,train
+51,295521797275795456,energias positivas para as famílias de #santamaria que perderam algum parente . ,Related - but not informative,Sun Jan 27 13:21:01 +0000 2013,train
+52,295522283848626177,"bbc news - scores killed in nightclub fire in santa maria , brazil <URL> ",Related and informative,Sun Jan 27 13:22:57 +0000 2013,train
+53,295522577433120773,"breaking : fire sweeps through brazil nightclub , officials say 180 dead ",Related and informative,Sun Jan 27 13:24:07 +0000 2013,train
+54,295522694890389505,"só consigo imaginar os pais das pessoas que morreram , é muito triste :s #santamaria ",Related - but not informative,Sun Jan 27 13:24:35 +0000 2013,train
+55,295523294663286785,gente que tragédia em santa maria número de mortos chega a 245 #tragediaemsm ,Related and informative,Sun Jan 27 13:26:58 +0000 2013,train
+56,295524162888409088,"segundo o corpo de bombeiros , a maioria das mortes na boate kiss foi causada por asfixia devido à inalação de fumaça http . . . ",Related and informative,Sun Jan 27 13:30:25 +0000 2013,train
+57,295524313866592257,"“ <USR> : update : death toll from fire at nightclub in santa maria , southern brazil , reaches 245 , police say - <USR> ” omg ",Related and informative,Sun Jan 27 13:31:01 +0000 2013,train
+58,295524397782024193,"impossível não pensar em todas as boates sem estrutura , espalhadas por todo o brasil . . . #tragediaemsm ",Related - but not informative,Sun Jan 27 13:31:21 +0000 2013,train
+59,295524947223257088,mais de 180 mortos confirmados na tragédia de #santamaria . infelizmente só nos resta torcer para que não aja mais m . . . ,Related and informative,Sun Jan 27 13:33:32 +0000 2013,train
+60,295524951396605953,mais de 180 mortos confirmados na tragédia de #santamaria . infelizmente só nos resta torcer para que não aja mais m . . . ,Related and informative,Sun Jan 27 13:33:33 +0000 2013,train
+61,295524993335451648,mais de 180 mortos confirmados na tragédia de #santamaria . infelizmente só nos resta torcer para que não aja mais m . . . ,Related and informative,Sun Jan 27 13:33:43 +0000 2013,train
+62,295525110780149760,que triste véi =/ #santamaria ,Related - but not informative,Sun Jan 27 13:34:11 +0000 2013,train
+63,295525245006274560,reading an article about a fire in a brazil nightclub that killed 200 . my daughter notices pic of smoke through club lights pretty colors ! ,Related and informative,Sun Jan 27 13:34:43 +0000 2013,train
+64,295525521821945857,<URL> nyc . . . . . . . . #santamaria ,Related - but not informative,Sun Jan 27 13:35:49 +0000 2013,train
+65,295525672829460480,"de tudo que ouvi , o relato que mais me partiu o coração : os celulares dos mortos não param de tocar . #santamaria ",Related - but not informative,Sun Jan 27 13:36:25 +0000 2013,train
+66,295525882557259776,death toll in brazil nightclub fire rises to 180 - usa today : the guardiandeath toll in brazil nightclub fire ri . . . <URL> ,Related and informative,Sun Jan 27 13:37:15 +0000 2013,train
+67,295526293582254080,breaking : death toll rises to at least 245 in brazil nightclub fire ,Related and informative,Sun Jan 27 13:38:53 +0000 2013,train
+68,295526293594861568,"não perca só hoje no #bigfollow , ganhe mais pessoas do que segue ! #santamaria : - bigfollow . net ",Not related,Sun Jan 27 13:38:53 +0000 2013,train
+69,295526532674383872,#bigfollow só hoje : ganhe mais pessoas do que segue ! #santamaria : - bigfollow . net ,Not related,Sun Jan 27 13:39:50 +0000 2013,train
+70,295526536851898370,more than 150 dead in brazil nightclub fire : rio de janeiro : more than 150 people died early sunday when a fire . . . <URL> ,Related and informative,Sun Jan 27 13:39:51 +0000 2013,train
+71,295526562038702080,"ajudem os acidentados de santa maria doando sangue ! → av . pres . vargas , 2291 - santa maria - rs , 97015 - 513 #santamaria ",Related and informative,Sun Jan 27 13:39:57 +0000 2013,train
+72,295526700442320899,que deus de forças aos familiares das vítimas da tragédia . #santamaria ,Related - but not informative,Sun Jan 27 13:40:30 +0000 2013,train
+73,295526935319158786,breaking : death toll rises to at least 245 in brazil nightclub fire ,Related and informative,Sun Jan 27 13:41:26 +0000 2013,train
+74,295527178580398080,"omg , que tragédia , domingo triste . confirmado : mais de 245 mortos #luto #santamaria ",Related and informative,Sun Jan 27 13:42:24 +0000 2013,train
+75,295527199568691200,breaking : death toll rises to at least 245 in brazil nightclub fire ,Related and informative,Sun Jan 27 13:42:29 +0000 2013,train
+76,295527346352558080,que deus de forças para essas famílias . #santamaria <URL> ,Related - but not informative,Sun Jan 27 13:43:05 +0000 2013,train
+77,295527379902816256,"ainda que seja em oração , temos todos que ajudar ! #santamaria #luto #tragediaemsm ",Related - but not informative,Sun Jan 27 13:43:12 +0000 2013,train
+78,295527530901938176,campeonato gaúcho rodada cancelada devidpo a tragedia em rio grande em luto . #santamaria <URL> ,Related - but not informative,Sun Jan 27 13:43:48 +0000 2013,train
+79,295527770002444290,que deus conforte o coração dos familiares . . . #tragediaemsm ,Related - but not informative,Sun Jan 27 13:44:45 +0000 2013,train
+80,295528239735128065,"ainda que seja em oração , temos todos que ajudar ! #santamaria #luto #tragediaemsm ",Related - but not informative,Sun Jan 27 13:46:37 +0000 2013,train
+81,295528277492252672,desejamos forças para os familiares e amigos de todas as vítimas da #tragediaemsm . ,Related - but not informative,Sun Jan 27 13:46:46 +0000 2013,train
+82,295528285901840386,que tragédia gente . . to chocada :'( #santamaria ,Related - but not informative,Sun Jan 27 13:46:48 +0000 2013,train
+83,295528432702472193,"sem palavras para comentar a tragédia no rs . apenas manifestar solidariedade aos familiares . . . #santamaria , mãe de deus , rogai por nós ! ",Related - but not informative,Sun Jan 27 13:47:23 +0000 2013,train
+84,295528680162201602,"corpo de bombeiros : segundo o corpo de bombeiros a maioria das mortes causadas na boate kiss , foram causadas por asfixia . . . . ",Related and informative,Sun Jan 27 13:48:22 +0000 2013,train
+85,295528768234196992,coronel : eu abri a porta e desceu aquela barreira enorme de pessoas mortas ! faltou uma boa saída de emergência ! que lastimável ! #santamaria ,Related and informative,Sun Jan 27 13:48:43 +0000 2013,train
+86,295528772415926273,que deus ajude e de forças aos familiares das vitimas de #santamaria ,Related - but not informative,Sun Jan 27 13:48:44 +0000 2013,train
+87,295528956952723456,scores dead as fire sweeps through nightclub in brazil <URL> ,Related and informative,Sun Jan 27 13:49:28 +0000 2013,train
+88,295529254769270785,"urgente : número de víctimas mortales en el incendio en #santamaria llega a 245 , informa la policía <URL> ",Related and informative,Sun Jan 27 13:50:39 +0000 2013,train
+89,295529313468551169,lol this made me laugh ! ! ! #santamaria <URL> ,Not related,Sun Jan 27 13:50:53 +0000 2013,train
+90,295529653215588352,que deus ampare e conforte a família das vítimas na boate kiss em santa maria / rs . siga <USR> ,Related - but not informative,Sun Jan 27 13:52:14 +0000 2013,train
+91,295529749680386049,"perder alguém não é fácil , nada fácil . força pelas familias das vitimas ! #santamaria :( ",Related - but not informative,Sun Jan 27 13:52:37 +0000 2013,train
+92,295529808425799680,confirmadas pelo menos 180 mortos no incêndio na boate kiss . corpos estão sendo encaminhados ao centro desportivo de santa . . . ,Related and informative,Sun Jan 27 13:52:51 +0000 2013,train
+93,295529825177858051,"#santamaria : mais de 247 pessoas morreram após um incêndio na cidade de santa maria / rs , na boate kiss . twitteiros estão t . . . ",Related and informative,Sun Jan 27 13:52:55 +0000 2013,train
+94,295529900679495680,"ajudem os acidentados de santa maria doando sangue ! → av . pres . vargas , 2291 - santa maria - rs , 97015 - 513 #santamaria ",Related and informative,Sun Jan 27 13:53:13 +0000 2013,train
+95,295530022305931265,só jesus para confortar as famílias que estão passando por essa dor . tragédia na boate kiss - santa maria - rs <URL> ,Related - but not informative,Sun Jan 27 13:53:42 +0000 2013,train
+96,295530198491881473,"deadly inferno : more than 180 killed in brazil nightclub fire : bus crashes into ravine in portugal , killing 1 0 re . . . <URL> ",Related and informative,Sun Jan 27 13:54:24 +0000 2013,train
+97,295530336903905280,update : death toll rises to 245 killed in brazil nightclub fire . <URL> ,Related and informative,Sun Jan 27 13:54:57 +0000 2013,train
+98,295530651455725569,"#santamaria está precisando de enfermeiros auxiliares , psicólogos e psiquiatras . contato : bia ( 55 ) 9155 - 2087 . ",Related and informative,Sun Jan 27 13:56:12 +0000 2013,train
+99,295530760503435264,"meu deus , que tristeza esse incêndio em #santamaria - rs . confirmado mais de 245 mortos , fé e força para todos os a . . . ",Related - but not informative,Sun Jan 27 13:56:38 +0000 2013,train
+100,295531117048643584,"#santamaria - que deus ajude , e abençoe as famílias das vítimas desse incêndio , que teve mais de 200 mortos . ",Related - but not informative,Sun Jan 27 13:58:03 +0000 2013,train
+101,295531381260435456,noticia triste e lamentável . chocado com o número de pessoas q foram atingidas nesse acidente em #santamaria . que deus c . . . ,Related - but not informative,Sun Jan 27 13:59:06 +0000 2013,train
+102,295531381273030657,a <USR> está falando com a ' adolescente ' #bruna de 23 que sobreviveu a tragédia de #santamaria no rio grande do sul ! ,Related and informative,Sun Jan 27 13:59:06 +0000 2013,train
+103,295531456757903360,"death toll from fire at nightclub in santa maria in southern #brazil has now reached 245 , police say <URL> ",Related and informative,Sun Jan 27 13:59:24 +0000 2013,train
+104,295531570041864193,dilma se emociona com tragédia no rio grande do sul . <URL> #santamaria #tragediaemsm ,Related and informative,Sun Jan 27 13:59:51 +0000 2013,train
+105,295532085911883777,#santamaria a porta principal estava trancada . . . . 90 % das pessoas morreram intoxicadas . . . ,Related and informative,Sun Jan 27 14:01:54 +0000 2013,train
+106,295532232720924673,"#santamaria atenção ! santa maria avisa q precisa de enfermeiros , auxiliares , psicólogos , psiquiatras . bia no telefone ( 55 ) 9155 - 2087 ",Related and informative,Sun Jan 27 14:02:29 +0000 2013,train
+107,295532459230101504,"luto , realmente triste o que aconteceu , espero que deus acalme e console o coração dos familiares e amigos das vítimas #santamaria ",Related - but not informative,Sun Jan 27 14:03:23 +0000 2013,train
+108,295532496949493760,"#santamaria enfermeiros , auxiliares , psicólogos , psiquiatras . contato : bia ( 55 ) 9155 - 2087 ",Related and informative,Sun Jan 27 14:03:32 +0000 2013,train
+109,295532736041582592,que tristeza . . sem palavras . meus sentimentos aos familiares . rs de luto . #tragediaemsm #tragédiasm ,Related - but not informative,Sun Jan 27 14:04:29 +0000 2013,train
+110,295532853477924865,"oh no ! this is horrible ! “ <USR> : breaking : fire sweeps through brazil nightclub , officials say at least 220 people are . . . ",Related and informative,Sun Jan 27 14:04:57 +0000 2013,train
+111,295533012882440192,incêndio da boate kiss : há riscos do prédio da boate desabar . peritos de poa farão perícia sobre as causa do incêndio . #tr . . . ,Related and informative,Sun Jan 27 14:05:35 +0000 2013,train
+112,295533209997955073,"clubbers trampled in panic : a deadly nightclub fire has killed more than 200 people in santa maria , brazil . <URL> #news ",Related and informative,Sun Jan 27 14:06:22 +0000 2013,train
+113,295533243569143808,incêndio na boate kiss em santa maria : testemunhas acusam boate de ter fechado a porta no … <URL> im . . . ,Related and informative,Sun Jan 27 14:06:30 +0000 2013,train
+114,295533436507140096,"#santamaria está precisando de enfermeiros auxiliares , psicólogos e psiquiatras . contato : bia ( 55 ) 9155 - 2087 . ",Related and informative,Sun Jan 27 14:07:16 +0000 2013,train
+115,295533440672075776,"clubbers trampled in panic : a deadly nightclub fire has killed more than 200 people in santa maria , brazil . <URL> ",Related and informative,Sun Jan 27 14:07:17 +0000 2013,train
+116,295533478425001984,what a terrible thing happened in #santamaria during the night ! fire in the club and the guys making you pay the bill to go out . ,Related - but not informative,Sun Jan 27 14:07:26 +0000 2013,train
+117,295533553930874881,at least 240 dead in southern brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 14:07:44 +0000 2013,train
+118,295533755270041600,"#santamaria - que deus ajude , e abençoe as famílias das vítimas desse incêndio , que teve mais de 200 mortos . ",Related - but not informative,Sun Jan 27 14:08:32 +0000 2013,train
+119,295533767844564992,"#santamaria - que deus ajude , e abençoe as famílias das vítimas desse incêndio , que teve mais de 200 mortos . ",Related - but not informative,Sun Jan 27 14:08:35 +0000 2013,train
+120,295533910442528768,#santamaria - <URL> ,Related - but not informative,Sun Jan 27 14:09:09 +0000 2013,train
+121,295534128567312384,paga ou morre ! #santamaria ,Related - but not informative,Sun Jan 27 14:10:01 +0000 2013,train
+122,295534245995216897,#directionerdesejamforçasasantamaria #todosdesejamforçaasantamaria #santamaria sentimentos ,Related - but not informative,Sun Jan 27 14:10:29 +0000 2013,train
+123,295534405387169792,globo news mostrando imagens inéditas do incêndio em #santamaria . tristeza geral de todos e principalmente da família desses jovens . ,Related - but not informative,Sun Jan 27 14:11:07 +0000 2013,train
+124,295534493433991169,"#santamaria - que deus ajude , e abençoe as famílias das vítimas desse incêndio , que teve mais de 200 mortos . ",Related - but not informative,Sun Jan 27 14:11:28 +0000 2013,train
+125,295534506025304064,fox insider : brazil nightclub fire kills 245 people at least : a fire swept through a crowded nightclub in southe . . . <URL> ,Related and informative,Sun Jan 27 14:11:31 +0000 2013,train
+126,295534753493426177,"onde ja se viu so deixar sair se pagasse a comanda , nessas horas isso não importa #boatekiss ",Related - but not informative,Sun Jan 27 14:12:30 +0000 2013,train
+127,295534849979199488,12:12 força #santamaria ,Related - but not informative,Sun Jan 27 14:12:53 +0000 2013,train
+128,295534946418839553,alguém lembra de #tragédia de #incêndio igual (# 2 4 5 vítimas fatais ) ou superior a essa em #santamaria ? somente #acidentedeavião ? #comentem ! ,Related - but not informative,Sun Jan 27 14:13:16 +0000 2013,train
+129,295535000944795649,breaking : death toll rises to at least 245 in brazil nightclub fire ,Related and informative,Sun Jan 27 14:13:29 +0000 2013,train
+130,295535114195177472,a tragic story out of #brazil : at least 245 people are dead after a fire broke out in a nightclub . <URL> ,Related and informative,Sun Jan 27 14:13:56 +0000 2013,train
+131,295535550427967490,"que dia horrível , gente . . . que dia horrível #santamaria ",Related - but not informative,Sun Jan 27 14:15:40 +0000 2013,train
+132,295535797875138561,minhas condolências aos parentes e amigos da tragédia de #santamaria ,Related - but not informative,Sun Jan 27 14:16:39 +0000 2013,train
+133,295535890158198784,#rgp police up death toll to 245 in brazil club fire : a fire swept through a crowded nightclub in southern brazi . . . <URL> ,Related and informative,Sun Jan 27 14:17:01 +0000 2013,train
+134,295536045364240385,"<USR> <USR> : <USR> death toll from fire at nightclub in santa maria , brazil , 245 beliebers praying for all ",Related - but not informative,Sun Jan 27 14:17:38 +0000 2013,train
+135,295536057913589761,"<USR> boa a cobertura da tragédia que deus conforte essa familias que foram afetadas , #santamaria <USR> ",Related - but not informative,Sun Jan 27 14:17:41 +0000 2013,train
+136,295536552858222592,forças para todos de #santamaria ! ! ! ,Related - but not informative,Sun Jan 27 14:19:39 +0000 2013,train
+137,295537010033168384,"bá , que foda o que aconteceu lá em #santamaria naquela boate que já tem confirmado mais de 200 mortos =x ",Related - but not informative,Sun Jan 27 14:21:28 +0000 2013,train
+138,295537299448545280,tragédia e ver ivan moré e glenda cobrindo as notícias da catástrofe em #santamaria ,Related - but not informative,Sun Jan 27 14:22:37 +0000 2013,train
+139,295537362363088896,"que deus ajude os familiares das vítimas de #santamaria , e fica ae ! o senhor é meu pastor e nada me faltara - #forçasant . . . ",Related - but not informative,Sun Jan 27 14:22:52 +0000 2013,train
+140,295537467233280000,😨 rt <USR> : update : at least 245 killed in brazil nightclub fire . <URL> ,Related and informative,Sun Jan 27 14:23:17 +0000 2013,train
+141,295537785987796992,rodada do #gauchão é adiada por causa de tragédia em #santamaria : <URL> ,Not related,Sun Jan 27 14:24:33 +0000 2013,train
+142,295537785991995392,´ ´ por que tenho que me importar ´ ´ ´ ´ eu nem conheço essas pessoas que morreram ´ ´ como podem disser isso ? #santamaria ,Related - but not informative,Sun Jan 27 14:24:33 +0000 2013,train
+143,295537874059812865,<USR> : dp p / atend . 55 84283162 <USR> #santamaria #mcce click donate a tweet a day <URL> #dt <USR> ,Not related,Sun Jan 27 14:24:54 +0000 2013,train
+144,295537890820247552,estou perplexo e abalado com o incêndio na boate kiss . meus sentimentos aos familiares . estou muito triste . ,Related - but not informative,Sun Jan 27 14:24:58 +0000 2013,train
+145,295537915998633985,<USR> : sério mesmo que tem gente zoando o incêndio ? ? ? eu não consigo acreditar . . . que povo lixo . #santamaria ,Related - but not informative,Sun Jan 27 14:25:04 +0000 2013,train
+146,295538012471848961,update : police in brazil say at least 245 people dead after fire at nightclub in santa maria area of rio grande do sul . . . ,Related and informative,Sun Jan 27 14:25:27 +0000 2013,train
+147,295538150892269569,desejo morte lenta e sofrida a todos os idiotas que fazem piada com essa terrível tragédia . #santamaria ,Related - but not informative,Sun Jan 27 14:26:00 +0000 2013,train
+148,295538448683634688,"#santamaria está precisando de enfermeiros auxiliares , psicólogos e psiquiatras . contato : bia ( 55 ) 9155 - 2087 . ",Related and informative,Sun Jan 27 14:27:11 +0000 2013,train
+149,295538578694496257,<USR> : dp p / atend . 55 84283162 <USR> #santamaria #mcce click donate a tweet a day <URL> #dt <USR> ,Not related,Sun Jan 27 14:27:42 +0000 2013,train
+150,295538784227975168,nossa 245 mortos e 48 pessoas internadas . =( #staystrong #santamaria #todosdesejamforçasasantamaria ,Related and informative,Sun Jan 27 14:28:31 +0000 2013,train
+151,295539123945607168,<USR> : dp p / atend . 55 84283162 <USR> #santamaria #mcce click donate a tweet a day <URL> #dt <USR> ,Related - but not informative,Sun Jan 27 14:29:52 +0000 2013,train
+152,295539199468269568,breaking : police say 245 dead in brazil nightclub fire - ap ,Related and informative,Sun Jan 27 14:30:10 +0000 2013,train
+153,295539233018507264,video : firefighters and civilians battle to rescue people from the nightclub fire in brazil - <USR> tessmer077 http : . . . ,Related and informative,Sun Jan 27 14:30:18 +0000 2013,train
+154,295539543384416256,terrible #nightclub #fire in #brazil . 200 + reported dead . follow #bbcbrasil ' s <USR> for latest ,Related and informative,Sun Jan 27 14:31:32 +0000 2013,train
+155,295539694375149569,over 200 feared dead in brazil nightclub fire - wall street journal <URL> ,Related and informative,Sun Jan 27 14:32:08 +0000 2013,train
+156,295539727950573569,agente se coloca no lugar do familiar de #santamaria ,Related - but not informative,Sun Jan 27 14:32:16 +0000 2013,train
+157,295540256424460289,"é triste ver tantos jovens mortos , eles escolheram curtir a vida e acabou perdendo - as . só penso nas almas deles . . . =/ caso #santamaria :( ",Related - but not informative,Sun Jan 27 14:34:22 +0000 2013,train
+158,295540596150501376,"por fora , a boate parece bem ajeitada . . . ñ parece um muquifo sem estrutura rt <USR> : boate kiss no google street <URL> ",Not related,Sun Jan 27 14:35:43 +0000 2013,train
+159,295540705231769601,“ quanta dor ! oremos igreja ! <USR> : jovens que estavam na boate de #santamaria relatam como foi o incêndio . http :// . . . ,Related and informative,Sun Jan 27 14:36:09 +0000 2013,train
+160,295540898165555201,#beliebersdesejamforçasasantamaria #santamaria #todosdesejamforçasasantamaria me expliquem o que houve ,Related - but not informative,Sun Jan 27 14:36:55 +0000 2013,train
+161,295541191745871872,very sad rt “ <USR> : police up death toll to 245 in brazil nightclub fire | <URL> ,Related and informative,Sun Jan 27 14:38:05 +0000 2013,train
+162,295541388886544384,at least 245 killed in brazil nightclub fire update : <URL> ,Related and informative,Sun Jan 27 14:38:52 +0000 2013,train
+163,295542361948295169,"fiz especialmente para #santamaria , #beliebersdesejamforçasasantamaria #todosdesejamforçasasantamaria #santamaria h . . . ",Related - but not informative,Sun Jan 27 14:42:44 +0000 2013,train
+164,295542663967547393,rede globo e grupo rbs distorcendo o comentário do representante dos bombeiros sobre a regularização da boate kiss . sensacionalismo ? ,Related - but not informative,Sun Jan 27 14:43:56 +0000 2013,train
+165,295542953349349377,"#santamaria wow , . . . is this for real ? ",Related - but not informative,Sun Jan 27 14:45:05 +0000 2013,train
+166,295542978544533505,"shocked about what happened in a nightclub in brazil . 245 people died due to a fire . rip to all victims , thoughts go o . . . ",Related - but not informative,Sun Jan 27 14:45:11 +0000 2013,train
+167,295543016284884992,"<USR> : jesus , conforta o coração desses pais , tenha compaixão dessas famílias #santamaria ",Related - but not informative,Sun Jan 27 14:45:20 +0000 2013,train
+168,295543427330895872,só desejo força aos familiares de #santamaria . que os orixás protejam a todos ! ,Related - but not informative,Sun Jan 27 14:46:58 +0000 2013,train
+169,295543892898639872,at least 245 killed in brazil nightclub fire update : <URL> ,Related and informative,Sun Jan 27 14:48:49 +0000 2013,train
+170,295543901278842880,"chocada com a tragédia em #santamaria . meu deus , dai força para essas famílias que tanto sofrem nesse momento . #luto ",Related - but not informative,Sun Jan 27 14:48:51 +0000 2013,train
+171,295544350048415744,#santamaria lmfao ngl this made me laugh <URL> ,Not related,Sun Jan 27 14:50:38 +0000 2013,train
+172,295544513655615489,hoje o brasil amanhece de luto ! #santamaria ,Related - but not informative,Sun Jan 27 14:51:17 +0000 2013,train
+173,295544857567576066,fica meu repúdio aos que querem tirar uma casquinha política ou confessional em cima dessa tragédia na boate kiss #santamaria ,Related - but not informative,Sun Jan 27 14:52:39 +0000 2013,train
+174,295544954053345280,i guess nobody called 911 when shawty was fire burning on the dancefloor in a brazil nightclub . ,Related - but not informative,Sun Jan 27 14:53:02 +0000 2013,train
+175,295545516102651904,awful rt <USR> : at least 180 people dead in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 14:55:16 +0000 2013,train
+176,295546250097467392,e ainda tem gente que fica fazendo piadinha com essa tragédia . . . aff ! #santamaria ,Related - but not informative,Sun Jan 27 14:58:11 +0000 2013,train
+177,295546287833620480,que deus possa confortar os pais destes estudantes mortos em #santamaria ,Related - but not informative,Sun Jan 27 14:58:20 +0000 2013,train
+178,295546531090673664,que país é esse ? é o único lugar que dinheiro vale mais que a vida de uma pessoa . #santamaria ,Related - but not informative,Sun Jan 27 14:59:18 +0000 2013,train
+179,295547072176848896,"continua o mistério e polícia se cala : quem são e onde estão os donos da boate kiss e os promotores da festa , a green live ",Related and informative,Sun Jan 27 15:01:27 +0000 2013,train
+180,295547583856791552,um brasil onde o dinheiro vale mais que a própria vida ! #santamaria ,Related - but not informative,Sun Jan 27 15:03:29 +0000 2013,train
+181,295547667780624384,forças as famílias das vitimas . que vocês consigam achar conforto de alguma forma #santamaria ,Related - but not informative,Sun Jan 27 15:03:49 +0000 2013,train
+182,295547902628098048,<USR> <USR> <USR> hahahahahahahha kta m trending ta eagi ang album ! ! #santamaria hay cn ka von ? ! ! ? :p ,Not applicable,Sun Jan 27 15:04:45 +0000 2013,train
+183,295547969753710592,horrible . rt <USR> : ' 245 dead ' in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 15:05:01 +0000 2013,train
+184,295549026714140673,"if you hate brazil , forget it . they need your support ! 245 teenagers dead in nightclub fire in southern brazil . . . #prayforsantamaria ",Related and informative,Sun Jan 27 15:09:13 +0000 2013,train
+185,295549064471257088,245 people dead in brazil nightclub fire <URL> #ny #nyc ,Related and informative,Sun Jan 27 15:09:22 +0000 2013,train
+186,295549085434380289,#prayforsantamaria #prayforbrazil stay strong we love you and we ' re here to support you guys ,Related - but not informative,Sun Jan 27 15:09:27 +0000 2013,train
+187,295549202883289088,"tragédia em boate de #santamaria , no rio grande do sul , é noticiada pela imprensa internacional . <URL> ",Related and informative,Sun Jan 27 15:09:55 +0000 2013,train
+188,295549320319614976,sending all my thoughts to the victims and the families that lost members . rip all the victims in #santamaria . #prayforsan . . . ,Related - but not informative,Sun Jan 27 15:10:23 +0000 2013,train
+189,295549416784404482,fire sweeps through nightclub in brazil ; scores dead <URL> ,Related and informative,Sun Jan 27 15:10:46 +0000 2013,train
+190,295549521637830657,' ' a proxima atração da boate kiss é a banda sepultura . . ' ' aiuehuaehua gente que horror ,Related - but not informative,Sun Jan 27 15:11:11 +0000 2013,train
+191,295549588750884865,"convocação #santamaria ajudem ! ! ! doação de sangue urgente , repassem o endereço é : av . pres . vargas , 2291 - santa maria - rs , 97015 - 513 ",Related - but not informative,Sun Jan 27 15:11:27 +0000 2013,train
+192,295549681025576961,"mais de 245 : até agora há pouco foram confirmados mais de 245 pessoas mortas da tragédia na boate kiss , de santa maria / rs . . . ",Related and informative,Sun Jan 27 15:11:49 +0000 2013,train
+193,295549911716466688,"mais de 245 : até agora há pouco foram confirmados mais de 245 pessoas mortas da tragédia na boate kiss , de santa maria / rs . . . ",Related and informative,Sun Jan 27 15:12:44 +0000 2013,train
+194,295549987192971266,"de tudo que ouvi , o relato que mais me partiu o coração : os celulares dos mortos não param de tocar :( #santamaria ",Related - but not informative,Sun Jan 27 15:13:02 +0000 2013,train
+195,295550360498622464,"#santamaria madre de dios , ruega por nosotros pecadores . . . ",Related - but not informative,Sun Jan 27 15:14:31 +0000 2013,train
+196,295550905779113984,#luto #santamaria 🙏 😢 🙏 😢 <URL> ,Related - but not informative,Sun Jan 27 15:16:41 +0000 2013,train
+197,295551660724453377,galera do rio grande do sul doação de sangue av presidente vargas 2291 santa maria rio grande do sul #santamaria ,Related and informative,Sun Jan 27 15:19:41 +0000 2013,train
+198,295551807520907264,noticia triste e lamentável . chocado com o número de pessoas q foram atingidas nesse acidente em #santamaria . que deus c . . . ,Related - but not informative,Sun Jan 27 15:20:16 +0000 2013,train
+199,295551958515851264,"precisam - se de doadores de sangue urgente , repassem o endereço do hemocentro de #santamaria : av . pres . vargas , 2291 - sa . . . ",Related and informative,Sun Jan 27 15:20:52 +0000 2013,train
+200,295552075989925888,"desejo forças para todos , sem palavras . . . #santamaria ",Related - but not informative,Sun Jan 27 15:21:20 +0000 2013,train
+201,295552604451246081,#santamaria dia dificil hoje em :( ,Related - but not informative,Sun Jan 27 15:23:26 +0000 2013,train
+202,295552734470492160,"o que nós temos que lembrar é que no céu hoje , chegaram mais 245 estrelas ! #todosdesejamforçasasantamaria #santamaria ",Related - but not informative,Sun Jan 27 15:23:57 +0000 2013,train
+203,295552872911884288,"o que nós temos que lembrar é que no céu hoje , chegaram mais 245 estrelas ! #todosdesejamforçasasantamaria #santamaria ",Related - but not informative,Sun Jan 27 15:24:30 +0000 2013,train
+204,295553208439406592,#todosdesejamforçasasantamaria #prayforsantamaria #santamaria #twfanmilydesejaforçasasantamaria desejo todo o consolo do . . . ,Related - but not informative,Sun Jan 27 15:25:50 +0000 2013,train
+205,295553351062519808,death toll in brazil nightclub fire hits 245 - los angeles times : brisbane timesdeath toll in brazil nightclub f . . . <URL> ,Related and informative,Sun Jan 27 15:26:24 +0000 2013,train
+206,295553443328843777,nightclub fire kills 245 in southern brazil - reuters : brisbane timesnightclub fire kills 245 in southern brazil . . . <URL> ,Related and informative,Sun Jan 27 15:26:46 +0000 2013,train
+207,295553938244116480,"precisam - se de doadores de sangue urgente , repassem o endereço do hemocentro de #santamaria : av . pres . vargas , 2291 - san . . . ",Related and informative,Sun Jan 27 15:28:44 +0000 2013,train
+208,295554517041299459,nightclub fire kills 245 in southern brazil - reuters <URL> ,Related and informative,Sun Jan 27 15:31:02 +0000 2013,train
+209,295554873565515777,"meeu deus , mortos no banheiro da boate kiss , em santa maria - rs <URL> ",Related - but not informative,Sun Jan 27 15:32:27 +0000 2013,train
+210,295555376873607168,pictures of tragic fire in brazil - 245 fatalities ! ! mail online <URL> #brazil ,Related and informative,Sun Jan 27 15:34:27 +0000 2013,train
+211,295555494330920963,"o que me revolta , é que mesmo nessas horas de apuro total , as pessoas ainda deixam prevalecer o dinheiro e esquecem da vida ! #santamaria ",Related - but not informative,Sun Jan 27 15:34:55 +0000 2013,train
+212,295555712438923264,boate kiss ? hotter than hell ,Related - but not informative,Sun Jan 27 15:35:47 +0000 2013,train
+213,295556614222663681,#todosdesejamforçasasantamaria #prayforsantamaria #beliebersdesejamforçasasantamaria #santamaria #brasildesejaforçasasvitimasdesantamaria ,Related - but not informative,Sun Jan 27 15:39:22 +0000 2013,train
+214,295557096542437376,#ebc ex - presidente lula manifesta solidariedade aos parentes das vítimas do incêndio na boate kiss <URL> ,Related and informative,Sun Jan 27 15:41:17 +0000 2013,train
+215,295557708919209984,"senhor ajudamos a suportar a dor , que o seu consolo venha sobre todos de #santamaria #todosdesejamforçasasantamaria ",Related - but not informative,Sun Jan 27 15:43:43 +0000 2013,train
+216,295558006719000576,"certos comentários horríveis sobre #santamaria melhor nem responder calado ficarei , pois que a língua que falo é d . . . ",Related - but not informative,Sun Jan 27 15:44:54 +0000 2013,train
+217,295558015120203777,"porta principal da boate de #santamaria estava trancada na hora do incêndio , diz bombeiros . <URL> ",Related and informative,Sun Jan 27 15:44:56 +0000 2013,train
+218,295558174482763776,update : police in brazil say at least 245 people dead after fire at nightclub in santa maria area of rio grande do sul . . . ,Related and informative,Sun Jan 27 15:45:34 +0000 2013,train
+219,295558325473517568,tragédia no rs : dilma chora ao falar sobre vítimas <URL> #r7 #santamaria ,Related and informative,Sun Jan 27 15:46:10 +0000 2013,train
+220,295558463898140672,un abrazo de solidaridad para los hermanos de brasil por la tragedia que nos enluta . #santamaria <URL> ,Related - but not informative,Sun Jan 27 15:46:43 +0000 2013,train
+221,295558669406457856,"de tudo que ouvi , o relato que mais me partiu o coração : os celulares dos mortos não param de tocar . #santamaria ",Related - but not informative,Sun Jan 27 15:47:32 +0000 2013,train
+222,295559109808373760,"<USR> a terrible tragedy happened in santa maria , rio grande do sul , brazil . let ' s all pray for them ! #santamaria ",Related - but not informative,Sun Jan 27 15:49:17 +0000 2013,train
+223,295559189516926976,"if you hate brazil , forget it . they need your support ! 245 teenagers dead in nightclub fire in southern brazil . . . #pr . . . ",Related - but not informative,Sun Jan 27 15:49:36 +0000 2013,train
+224,295559449563787265,pastora sarah sheena boate kiss um pedacinho do inferno em santa maria . venha viver essa experiência única . <URL> ,Not related,Sun Jan 27 15:50:38 +0000 2013,train
+225,295559571194392577,awful ~ > <USR> : so far 245 people are confirmed dead following a massive nightclub fire in southern brazil . <URL> ,Related and informative,Sun Jan 27 15:51:07 +0000 2013,train
+226,295559772508393472,#prayforbrazil ai você percebe q os outros paises se preocupam mais do q os brasileiros ,Related - but not informative,Sun Jan 27 15:51:55 +0000 2013,train
+227,295559856415453184,"if you hate brazil , forget it . they need your support ! 245 teenagers dead in nightclub fire in southern brazil . . . #pr . . . ",Related and informative,Sun Jan 27 15:52:15 +0000 2013,train
+228,295559868985786368,nearly at 300 followers wow ! ! ! anyone want to make me really happy ? <URL> #santamaria ,Related - but not informative,Sun Jan 27 15:52:18 +0000 2013,train
+229,295560145826623489,"horrível o que aconteceu em santa maria , só o que posso fazer é desejar força a todas as famílias . #santamaria ",Related - but not informative,Sun Jan 27 15:53:24 +0000 2013,train
+230,295560598782107648,"if you hate brazil , forget it . they need your support ! 245 teenagers dead in nightclub fire in southern brazil . . . #pr . . . ",Related and informative,Sun Jan 27 15:55:12 +0000 2013,train
+231,295561282474606592,nossa solidariedade às famílias de #santamaria e a todos os gaúchos neste domingo triste . ,Related - but not informative,Sun Jan 27 15:57:55 +0000 2013,train
+232,295561303437762560,"my solidarity to brazil , rio grande do sul by the tragedy of 245 students and friends killed in a nightclub . #prayforsantamaria ",Related and informative,Sun Jan 27 15:58:00 +0000 2013,train
+233,295561819358109697,"<USR> e pensar q isso pode acontecer em qq lugar . com parentes , amigos nossos . . . que deus conforte essas famílias ! #santamaria ",Related - but not informative,Sun Jan 27 16:00:03 +0000 2013,train
+234,295561903239991298,"tu não os ve tu não os toca mas estão presentes , vários momentos inesqueciveis me veem a mente ♪ #santamaria ",Related - but not informative,Sun Jan 27 16:00:23 +0000 2013,train
+235,295561974543155200,"bem - vindo ao brasil , o país onde o dinheiro vale mais que 245 vidas #santamaria ",Related and informative,Sun Jan 27 16:00:40 +0000 2013,train
+236,295562037445132291,tragic . <USR> : scores dead as fire sweeps through nightclub in brazil <URL> ,Related and informative,Sun Jan 27 16:00:55 +0000 2013,train
+237,295562297487798272,#santamaria #beliebersdesejamforçasasantamaria #directionersdesejamforçasasantamaria #lovaticsdesejamforçasasantamaria . . . ,Related - but not informative,Sun Jan 27 16:01:57 +0000 2013,train
+238,295562561724747777,"o governo dos estados proximo a rs , mandem os medicos do exercito , enfermeiros e tudo ! ! ! ajudem #santamaria ",Related - but not informative,Sun Jan 27 16:03:00 +0000 2013,train
+239,295562918265778178,"video : at this time of sadness , we are together : #brazil president dilma rousseff as fire kills at least 245 <URL> . . . ",Related and informative,Sun Jan 27 16:04:25 +0000 2013,train
+240,295563090223845377,nova foto dos mortos no banheiro da boate kiss em #santamaria <URL> ,Related and informative,Sun Jan 27 16:05:06 +0000 2013,train
+241,295563098587279361,horror : at least 245 dead in brazil nightclub blaze <URL> via <USR> ,Related and informative,Sun Jan 27 16:05:08 +0000 2013,train
+242,295563157328510976,sempre revoltante quando a irresponsabilidade de poucos acaba com a vida de tanta gente ! #santamaria ,Related - but not informative,Sun Jan 27 16:05:22 +0000 2013,train
+243,295563228614889473,"video : at this time of sadness , we are together : #brazil president dilma rousseff as fire kills at least 245 <URL> . . . ",Related and informative,Sun Jan 27 16:05:39 +0000 2013,train
+244,295563396387069952,"já chegou em 245 o calculo de mortos no incêndio na boate kiss em santa maria . que deus ilumine todos las , que de mt mt força #santamaria ",Related and informative,Sun Jan 27 16:06:19 +0000 2013,train
+245,295563631284846592,"uma tragédia ! força , rs ! rt <USR> : incêndio em boate de #santamaria já é o segundo maior da história no brasil . <URL> ",Related and informative,Sun Jan 27 16:07:15 +0000 2013,train
+246,295563945861865473,she is ! a legend her work is amazing . #santamaria <URL> ,Not related,Sun Jan 27 16:08:30 +0000 2013,train
+247,295564247839166464,232 mortos e 131 feridos #santamaria ,Related and informative,Sun Jan 27 16:09:42 +0000 2013,train
+248,295564335906955267,245 mortos = 2 + 4 + 5 = 11 de setembro no brasil #santamaria ,Related and informative,Sun Jan 27 16:10:03 +0000 2013,train
+249,295564625334923264,#santamaria #beliebersdesejamforçasasantamaria #todosdesejamforçasasantamaria . #brasildesejaforçasasvitimasdesantamaria . uma imensa perda . ,Related - but not informative,Sun Jan 27 16:11:12 +0000 2013,train
+250,295564671455490048,"( photos ) fire kills over 245 people in brazil nightclub , hundreds more injured - <URL> #ifwt ",Related and informative,Sun Jan 27 16:11:23 +0000 2013,train
+251,295564746969731072,falaram que os feridos tão sendo atendidos pelos colegas de faculdade no hospital universitário . to com meu coração apertado . #santamaria ,Related - but not informative,Sun Jan 27 16:11:41 +0000 2013,train
+252,295564872794660868,"nightclub tragedies in recent history : on saturday , a massive fire at the kiss nightclub in southern brazil kill . . . <URL> ",Related and informative,Sun Jan 27 16:12:11 +0000 2013,train
+253,295564902171553793,tenho certeza que deus está com vocês hoje #santamaria ,Related - but not informative,Sun Jan 27 16:12:18 +0000 2013,train
+254,295565149618704385,footage of nightclub scenes . youths aged between 18 - 22 yrs old died due to fire . rt <USR> : #rs <URL> #santamaria tragic ,Related and informative,Sun Jan 27 16:13:17 +0000 2013,train
+255,295565472584327168,"quem fica zuando com as vitimas de #santamaria são um bando de retardados , que não sabem o sofrimento q cada familia que pe . . . ",Related - but not informative,Sun Jan 27 16:14:34 +0000 2013,train
+256,295566265295175681,desejo os meus sinceros pêsames a todas as famílias de #santamaria . que deus conforte todas as famílias ! #todosdesejamforçasasantamaria ,Related - but not informative,Sun Jan 27 16:17:43 +0000 2013,train
+257,295566382748299264,at least 220 killed in brazil nightclub fire : at least 220 people have died in a fire that swept through a night . . . <URL> ,Related and informative,Sun Jan 27 16:18:11 +0000 2013,train
+258,295566416294342656,minha solidariedade a #santamaria e a todos os gaúchos . ,Related - but not informative,Sun Jan 27 16:18:19 +0000 2013,train
+259,295566420501217280,"quantas vidas foram tiradas , sonhos foram perdidos . . . que deus conforte os familiares , nesse momento tão triste e desesperador #santamaria ",Related - but not informative,Sun Jan 27 16:18:20 +0000 2013,train
+260,295566638584053760,tristeza é pouco pra o que estou sentindo agora ao ler a notícia da tragédia em #santamaria . que deus conforte os fa . . . ,Related - but not informative,Sun Jan 27 16:19:12 +0000 2013,train
+261,295567020278304769,rodoviária de porto alegre confirma pelo seu twitter <USR> ônibus extras para #santamaria ,Related and informative,Sun Jan 27 16:20:43 +0000 2013,train
+262,295567066415640576,"death toll from fire at nightclub in santa maria in southern #brazil has now reached 245 , police say <URL> ",Related and informative,Sun Jan 27 16:20:54 +0000 2013,train
+263,295567133545467904,"video : at this time of sadness , we are together : #brazil president dilma rousseff as fire kills at least 245 <URL> . . . ",Related and informative,Sun Jan 27 16:21:10 +0000 2013,train
+264,295567334872072192,foi na boate kiss e levou um kiss da morte ,Related - but not informative,Sun Jan 27 16:21:58 +0000 2013,train
+265,295567766860214272,#brazillian barbecue : 245 people dead in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 16:23:41 +0000 2013,train
+266,295568551220228097,#santamaria meu coração e minhas orações estão com vocês . . . não tem como nao sentir um vazio mesmo nao tendo familiar . . . ,Related - but not informative,Sun Jan 27 16:26:48 +0000 2013,train
+267,295569230684897280,"245 people killed in brazil nightclub fire , police tell state news agency . <URL> ",Related and informative,Sun Jan 27 16:29:30 +0000 2013,train
+268,295569390055858176,deus há de confortar essaa familias . . . 245 novas estrelas no céu esta noite . ( <USR> boate kiss ) <URL> ,Related - but not informative,Sun Jan 27 16:30:08 +0000 2013,train
+269,295569830482935809,"<USR> programação da boate kiss de santa maria neste sábado 26 / 01 , noite da tragédia : <URL> ",Related - but not informative,Sun Jan 27 16:31:53 +0000 2013,train
+270,295569998246719488,[ atualizada ] : polícia faz recontagem e número de mortos é de 232 <URL> #r7 #santamaria ,Related and informative,Sun Jan 27 16:32:33 +0000 2013,train
+271,295570010833825793,tristeza é pouco pra o que estou sentindo agora ao ler a notícia da tragédia em #santamaria . que deus conforte os fa . . . ,Related - but not informative,Sun Jan 27 16:32:36 +0000 2013,train
+272,295570329579958272,#brazil nightclub death toll revised to 230 by fire services as victims ' families gather at scene in santa maria http :/ . . . ,Related and informative,Sun Jan 27 16:33:52 +0000 2013,train
+273,295570333770063872,"um bombeiro pegou o celular de um corpo , e nele havia 104 chamadas perdidas da mãe sem palavras #santamaria ",Related and informative,Sun Jan 27 16:33:53 +0000 2013,train
+274,295570367320305665,oh no ! :( <USR> : more than 150 dead in brazil nightclub fire . read : <URL> ,Related and informative,Sun Jan 27 16:34:01 +0000 2013,train
+275,295570396680421377,#prayforbrazil and #prayforsantamaria ! we from usa loves you ! :( ,Related - but not informative,Sun Jan 27 16:34:08 +0000 2013,train
+276,295570614813589504,"245 people killed in brazil nightclub fire , police tell state news agency . <URL> ",Related and informative,Sun Jan 27 16:35:00 +0000 2013,train
+277,295571009044619268,#santamaria meu deus que horror ! coitados dos familiares ! ! ): ,Related - but not informative,Sun Jan 27 16:36:34 +0000 2013,train
+278,295571034223042560,#prayforbrazil hug me gringas ,Related - but not informative,Sun Jan 27 16:36:40 +0000 2013,train
+279,295571084579848192,#prayforsantamaria 245 teenagers died last night in nightclub fire in southern my country . brazil needs your prayers and . . . ,Related and informative,Sun Jan 27 16:36:52 +0000 2013,train
+280,295571248149299200,over 200 dead in brazil nightclub fire : over 200 dead in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 16:37:31 +0000 2013,train
+281,295571294257291264,"according to band tv , there were so many dead that to transfer to the sports center was necessary to use trucks . #santamaria ",Related and informative,Sun Jan 27 16:37:42 +0000 2013,train
+282,295571659182723072,"fire ! fire ! fire ! belongs in the oven , fireplace , firepit , or other safe places . music is not about fire ! ! ! #brazil rip sweet people . ",Related - but not informative,Sun Jan 27 16:39:09 +0000 2013,train
+283,295571780809134080,"` alô a senhora poderia vir a boate kiss para reconhecer o corpo do seu filho ? ` caralho , como isso deve doer . ",Related - but not informative,Sun Jan 27 16:39:38 +0000 2013,train
+284,295572124750462976,"#prayforbrazil eu to impressionada , as gringas que nos odiavam , estão mandando forças ",Related - but not informative,Sun Jan 27 16:41:00 +0000 2013,train
+285,295572141510905857,tristeza é pouco pra o que estou sentindo agora ao ler a notícia da tragédia em #santamaria . que deus conforte os fa . . . ,Related - but not informative,Sun Jan 27 16:41:04 +0000 2013,train
+286,295572200226947072,update : police in brazil say 231 people have died after a fire at a nightclub in the santa maria area of rio grande do . . . ,Related and informative,Sun Jan 27 16:41:18 +0000 2013,train
+287,295572330279743489,"' ' um bombeiro pegou o celular de um corpo , e nele havia 104 chamadas perdidas da mãe sem palavras #santamaria ",Related - but not informative,Sun Jan 27 16:41:49 +0000 2013,train
+288,295572808401047552,deus espalhe sua misericórdia . #santamaria ,Related - but not informative,Sun Jan 27 16:43:43 +0000 2013,train
+289,295573009736015872,"a tragédia na boate kiss no rio grande do sul já é a segunda maior do brasil com 245 mortos , que deus possa cuidar de todos ",Related and informative,Sun Jan 27 16:44:31 +0000 2013,train
+290,295573294948696065,245 dead in brazil nightclub fire <URL> via <USR> ,Related and informative,Sun Jan 27 16:45:39 +0000 2013,train
+291,295573320110333953,todo o meu amor e respeito a todos de #santamaria ,Related - but not informative,Sun Jan 27 16:45:45 +0000 2013,train
+292,295573366272839680,bbc news - in pictures : brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 16:45:56 +0000 2013,train
+293,295573454357405697,celso portiolli pegou a bruna para ser a rainha da desgraça ? é isso mesmo #produção ? ? ? ? ? #domingolegal #santamaria ,Not related,Sun Jan 27 16:46:17 +0000 2013,train
+294,295573563396743169,"` alô a senhora poderia vir a boate kiss para reconhecer o corpo do seu filho ? ` caralho , como isso deve doer . ",Related - but not informative,Sun Jan 27 16:46:43 +0000 2013,train
+295,295573827654660098,que tal ganhar muitos seguidores reais ? só hoje 27 / 01 #addseguidores <URL> #santamaria ,Not related,Sun Jan 27 16:47:46 +0000 2013,train
+296,295574163161243649,"today , 01.27 , in santa maria , brazil , 245 people died in a fire at a nightclub . now , many victims who survive … <URL> ",Related and informative,Sun Jan 27 16:49:06 +0000 2013,train
+297,295574414848843776,the lede blog : fire at a nightclub in southern brazil : scenes from an intense fire that ripped through a nightclub crowded with unive . . . ,Related and informative,Sun Jan 27 16:50:06 +0000 2013,train
+298,295574595212288001,245 novas estrelas brilharão no céu hoje a noite . #todosdesejamforçasasantamaria #santamaria #forçasantamaria #prayforsanta . . . ,Related - but not informative,Sun Jan 27 16:50:49 +0000 2013,train
+299,295574603600891905,245 novas estrelas brilharão no céu hoje a noite . #todosdesejamforçasasantamaria #santamaria #forçasantamaria #prayforsanta . . . ,Related - but not informative,Sun Jan 27 16:50:51 +0000 2013,train
+300,295574716821954560,at least 245 killed in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 16:51:18 +0000 2013,train
+301,295574846841176064,infelizmente só se nota que os locais estão improprios ou com problemas quando acontecem tragédias . #santamaria ,Related - but not informative,Sun Jan 27 16:51:49 +0000 2013,train
+302,295574897193779201,#santamaria #brasildesejaforçasasvitimasdesantamaria #forçasantamaria ,Related - but not informative,Sun Jan 27 16:52:01 +0000 2013,train
+303,295575354360340480,filing on <USR> and <USR> constantly on #brazil fire - hard to take in such a tragedy - so many young live . . . ,Related - but not informative,Sun Jan 27 16:53:50 +0000 2013,train
+304,295575375323480064,<USR> face do dono da boate kiss https://t.co/bzvpguag ,Not related,Sun Jan 27 16:53:55 +0000 2013,train
+305,295575652164313088,brazil nightclub fire kills at least 245 - wall street journal : livemintbrazil nightclub fire kills at least 245 . . . <URL> ,Related and informative,Sun Jan 27 16:55:01 +0000 2013,train
+306,295575748620726272,vamos ajudar . . repassem por favor ! ! #santamaria <URL> ,Related - but not informative,Sun Jan 27 16:55:24 +0000 2013,train
+307,295575962551209986,gente a boate kiss tem pagina no facebook <USR> ,Not related,Sun Jan 27 16:56:15 +0000 2013,train
+308,295576239366868993,evite a redenção e proximidades do hps . osvaldo bloqueada p chegada de helicopteros . #santamaria ,Related and informative,Sun Jan 27 16:57:21 +0000 2013,train
+309,295576776246165506,"daqui à pouco , todas as informações pelo jornalismo do sbt . #santamaria ",Related - but not informative,Sun Jan 27 16:59:29 +0000 2013,train
+310,295576855929565184,at least 245 killed in brazil nightclub fire update : <URL> ,Related and informative,Sun Jan 27 16:59:48 +0000 2013,train
+311,295576927241113600,bombeiros : os celulares não param de tocar nos bolsos das pessoas mortas e isso está doendo na gente . #santamaria #pray . . . ,Related - but not informative,Sun Jan 27 17:00:05 +0000 2013,train
+312,295577199837343744,[ enem 2013 ] o que conduz calor melhor que o ferro ? a ) cobre b ) madeira c ) boate kiss ,Not related,Sun Jan 27 17:01:10 +0000 2013,train
+313,295577220817223680,"de tudo que ouvi , o relato que mais me partiu o coração : os celulares dos mortos não param de tocar . #santamaria ",Related and informative,Sun Jan 27 17:01:15 +0000 2013,train
+314,295577250194137088,plano de prevenção contra incêndio de boate em santa maria estava vencido . #tragediaemsm <URL> ,Related and informative,Sun Jan 27 17:01:22 +0000 2013,train
+315,295577396986392578,<USR> <USR> <USR> <USR> <USR> please pray for us this is very sad #santamaria x20 ,Related - but not informative,Sun Jan 27 17:01:57 +0000 2013,train
+316,295577573134581760,"enquanto muitos fazem piadinhas , poucos sabem a dor que os familiares dessas pessoas estãopassando #santamaria http :// . . . ",Related - but not informative,Sun Jan 27 17:02:39 +0000 2013,train
+317,295578193912557570,"boa terde , mais não tão boa assim . meus sinceros sentimentos aos familiares das v ´ timas da trágédia em #santamaria , rs <URL> ",Related - but not informative,Sun Jan 27 17:05:07 +0000 2013,train
+318,295578277781848064,que tal ganhar muitos seguidores reais ? só hoje 27 / 01 #addseguidores <URL> #santamaria ,Not related,Sun Jan 27 17:05:27 +0000 2013,train
+319,295578449760882689,"não tenho condições para ir a santa maria , mas tenho 3 coisas fundamentais neste momento fé , sentimento e oração para rezar #força #santamaria ",Related - but not informative,Sun Jan 27 17:06:08 +0000 2013,train
+320,295578856608370689,que deus conforte e dê forças a todos que sofrem com essa tragédia ! #luto #santamaria ,Related - but not informative,Sun Jan 27 17:07:45 +0000 2013,train
+321,295579116634255361,#calypseirosoramporsantamaria em solidariedade às famílias afetadas pela tragédia na boate kiss <URL> <USR> ,Related - but not informative,Sun Jan 27 17:08:47 +0000 2013,train
+322,295579565449945088,partiu pro aniver da minha mala favorita . boa noite ! ! — com angélica lunardi em boate kiss . https://t.co/oxjy5m5g ,Not related,Sun Jan 27 17:10:34 +0000 2013,train
+323,295579808698613760,"jesus christ , the brazil nightclub fire story is just horrible . ",Related - but not informative,Sun Jan 27 17:11:32 +0000 2013,train
+324,295579850666811392,"corpos recolhidos boate kiss : 232 . além destes , ocorreram mortes nos hospitais de sm . número oficial pode chegar a 245 . feridos - 131 . ",Related and informative,Sun Jan 27 17:11:42 +0000 2013,train
+325,295580123304968192,breaking : police lower death toll in brazil nightclub fire to 232 . - ss ,Related and informative,Sun Jan 27 17:12:47 +0000 2013,train
+326,295580731441295360,video dos primeiros socorros as vitimas da tragedia da boate kiss ! . . . <URL> ,Related and informative,Sun Jan 27 17:15:12 +0000 2013,train
+327,295580832121368576,245 killed in deadly nightclub fire in southern #brazil - <URL> ,Related and informative,Sun Jan 27 17:15:36 +0000 2013,train
+328,295580916011651072,"precisam - se de doadores de sangue urgente , repassem o endereço do hemocentro de #santamaria : av . pres . vargas … <URL> ",Related and informative,Sun Jan 27 17:15:56 +0000 2013,train
+329,295580995699212288,caramba o pior são tantos jovens q tinham uma vida pela frente sonhos ! #santamaria ,Related - but not informative,Sun Jan 27 17:16:15 +0000 2013,train
+330,295581268349952000,"#santamaria relato de uma adolecente que estava láquando acendeu bateu no teto e começou a pegar fogo , eles do palco chogavam o que tinham ",Related and informative,Sun Jan 27 17:17:20 +0000 2013,train
+331,295582186881560576,ipaly <USR> só quero ver se o <USR> vai apurar se houve propina para a boate kiss poder funcionar com a . . . <URL> ,Related - but not informative,Sun Jan 27 17:20:59 +0000 2013,train
+332,295583176724721664,the death toll from a fire at a nightclub in brazil has risen to 245 . ,Related and informative,Sun Jan 27 17:24:55 +0000 2013,train
+333,295583302553849856,"vamos divulgar ! ! ! rt <USR> : #tragediaemsm neste link , informações para quem quer ajudar : <URL> ",Related and informative,Sun Jan 27 17:25:25 +0000 2013,train
+334,295583763939872770,<USR> pray for the families of 230 young people who died this morning in a fire at a nightclub in brazil . #pr . . . ,Related and informative,Sun Jan 27 17:27:15 +0000 2013,train
+335,295584040747167746,deveriam ter mais respeito pela tragédia dos outros . cretinos que estão fazendo piada vão ter o que merecem na pós - vida . #santamaria ,Related - but not informative,Sun Jan 27 17:28:21 +0000 2013,train
+336,295584116273971200,"245 mortos , 245 futuros destruídos , 245 famílias com o coração partido e 245 sonhos sem se tornarem realidade . #santamaria ",Related - but not informative,Sun Jan 27 17:28:39 +0000 2013,train
+337,295584762196799490,seguidores reais ? eu ganho no #addseguidores ! esse site arrebenta 27 / 01 visita lá <URL> #santamaria ,Not related,Sun Jan 27 17:31:13 +0000 2013,train
+338,295585013842472961,central de apoio #santamaria - todas informações para ajudar ! rt <USR> : para quem puder ajudar . . . http : . . . ,Related - but not informative,Sun Jan 27 17:32:13 +0000 2013,train
+339,295585701691531264,"#tragediaemsm neste link , informações para quem quer ajudar : <URL> ",Related and informative,Sun Jan 27 17:34:57 +0000 2013,train
+340,295585957569261568,noticia triste e lamentável . chocado com o número de pessoas q foram atingidas nesse acidente em #santamaria . que deus c . . . ,Related - but not informative,Sun Jan 27 17:35:58 +0000 2013,train
+341,295586397966987264,232 mortes confirmadas e 116 feridos #santamaria ,Related and informative,Sun Jan 27 17:37:43 +0000 2013,train
+342,295587060667006976,músico que tocava na boate kiss morreu : ele voltou para buscar sua gaita : <URL> ,Related and informative,Sun Jan 27 17:40:21 +0000 2013,train
+343,295587190682034176,breaking : police lower death toll in brazil nightclub fire to 232 . - ss ,Related and informative,Sun Jan 27 17:40:52 +0000 2013,train
+344,295587316523757569,people screamed but security tried to keep only exit shut - eyewitness accounts from #brazil as fire kills 230 http :/ . . . ,Related and informative,Sun Jan 27 17:41:22 +0000 2013,train
+345,295587505259040768,"“ um bombeiro pegou o celular de um corpo , e nele havia 104 chamadas perdidas da mãe sem palavras #santamaria ! isso d . . . ",Related and informative,Sun Jan 27 17:42:07 +0000 2013,train
+346,295587656262381568,"certos comentários horríveis sobre #santamaria melhor nem responder calado ficarei , pois que a língua que falo é d . . . ",Related - but not informative,Sun Jan 27 17:42:43 +0000 2013,train
+347,295587941487628288,people screamed but security tried to keep only exit shut - eyewitness accounts from #brazil as fire kills 230 http :/ . . . ,Related and informative,Sun Jan 27 17:43:51 +0000 2013,train
+348,295588016964108288,<USR> <USR> aviões da base aérea da fab em santa maria também trazem vítimas do incêndio da boate kiss para porto alegre ,Related and informative,Sun Jan 27 17:44:09 +0000 2013,train
+349,295588063084683264,<USR> aqui esta o relato de um jovem que conseguiu se salvar <URL> #santamaria ,Related and informative,Sun Jan 27 17:44:20 +0000 2013,train
+350,295589942137085953,você acha que dinheiro vale mais que 245 vidas ? desculpe mais nao dar pra entender a sociedade #santamaria ,Related - but not informative,Sun Jan 27 17:51:48 +0000 2013,train
+351,295589979915161600,músico que tocava na boate kiss morreu : ele voltou para buscar sua gaita : <URL> ,Related and informative,Sun Jan 27 17:51:57 +0000 2013,train
+352,295590164435197953,' complete panic ' as 232 killed in brazil nightclub fire - usa today <URL> ,Related and informative,Sun Jan 27 17:52:41 +0000 2013,train
+353,295590378365657088,"#santamaria - #dilma deixou agora há pouco o cmd , onde estão os corpos das 232 pessoas mortas no incêndio <URL> ",Related and informative,Sun Jan 27 17:53:32 +0000 2013,train
+354,295590990717272065,"245 mortos , 245 futuros destruídos , 245 famílias com o coração partido e 245 sonhos sem se tornarem realidade . #santamaria ",Related and informative,Sun Jan 27 17:55:58 +0000 2013,train
+355,295591431127568384,"245 mortos , 245 futuros destruídos , 245 famílias com o coração partido e 245 sonhos sem se tornarem realidade . #santamaria ",Related - but not informative,Sun Jan 27 17:57:43 +0000 2013,train
+356,295591758287470592,é triste saber que no brasil o dinheiro vale mais que a vida . #todosdesejamforçasasantamaria #santamaria ,Related - but not informative,Sun Jan 27 17:59:01 +0000 2013,train
+357,295591808606552064,"245 mortos , 245 futuros destruídos , 245 famílias com o coração partido e 245 sonhos sem se tornarem realidade . #santamaria ",Related and informative,Sun Jan 27 17:59:13 +0000 2013,train
+358,295591934439854080,"death toll in #brazil nightclub fire rises to 180 , police in southern city of santa maria say <URL> ",Related and informative,Sun Jan 27 17:59:43 +0000 2013,train
+359,295592169329262592,"<USR> a tragedy happened today in brazil , a nightclub caught fire and 232 were confirmed dead , u could use this > #forçasantamaria ",Related and informative,Sun Jan 27 18:00:39 +0000 2013,train
+360,295593251472289792,"além das pessoas ficarem comentando td a hr sobre o ocorrido em #santamaria , ainda falam errada , não foram 245 mortos , foram 232 . ",Related and informative,Sun Jan 27 18:04:57 +0000 2013,train
+361,295594492990476288,"luto tbm é respeito , eu não iria querer a foto do meu filho morto nas redes sociais #santamaria ",Related - but not informative,Sun Jan 27 18:09:53 +0000 2013,train
+362,295594740446023680,"<USR> good , tragedy struck ! in rio grande do sul in brazil hears a fire in a nightclub ! many people died . . i am very sad . ",Related - but not informative,Sun Jan 27 18:10:52 +0000 2013,train
+363,295595419931668480,"nightclub fire in #brazil : club was 1,000 people over capacity , official says . <URL> ",Related and informative,Sun Jan 27 18:13:34 +0000 2013,train
+364,295596283920535552,update : at least 245 dead in brazil nightclub fire <URL> ,Related and informative,Sun Jan 27 18:17:00 +0000 2013,train
+365,295596548161691648,"nightclub fire in #brazil : club was 1,000 people over capacity , official says . <URL> ",Related and informative,Sun Jan 27 18:18:03 +0000 2013,train
+366,295596644651646977,músico que tocava na boate kiss morreu : ele voltou para buscar sua gaita : <URL> ,Related and informative,Sun Jan 27 18:18:26 +0000 2013,train
+367,295596799824109568,r . ip to all those people who died in brazil in that tragic nightclub fire . my heart goes out to the family . ,Related - but not informative,Sun Jan 27 18:19:03 +0000 2013,train
+368,295597219283865600,"245 mortos , 245 futuros destruídos , 245 famílias com o coração partido e 245 sonhos sem se tornarem realidade . #santamaria ",Related and informative,Sun Jan 27 18:20:43 +0000 2013,train
+369,295597974225035264,"maioria das vítimas da tragédia em #santamaria tinha entre 16 e 20 anos , diz globonews . <URL> ",Related and informative,Sun Jan 27 18:23:43 +0000 2013,train
+370,295598305579257857,waking up to some sad news from the brazilian jillianators :/ please everyone #prayforsantamaria #prayforbrazil <3 . . . ,Related - but not informative,Sun Jan 27 18:25:02 +0000 2013,train
+371,295598750179667968,just heard what happened in #santamaria . so terrible :( my heart & prayers are with their family & friends & #br . . . ,Related - but not informative,Sun Jan 27 18:26:48 +0000 2013,train
+372,295598838281023489,a todas esas personas que juegan con el dolor de las familias de las victimas en #santamaria miren #vayansealcarajo #insensibles ,Related - but not informative,Sun Jan 27 18:27:09 +0000 2013,train
+373,295599060562362370,o brasil todo está . #forçasantamaria #santamaria #brasildesejaforçasasvitimasdesantamaria <URL> ,Related - but not informative,Sun Jan 27 18:28:02 +0000 2013,train
+374,295599266070667264,alberto rodrigues se emocionando na itatiaia . tantos jovens morreram #santamaria ,Related - but not informative,Sun Jan 27 18:28:51 +0000 2013,train
+375,295600004301737984,vídeo mostra resgate de vítimas duranteo incêndio de boate em #santamaria na maior tragédia da história gaúcha <URL> ,Related and informative,Sun Jan 27 18:31:47 +0000 2013,train
+376,295600075579736065,cada coisa chocante que aconteceu na tragédia de sm que me faz chorar . #todosdesejamforçasasantamaria #forçasantamaria #santamaria #luto ,Related - but not informative,Sun Jan 27 18:32:04 +0000 2013,train
+377,295600100741369856,"245 mortos , 245 futuros destruídos , 245 famílias com o coração partido e 245 sonhos sem se tornarem realidade . #santamaria ",Related - but not informative,Sun Jan 27 18:32:10 +0000 2013,train
+378,295600813806592000,fechar as portas com medo de que saiam sem pagar . . . bem vindo ao brasil colega ! #santamaria ,Related - but not informative,Sun Jan 27 18:35:00 +0000 2013,train
+379,295601065435492352,"rt gente ! atenção #santamaria avisa que precisam de : enfermeiros , auxiliares , psicólogos , psiquiatras . contato : bia . . . ",Related and informative,Sun Jan 27 18:36:00 +0000 2013,train
+380,295601199678382080,"hoje é um dia daqueles para aprendermos a valorizar mais as pessoas que amamos , ficou evidente que podemos perde - las do nada . #santamaria ",Related - but not informative,Sun Jan 27 18:36:32 +0000 2013,train
+381,295601367429562371,"caralho , olha o cartaz da banda que tava tocando na boate https://t.co/dswhzssu … :o #santamaria ",Related - but not informative,Sun Jan 27 18:37:12 +0000 2013,train
+382,295603024171237376,"#santamaria boate tentou impedir saída , exigindo pagamento de conta , dizem bombeiros : <URL> ",Related and informative,Sun Jan 27 18:43:47 +0000 2013,train
+383,295603556864626688,so you hate brazil cause they are the best fans ? stop with it . they needs our help . praying for you brazil . #santamaria ,Related - but not informative,Sun Jan 27 18:45:54 +0000 2013,train
+384,295603737236480000,"todos os jovens morreram um pouco , impossível não se por no lugar ! ! triiste demais ! #santamaria ",Related - but not informative,Sun Jan 27 18:46:37 +0000 2013,train
+385,295603837862039552,"maioria das vítimas da tragédia em #santamaria tinha entre 16 e 20 anos , diz globonews . #santamaria então a coisa . . . . . ",Related and informative,Sun Jan 27 18:47:01 +0000 2013,train
+386,295604295057936384,' ' bombeiros acham corpos de namorados abraçados ' ' #forçasantamaria #todosdesejamforçasasantamaria #santamaria ,Related and informative,Sun Jan 27 18:48:50 +0000 2013,train
+387,295606316695711744,#santamaria : hospital divulga nome dos 29 feridos internados no local : <URL> ,Related and informative,Sun Jan 27 18:56:52 +0000 2013,train
+388,295606522254340097,#santamaria : banda que se apresentava em boate tinha hábito de fazer shows pirotécnicos <URL> ,Related and informative,Sun Jan 27 18:57:41 +0000 2013,train
+389,295606773912567808,"topstory : horror in brazil : more than 230 killed , 200 injured , by nightclub fire <URL> ",Related and informative,Sun Jan 27 18:58:41 +0000 2013,train
+390,295607289774239745,girl on fire ( live form kiss boate ) <USR> ,Not related,Sun Jan 27 19:00:44 +0000 2013,train
+391,295608099312648192,"a dor e a revolta da tragédia em #santamaria é enorme . mas que a emoção não mascare os fatos . omissão , ganância , negligênc . . . ",Related - but not informative,Sun Jan 27 19:03:57 +0000 2013,train
+392,295608137044590592,o hospital de pronto socorro de poa está recebendo vítimas da tragédia em #santamaria e precisa de doadores de sangue ! . . . ,Related and informative,Sun Jan 27 19:04:06 +0000 2013,train
+393,295608967512588289,brazil nightclub fire kills 232 people <URL> ,Related and informative,Sun Jan 27 19:07:24 +0000 2013,train
+394,295608967516786688,breaking : police lower death toll in brazil nightclub fire to 232 . - ss ,Related and informative,Sun Jan 27 19:07:24 +0000 2013,train
+395,295609416307310593,deadly brazil fire video : ' kiss ' nightclub blaze kills over 200 in santa maria <URL> ,Related and informative,Sun Jan 27 19:09:11 +0000 2013,train
+396,295609529566130177,perfil do facebook de 1 sobrevivente da boate kiss . <URL> <URL> ,Related - but not informative,Sun Jan 27 19:09:38 +0000 2013,train
+397,295612356497637376,polisi ralat jumlah korban kebakaran klab malam di brazil : kebakaran menewaskan ratusan warga di boate kiss klub . . . <URL> ,Not applicable,Sun Jan 27 19:20:52 +0000 2013,train
+398,295612398474256385,nossas orações estão voltadas às vítimas e familiares de #santamaria #forçasantamaria ,Related - but not informative,Sun Jan 27 19:21:02 +0000 2013,train
+399,295612679454851072,#santamaria : 115 mortos já foram reconhecidos : <URL> ,Related and informative,Sun Jan 27 19:22:09 +0000 2013,train
+400,295613056954793984,"maioria das vítimas da tragédia em #santamaria tinha entre 16 e 20 anos , diz globonews . <URL> ",Related and informative,Sun Jan 27 19:23:39 +0000 2013,train
+401,295613954523295744,"dono da boate kiss , palco do incêndio em #santamaria , se apresenta à polícia ainda nesta tarde <URL> #forç . . . ",Related and informative,Sun Jan 27 19:27:13 +0000 2013,train
+402,295614436880818177,#santamaria : 115 mortos já foram reconhecidos : <URL> ,Related and informative,Sun Jan 27 19:29:08 +0000 2013,train
+403,295614634004721665,"232 die in smoke , stampede in brazil club fire : a blaze raced through a crowded nightclub in southern brazil ear . . . ht . . . ",Related and informative,Sun Jan 27 19:29:55 +0000 2013,train
+404,295614831162179584,"#santamaria : garota pediu socorro pelo facebook : ' incêndio na kiss socorro ' , postou às 0 3 h20 : <URL> ",Related and informative,Sun Jan 27 19:30:42 +0000 2013,train
+405,295614956978716672,gostei de um vídeo <USR> <URL> na boate kiss em santa maria - rs 27 de janeiro de 2013 ,Related and informative,Sun Jan 27 19:31:12 +0000 2013,train
+406,295615091183869952,more than 200 dead in brazilian nightclub inferno : nightclub fire in brazil kills at least 232 more » <URL> ,Related and informative,Sun Jan 27 19:31:44 +0000 2013,train
+407,295615741321957376,"♪ eu te ofereço o sol que brilha forte , . te ofereço a dor do meu irmão #santamaria #missa <USR> <USR> ",Related - but not informative,Sun Jan 27 19:34:19 +0000 2013,train
+408,295616441745559554,"sim , esse era o cartaz do evento da boate kiss o que ainda me deixou mais surpreso <URL> ",Not related,Sun Jan 27 19:37:06 +0000 2013,train
+409,295617716843343872,"brazil nightclub fire kills more than 230 people : brasilia , brazil ( ap ) — flames raced through a crowded nightcl . . . <URL> ",Related and informative,Sun Jan 27 19:42:10 +0000 2013,train
+410,295617733620539394,"245 katao patay sa sunog sa isang sikat na nightclub sa brazil , bilang ng mga nasawi posibleng madagdagan pa . ",Related and informative,Sun Jan 27 19:42:14 +0000 2013,train
+411,295618102706704384,o cartaz da banda que tocou na boate kiss em santa maria era de uma caveira pegando fogo falo nada . ,Related - but not informative,Sun Jan 27 19:43:42 +0000 2013,train
+412,295618987709054977,#remadigitalmedia timeline : fire in nightclub kills 232 in brazil : ( reuters ) - a fire killed at least . . . <URL> #yahoonews ,Related and informative,Sun Jan 27 19:47:13 +0000 2013,train
+413,295620426355331072,#doesangue em qualquer lugar é amor incondicional ! rt <USR> : hemocentro de #santamaria - urgente ( 55 ) 3221 . . . ,Related and informative,Sun Jan 27 19:52:56 +0000 2013,train
+414,295621076459864065,"video : at this time of sadness , we are together : #brazil president dilma rousseff as fire kills at least 245 <URL> . . . ",Related and informative,Sun Jan 27 19:55:31 +0000 2013,train
+415,295621856617181185,"<USR> seria muito bom se nós blogueiros postasse nas fan pages uma imagem com as informações , não acha ? #santamaria ",Related - but not informative,Sun Jan 27 19:58:37 +0000 2013,train
+416,295622120841551872,#prayforbrazil and #prayforsantamaria ! we from usa loves you ! :( ,Related - but not informative,Sun Jan 27 19:59:40 +0000 2013,train
+417,295622880018960385,#forçasantamaria #santamaria #todosdesejamforçasasantamaria ,Related - but not informative,Sun Jan 27 20:02:41 +0000 2013,train
+418,295623207191461890,#brasil - pensando na minha terra natal . . . sending my thoughts 2 all the victims of fire in #santamaria ,Related - but not informative,Sun Jan 27 20:03:59 +0000 2013,train
+419,295624209596571649,noticia triste e lamentável . chocado com o número de pessoas q foram atingidas nesse acidente em #santamaria . que deus c . . . ,Related - but not informative,Sun Jan 27 20:07:58 +0000 2013,train
+420,295625153352704002,"embajador augusto ocampos va a #santamaria , lugar del incendio de discoteca , a 310 kilómetros de porto alegre , para asistir a paraguayos ",Related and informative,Sun Jan 27 20:11:43 +0000 2013,train
+421,295626612949520384,estou perplexo e abalado com o incêndio na boate kiss . meus sentimentos aos familiares . estou muito triste . ,Related - but not informative,Sun Jan 27 20:17:31 +0000 2013,train
+422,295627321791098880,olha o cartaz da banda que tocaria em #santamaria onde aconteceu a tragédia 245 pessoas morreram . é muita coincidênc . . . ,Related - but not informative,Sun Jan 27 20:20:20 +0000 2013,train
+423,295628563317653504,é impressionante saber que vivemos em uma país em que uma comanda vale mais do que uma vida . força #santamaria ,Related - but not informative,Sun Jan 27 20:25:16 +0000 2013,train
+424,295628856918941696,‎ o cartaz da banda que tocou na boate kiss era uma caveira pegando fogo e a ultima musica a tocar foi die young ( morre . . . ,Related - but not informative,Sun Jan 27 20:26:26 +0000 2013,train
+425,295629070811684867,rt <USR> update : at least 245 dead in brazil nightclub fire <URL> so saddened to hear about this . ,Related and informative,Sun Jan 27 20:27:17 +0000 2013,train
+426,295630702408527872,a maior tragédia de nossas vidas <URL> #forçasantamaria #prayforsantamaria #todosdesejamforçasasantamaria #santamaria #rt ,Related - but not informative,Sun Jan 27 20:33:46 +0000 2013,train
+427,295631029560045568,"' nem guerra deve ser tão triste ' , diz testemunha que ajudou resgate : alberto tessmer passava perto da boate kiss . . . <URL> ",Related - but not informative,Sun Jan 27 20:35:04 +0000 2013,train
+428,295631167980445696,230 people killed in a fire in a nightclub in brazil only 1 exit in the whole place #disgraceful ,Related and informative,Sun Jan 27 20:35:37 +0000 2013,train
+429,295631692247465984,"cadê o brasil agora heim ? cadê , um brasil desse , que fez perde mais de 240 vidas em #santamaria . ",Related - but not informative,Sun Jan 27 20:37:42 +0000 2013,train
+430,295631830672089088,acompanhe a cobertura completa do incêndio em boate em #santamaria no #portalebc : <URL> #forçasantamaria ,Related and informative,Sun Jan 27 20:38:15 +0000 2013,train
+431,295631834849619968,"rt <USR> : #santamaria : saiba como doar água e medicamentos , entre outros , para ajudar as vítimas da tragédia : http : . . . ",Related and informative,Sun Jan 27 20:38:16 +0000 2013,train
+432,295631868429217792,"meus sentimentos a <USR> q perdeu sua irmã na tragédia de #santamaria , eu em nome da #familiapanicats dese . . . ",Related - but not informative,Sun Jan 27 20:38:24 +0000 2013,train
+433,295631922934210560,#addseguidores é o melhor site para ganhar seguidores reais #santamaria ,Not related,Sun Jan 27 20:38:37 +0000 2013,train
+434,295633344820047872,"im so sad about the brazil nightclub fire , my heart goes out to all the families ",Related - but not informative,Sun Jan 27 20:44:16 +0000 2013,train
+435,295634296906063873,não corrigir nossas faltas é o mesmo que cometer novos erros . #santamaria ,Related - but not informative,Sun Jan 27 20:48:03 +0000 2013,train
+436,295637434253856769,que essa terrível tragédia sirva de alerta para as autoridades em todo o pais . . . triste demais . #luto #santamaria ,Related - but not informative,Sun Jan 27 21:00:31 +0000 2013,train
+437,295639778853003264,"luto em santa maria ( rs ) . e que deus console os corações das famílias de todos os jovens mortos no incêndio da boate kiss , no rio grande do sul ",Related - but not informative,Sun Jan 27 21:09:50 +0000 2013,train
+438,295640252838731776,tragédia no rio grande do sul incêndio na boate kiss deixa 231 mortos em santa maria 1 : <URL> via <USR> ,Related and informative,Sun Jan 27 21:11:43 +0000 2013,train
+439,295641280422227968,"im so sad about the brazil nightclub fire , my heart goes out to all the families ",Related - but not informative,Sun Jan 27 21:15:48 +0000 2013,train
+440,295642844926984192,chocado e emocionado com a tragédia em #santamaria rs q deus conforte todas as vítimas ! . . . :( ,Related - but not informative,Sun Jan 27 21:22:01 +0000 2013,train
+441,295643448881582081,police : brazil nightclub fire kills at least 232 <URL> via <USR> ,Related and informative,Sun Jan 27 21:24:25 +0000 2013,train
+442,295643524387446784,perdeu algum conhecido ou familiar no acidente na boate kiss ? . . . — namorada do meu irmao ): <URL> ,Related - but not informative,Sun Jan 27 21:24:43 +0000 2013,train
+443,295644719755702275,para lembrar outro 27 / 01 e em respeito às vítimas de #santamaria #comissaodaverdade #democracia <URL> ,Related - but not informative,Sun Jan 27 21:29:28 +0000 2013,train
+444,295650264638185472,death toll in #brazil nightclub fire revised to 232 . <URL> ,Related and informative,Sun Jan 27 21:51:30 +0000 2013,train
+445,295650268811509761,tristeza é pouco pra o que estou sentindo agora ao ler a notícia da tragédia em #santamaria . que deus conforte os fa . . . ,Related - but not informative,Sun Jan 27 21:51:31 +0000 2013,train
+446,295650696638889985,chaos of brazil nightclub fire captured on amateur video <URL> ,Related and informative,Sun Jan 27 21:53:13 +0000 2013,train
+447,295651216732610560,"#santamaria : saiba como doar água e medicamentos , entre outros , para ajudar as vítimas da tragédia : <URL> ",Related and informative,Sun Jan 27 21:55:17 +0000 2013,train
+448,295653842371100673,"nightclub fire kills at least 232 in brazil : santa maria , brazil ( reuters ) - a nightclub fire killed at least 232 people in southern . . . ",Related and informative,Sun Jan 27 22:05:43 +0000 2013,train
+449,295657545928953857,"boate kiss , baladinha monstra ™ ",Related - but not informative,Sun Jan 27 22:20:26 +0000 2013,train
+450,295658116354297857,a nota da boate kiss que está sendo divulgada é falsa . #rt ,Related - but not informative,Sun Jan 27 22:22:42 +0000 2013,train
+451,295659135603724289,sinto muito aos que perderam parentes e amigos no incidente de #santamaria ,Related - but not informative,Sun Jan 27 22:26:45 +0000 2013,train
+452,295659462751039488,acho 10 iguais aqui em sp ==> rt <USR> : como aquilo tinha licença ? / licença contra incêndios da boate kiss estava vencida ; ,Related and informative,Sun Jan 27 22:28:03 +0000 2013,train
+453,295660247090085889,"a tragédia na boate kiss em santa maria : muito amor a todos os envolvidos , muita força aos familiares . <URL> ",Related - but not informative,Sun Jan 27 22:31:10 +0000 2013,train
+454,295661668946542592,"acho tão lindo todos prestando de um jeito ou de outro sua solidariedade , carinho , respeito ao que aconteceu em #santamaria ",Related - but not informative,Sun Jan 27 22:36:49 +0000 2013,train
+455,295662100938907650,lista dos mortos na boate kiss | itaberaba noticias <URL> ,Related and informative,Sun Jan 27 22:38:32 +0000 2013,train
+456,295662964965519362,just heard that over 200 people have lost there lives in a nightclub fire in brazil ! such a horrible disaster r . i . p ♥ ,Related and informative,Sun Jan 27 22:41:58 +0000 2013,train
+457,295664659476910082,#brazil fire deaths : smoke engulfed nightclub in major university city when soundproofing set alight - officials http :// t . . . . ,Related and informative,Sun Jan 27 22:48:42 +0000 2013,train
+458,295668920881389568,perfil falso da kiss divulgou comunicado atribuído à boate incendiada <URL> ,Related and informative,Sun Jan 27 23:05:38 +0000 2013,train
+459,295669596197879809,cinco jovens santo - angelenses morrem em incêndio na boate kiss em santa maria e a tristeza pegando ! ,Related and informative,Sun Jan 27 23:08:19 +0000 2013,train
+460,295669944299966465,"so upsetting 2 see all of this about this nightclub tragedy in brazil . . . love , thoughts & prayers are with you all #pra . . . ",Related - but not informative,Sun Jan 27 23:09:42 +0000 2013,train
+461,295670200173465600,rt <USR> : licença contra incêndios da boate kiss de #santamaria estava vencida . estamos no brasil . . . http :// t . . . . ,Related and informative,Sun Jan 27 23:10:43 +0000 2013,train
+462,295670506336681984,"245 people killed in brazil nightclub fire , r . i . p . to them all . ",Related and informative,Sun Jan 27 23:11:56 +0000 2013,train
+463,295671693328924673,p / demonstrar #compaixão e #luto não é preciso sensacionalizar expondo fotos das #vítimas do #incêncio na #boatekiss . #respeito às famílias ! ,Related - but not informative,Sun Jan 27 23:16:39 +0000 2013,train
+464,295672955801833474,reading about the nightclub fire in brazil . so tragic . thoughts and prayers go out to my brazilian fans . ,Related - but not informative,Sun Jan 27 23:21:40 +0000 2013,train
+465,295674813912059904,"if you didn ' t know , a nightclub caught fire in brazil and 235 people lost their life . my heart is with brazil . ",Related and informative,Sun Jan 27 23:29:03 +0000 2013,train
+466,295675141051011072,nightclub fire in brazil kills at least 232 [ #update ] - officials say at least 232 people died in a . . . <URL> #santamaria ,Related and informative,Sun Jan 27 23:30:21 +0000 2013,train
+467,295676747486224385,"<USR> jessie , brazil nightclub fire kills 232 in santa maria . pray for the dead . :'( ",Related and informative,Sun Jan 27 23:36:44 +0000 2013,train
+468,295677200466849792,"if you didn ' t know , a nightclub caught fire in brazil and 235 people lost their life . my heart is with brazil . ",Related and informative,Sun Jan 27 23:38:32 +0000 2013,train
+469,295679008190898176,noticia triste e lamentável . chocado com o número de pessoas q foram atingidas nesse acidente em #santamaria . que deus c . . . ,Related - but not informative,Sun Jan 27 23:45:43 +0000 2013,train
+955,298609207693959169,"aí , tou sabendo que uma jovem que desistiu de ir à boate kiss no dia do acidente morreu em acidente no estado do paraná . #quantoazar ): ",Related - but not informative,Tue Feb 05 01:49:17 +0000 2013,test
+956,298609664877264896,"caralho , q merda ! ! aluna que escapou do incêndio na boate kiss graças ao namorado , morre em acidente de carro - http : . . . ",Related and informative,Tue Feb 05 01:51:06 +0000 2013,test
+957,298749196771676160,"nova perícia na boate kiss , em santa maria , vai remover escombros : perícia vai procurar parte de ignição que deu . . . <URL> ",Related and informative,Tue Feb 05 11:05:33 +0000 2013,test
+958,298750207607336960,secretário de segurança do rs diz que boate kiss não poderia funcionar <URL> #brasil via <USR> ,Related and informative,Tue Feb 05 11:09:34 +0000 2013,test
+959,298757879006113792,garota que desistiu de ir à boate kiss morre em acidente no pr . <URL> ,Related and informative,Tue Feb 05 11:40:03 +0000 2013,test
+960,298800199525097473,"dono da boate kiss deve receber alta nesta terça - feira : o diaapós saída de hospital , kiko . . . <URL> #ultimosegundo . ig . co ",Related and informative,Tue Feb 05 14:28:13 +0000 2013,test
+961,298810211341307906,jovem que desistiu de ir a festa na boate kiss morre em acidente de carro : <URL> ,Related and informative,Tue Feb 05 15:08:00 +0000 2013,test
+962,298812195213545472,"to vendo um episódio de csi q é baseado no acidente da boate kiss , ou pelo menos a história é mega parecida kkkk ",Related - but not informative,Tue Feb 05 15:15:53 +0000 2013,test
+963,298820642554396672,"covering the santa maria #brazil fire , i saw the best of humanity and the absolute worst of the media . my folha blog : <URL> ",Related and informative,Tue Feb 05 15:49:27 +0000 2013,test
+964,298820982284627968,jovem que desistiu de ir a festa na boate kiss morre em acidente de carro : <URL> ,Related and informative,Tue Feb 05 15:50:48 +0000 2013,test
+965,298822852944216064,garota que desistiu de ir à boate kiss morre em acidente no pr | o comico <URL> ,Related and informative,Tue Feb 05 15:58:14 +0000 2013,test
+966,298890049880207361,jovem internado morre e chega a 238 número de mortos no incêndio da boate kiss : <URL> ,Related and informative,Tue Feb 05 20:25:15 +0000 2013,test
+967,298916113289474049,garota que desistiu de ir à boate kiss morre em acidente de carro : <URL> ,Related and informative,Tue Feb 05 22:08:49 +0000 2013,test
+968,298916956369743872,"rs : sócio da boate kiss recebe alta e é encaminhado a delegacia : o empresário elissandro spohr , o kiko , um dos s . . . <URL> ",Related and informative,Tue Feb 05 22:12:10 +0000 2013,test
+969,298921742062194688,rs : sócio da boate kiss recebe alta e é encaminhado a delegacia <URL> #santamaria ,Related and informative,Tue Feb 05 22:31:11 +0000 2013,test
+934,298224023769346052,sério que vcs ainda piadinha boate kiss ,Related - but not informative,Mon Feb 04 00:18:42 +0000 2013,test
+935,298232680829575168,um verdadeiro heroi ! morreu pra tentar salvar a vida de pessoas que ele talvez nem conhecia ! #santamaria ,Related - but not informative,Mon Feb 04 00:53:06 +0000 2013,test
+936,298233335124197376,"odeio ver as matérias da boate kiss , é muita tristeza . . . ",Related - but not informative,Mon Feb 04 00:55:42 +0000 2013,test
+937,298233385455857664,a <USR> vai ficar até quando explorando essa tragédia da boate kiss ? porra ! fantastico recriou um espaço do mesmo tam . . . ,Related - but not informative,Mon Feb 04 00:55:54 +0000 2013,test
+938,298233460974301184,como não chorar ? tô arrasada #santamaria #fantástico ,Related - but not informative,Mon Feb 04 00:56:12 +0000 2013,test
+939,298233679065522176,que era pra sempre . . . sempre se acaba <USR> #fantástico #santamaria ,Related - but not informative,Mon Feb 04 00:57:04 +0000 2013,test
+940,298234173980815361,"impressionante , a globo fez uma réplica real da boate kiss . poder ! #fantastico ",Related - but not informative,Mon Feb 04 00:59:02 +0000 2013,test
+941,298234455011782656,"na hora lembrei do negócio da boate kiss lá e tals , senti um pouco do que aconteceu . da vergonha de viver num país desse . ",Related - but not informative,Mon Feb 04 01:00:09 +0000 2013,test
+942,298235025428725760,"as vítimas da boate kiss deve ta vendo pânico lá no céu , de tão ruim que o fantástico ta ",Related - but not informative,Mon Feb 04 01:02:25 +0000 2013,test
+943,298247117632311297,to contando pra rafaela o que aconteceu na boate kiss pq ela nao ficou sabendo ,Related - but not informative,Mon Feb 04 01:50:28 +0000 2013,test
+944,298247935517417473,santa maria : cai número de pacientes internados após incêndio na boate kiss <URL> ,Related and informative,Mon Feb 04 01:53:43 +0000 2013,test
+945,298252536652111873,globo simplesmente humilhando as emissoras brasileiras com essa réplica real da boate kiss . #fantastico ,Related - but not informative,Mon Feb 04 02:12:00 +0000 2013,test
+946,298258916205273089,<USR> cruz alta tem caminhada para lembrar vítimas da boate kiss <URL> #bbb13 #tvonline #tv ,Related and informative,Mon Feb 04 02:37:21 +0000 2013,test
+947,298276792303751168,"<USR> esta falando de malafaia e de boate kiss , alguém ouviu falar do novo presidente do senado <URL> ",Related - but not informative,Mon Feb 04 03:48:23 +0000 2013,test
+948,298291409486749697,fantástico faz reprodução do ambiente da boate kiss <URL> ,Related and informative,Mon Feb 04 04:46:28 +0000 2013,test
+949,298356668666875904,fiscais de santa maria devem depor contra prefeito no caso da boate kiss <URL> ,Related and informative,Mon Feb 04 09:05:47 +0000 2013,test
+950,298468190999175168,especialistas definem plano de prevenção contra incêndio da boate kiss como <URL> ,Related and informative,Mon Feb 04 16:28:56 +0000 2013,test
+951,298487161831948288,pq que o silas malafaia não estava na boate kiss hein ? ? ? ,Related - but not informative,Mon Feb 04 17:44:19 +0000 2013,test
+952,298488705344217088,"kkkkkk , , , , , mineirao , , , , , , boate kiss ",Not related,Mon Feb 04 17:50:27 +0000 2013,test
+953,298489208660688896,espuma usada na boate kiss foi comprada em loja de colchões <URL> ,Related and informative,Mon Feb 04 17:52:27 +0000 2013,test
+954,298581382693781504,"ministério engel , participa de vigília em frente a boate kiss <URL> … #noticia #gospel rt <USR> . . . ",Related and informative,Mon Feb 04 23:58:43 +0000 2013,test
+984,299782346138341379,"after nightclub fire that killed 238 , worries are raised about safety during brazil ' s carnival : <URL> - ras ",Related and informative,Fri Feb 08 07:30:55 +0000 2013,test
+985,299939410223435777,três feridos no incêndio da boate kiss deixam ventilação mecânica e internados agora baixam a 64 - <URL> ,Related and informative,Fri Feb 08 17:55:02 +0000 2013,test
+757,296047880450473984,olhem os ultimos tweets da menina que morreu na boate kiss . https://t.co/qojdxoeb . nossaaa . . ='( ,Related - but not informative,Tue Jan 29 00:11:29 +0000 2013,test
+758,296048425730977794,brazil nightclub fire : four arrested in connection with deadly blaze <URL> ,Related and informative,Tue Jan 29 00:13:39 +0000 2013,test
+759,296048610267779072,#santamaria perdeu tanto gauchinhus e gauchinhas o dó ,Related - but not informative,Tue Jan 29 00:14:23 +0000 2013,test
+760,296051651146571777,olhem os ultimos tweets da menina que morreu na boate kiss . https://t.co/qojdxoeb . nossaaa . . ='( ,Related - but not informative,Tue Jan 29 00:26:28 +0000 2013,test
+761,296052083134717953,muita luz para as vítimas e os familiares das vítimas da tragédia ! muito triste ! #santamaria ,Related - but not informative,Tue Jan 29 00:28:11 +0000 2013,test
+762,296053010105245697,<USR> vamos pra boate kiss ,Not related,Tue Jan 29 00:31:52 +0000 2013,test
+763,296059960062779393,envio minhas orações para as vítimas do incêndio no clube em #santamaria . o meu coração está com vocês #brasil . ❤ #prayforsa . . . ,Related - but not informative,Tue Jan 29 00:59:29 +0000 2013,test
+764,296060467577769984,ainda não me conformo ! ! #santamaria ,Related - but not informative,Tue Jan 29 01:01:30 +0000 2013,test
+765,296061298045775872,a boate kiss vira mistério começou a sumir as provas do crime ,Related - but not informative,Tue Jan 29 01:04:48 +0000 2013,test
+766,296064104030937088,"véi , geral ja falou de #santamaria menos eu ! ",Related - but not informative,Tue Jan 29 01:15:57 +0000 2013,test
+767,296067153264791552,r . i . p to all those people #ithurts #prayerstobrazil #prayforbrazil #prayforsantamaria #prayerstobrasil <URL> . . . ,Related - but not informative,Tue Jan 29 01:28:04 +0000 2013,test
+768,296069078488055808,"donos da boate kiss devem responder por risco de morte , com pena de até 12 anos , indica promotoria : <URL> ",Related and informative,Tue Jan 29 01:35:43 +0000 2013,test
+769,296069225259352064,"donos da boate kiss devem responder por risco de morte , com pena de até 12 anos , indica promotoria : <URL> ",Related and informative,Tue Jan 29 01:36:18 +0000 2013,test
+770,296073297920155648,all my support and strength to the affected of the fire in #brazil . this kind of situation should not happen again ! ,Related - but not informative,Tue Jan 29 01:52:29 +0000 2013,test
+771,296078507283472385,from joy to tragedy : inside the brazil nightclub where 233 died <URL> via <USR> ,Related and informative,Tue Jan 29 02:13:11 +0000 2013,test
+772,296081309065949184,"report : brazil blaze club owner , band members , held - a nightclub owner and two members of a band have been arrested . . . <URL> ",Related and informative,Tue Jan 29 02:24:19 +0000 2013,test
+773,296085411070099456,"no alarm , only 1 exit in brazil nightclub fire : no alarm , only 1 exit in brazil nightclub fire ",Related and informative,Tue Jan 29 02:40:37 +0000 2013,test
+774,296089571857403904,"pô ! fico super comovida com o caso #santamaria , porém as notícias toda hora , já está ficando chato :/ ",Related - but not informative,Tue Jan 29 02:57:09 +0000 2013,test
+775,296091719303323649,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Tue Jan 29 03:05:41 +0000 2013,test
+776,296091853558804481,envio minhas orações para as vítimas do incêndio no clube em #santamaria . o meu coração está com vocês #brasil . ❤ #prayforsa . . . ,Related - but not informative,Tue Jan 29 03:06:13 +0000 2013,test
+777,296092721775521792,three held over deadly brazil nightclub fire <URL> via <USR> ,Related and informative,Tue Jan 29 03:09:40 +0000 2013,test
+778,296092864373460992,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Tue Jan 29 03:10:14 +0000 2013,test
+779,296093313176584192,envio minhas orações para as vítimas do incêndio no clube em #santamaria . o meu coração está com vocês #brasil . ❤ #prayforsa . . . ,Related - but not informative,Tue Jan 29 03:12:01 +0000 2013,test
+780,296094026187292672,"in brazil nightclub fire , a frantic struggle to survive : santa maria , brazil — the band was revving up , and luciene louzeiro was righ . . . ",Related and informative,Tue Jan 29 03:14:51 +0000 2013,test
+781,296097255805562881,brazil nightclub fire – in pictures <URL> ,Related and informative,Tue Jan 29 03:27:41 +0000 2013,test
+782,296097482285387776,"pessoal , amanhã no calçadão de alegrete , as 17 horas haverá uma caminhada em solidariedade aos jovens mortos no incêndio na boate kiss ",Related and informative,Tue Jan 29 03:28:35 +0000 2013,test
+783,296100296671780864,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Tue Jan 29 03:39:46 +0000 2013,test
+784,296108198753091585,deus amostra só não ver quem não quer . boate kiss <URL> ,Related - but not informative,Tue Jan 29 04:11:10 +0000 2013,test
+785,296109054361747456,<USR> : tonight on <USR> : what caused #brazil nightclub fire ? <USR> & amp ;@ mattgutmanabc weigh in <URL> ,Related and informative,Tue Jan 29 04:14:34 +0000 2013,test
+786,296112825078796289,( via eslerifore ) luto pelos mortos da boate kiss <URL> ,Related - but not informative,Tue Jan 29 04:29:33 +0000 2013,test
+787,296115698151866369,"também perdi conhecidos , na tragédia de #santamaria . . ",Related - but not informative,Tue Jan 29 04:40:58 +0000 2013,test
+788,296160820465922048,“ <USR> : boate kiss desrespeitou normas básicas de segurança <URL> ,Related and informative,Tue Jan 29 07:40:16 +0000 2013,test
+789,296168248599252992,brazil police reportedly question 4 in nightclub fire <URL> ,Related and informative,Tue Jan 29 08:09:47 +0000 2013,test
+790,296209134662070272,tragédia em santa maria : sócios da boate kiss têm ficha na polícia por agressão e estelionato : <URL> ,Related and informative,Tue Jan 29 10:52:15 +0000 2013,test
+791,296213660328656896,"após boatos de die young ter sido a última música a tocar na boate kiss , estou automaticamente a apagando da minha playlist . medo . ",Related - but not informative,Tue Jan 29 11:10:14 +0000 2013,test
+792,296213760975175680,e a legitimidade ? ? ? rt <USR> : defensoria pública pede bloqueio de bens dos donos da boate kiss no rs http :// . . . ,Related and informative,Tue Jan 29 11:10:38 +0000 2013,test
+793,296216353067646978,sócios da boate kiss têm ficha na polícia por agressão e estelionato . <URL> ,Related and informative,Tue Jan 29 11:20:56 +0000 2013,test
+794,296216403386703872,"<USR> really sad about the tragedy :( , may they rest in peace #santamaria ",Related - but not informative,Tue Jan 29 11:21:08 +0000 2013,test
+795,296235579765571585,"ontem , ao acordarmos , fomos pegos de surpresa com a notícia do incêndio na boate kiss . uma tragédia imensa que deixou t . . . ",Related - but not informative,Tue Jan 29 12:37:20 +0000 2013,test
+796,296235646866046976,"245 mortos , 245 futuros destruídos , 245 famílias com o coração partido e 245 sonhos sem se tornarem realidade . #santamaria ",Related and informative,Tue Jan 29 12:37:36 +0000 2013,test
+797,296237882409095168,#santamaria o problema do br é a corrupção . todo mundo faz o q quer pq dá a cervejinha e fica por isso mesmo . br é o país d . . . ,Related - but not informative,Tue Jan 29 12:46:29 +0000 2013,test
+798,296242038981152768,tragédia em #santamaria está entre os cinco piores incêndios do século . veja lista <URL> #r7 ,Related and informative,Tue Jan 29 13:03:00 +0000 2013,test
+799,296243033039577089,sócios da boate kiss já tinham ficha na polícia - <URL> <URL> ,Related and informative,Tue Jan 29 13:06:57 +0000 2013,test
+800,296251119632535552,bbc news - brazil nightclub fire : four arrested in santa maria <URL> ,Related and informative,Tue Jan 29 13:39:05 +0000 2013,test
+801,296253552349810688,sócios da boate kiss tem ficha na polícia por agressão e estelionato <URL> ,Related and informative,Tue Jan 29 13:48:45 +0000 2013,test
+802,296257910235860994,boate kiss havia sido condenada por cárcere privado . é acusada de reter cliente que perdeu comanda . sentença de 201 . . . ,Related and informative,Tue Jan 29 14:06:04 +0000 2013,test
+803,296259063656902656,justiça bloqueia bens dos donos da boate kiss <URL> ,Related and informative,Tue Jan 29 14:10:39 +0000 2013,test
+804,296259072066469889,justiça bloqueia bens dos donos da boate kiss <URL> ,Related and informative,Tue Jan 29 14:10:41 +0000 2013,test
+805,296260347101339648,brazil : police arrest nightclub owner after fire <URL> ,Related and informative,Tue Jan 29 14:15:45 +0000 2013,test
+806,296261731225845760,a vida é uma estrada sinuosa e turbulenta – curva após curva leia a postagem completa sobre sofrimento e #santamaria : <URL> ,Related - but not informative,Tue Jan 29 14:21:15 +0000 2013,test
+807,296266835710599169,lady gaga ’ s earnest prayers for fan killed in brazil nightclub fire <URL> ,Related - but not informative,Tue Jan 29 14:41:32 +0000 2013,test
+808,296268060426371072,banda que fazia show na boate kiss diz que incêndio começou com pane elétrica <URL> via <USR> ,Related and informative,Tue Jan 29 14:46:24 +0000 2013,test
+809,296268727333318657,brazil : police arrest nightclub owner after fire <URL> ,Related and informative,Tue Jan 29 14:49:03 +0000 2013,test
+810,296269050311499776,linda a homenagem que o luan santana fez para sua fã morta na boate kiss . luan um menino jovem de muito futuro pois t . . . ,Related - but not informative,Tue Jan 29 14:50:20 +0000 2013,test
+811,296269507498999810,"after deadly brazil nightclub fire , safety questions emerge . <URL> ",Related and informative,Tue Jan 29 14:52:09 +0000 2013,test
+812,296273592746926080,"naty já esteve na boate kiss , nessa matéria aparece até um dos sócios . muito triste ! que deus dê força as famílias #bbb13 <URL> ",Related - but not informative,Tue Jan 29 15:08:23 +0000 2013,test
+813,296286553112723456,", um filme no mínimo vai sair dessa trajedia em . . #santamaria #ufsm ",Related - but not informative,Tue Jan 29 15:59:53 +0000 2013,test
+814,296289736602030082,#santamaria mais 3 mortes . falta saber se são vítimas do incêndio na boate ,Related and informative,Tue Jan 29 16:12:32 +0000 2013,test
+815,296289845670711296,muito triste essa tragedia de #santamaria . com perda de 236 vidas preciosas . a população e principalmente a família brandam por justiça ! ! ! ,Related - but not informative,Tue Jan 29 16:12:58 +0000 2013,test
+816,296290541933559810,o oportunismo em cima da tragédia na boate kiss está demais . ,Related - but not informative,Tue Jan 29 16:15:44 +0000 2013,test
+817,296317540660047872,"sócio da boate kiss está sedado e isolado em cela especial , diz advogado <URL> ",Related and informative,Tue Jan 29 18:03:01 +0000 2013,test
+818,296319058989694976,<USR> : ta aí o dinheiro boate kiss . . . será que agora vocês podem devolver nossos jovens ? página 29 de 365 ,Related - but not informative,Tue Jan 29 18:09:03 +0000 2013,test
+819,296326889738481664,"death toll in #brazil nightclub fire hits 234 , official says . <URL> ",Related and informative,Tue Jan 29 18:40:10 +0000 2013,test
+820,296338155643219968,pope : dismay and prayers for victims of brazil nightclub blaze <URL> ,Related - but not informative,Tue Jan 29 19:24:56 +0000 2013,test
+821,296340064059924480,justiça bloqueia bens de donos da boate kiss - bbc brasil - notícias <URL> - - - <USR> ! ! ,Related and informative,Tue Jan 29 19:32:31 +0000 2013,test
+822,296347504759406592,"brazil nightclub fire : souls rose to heaven symbolically monday night , when marchers in this southern brazilian . . . <URL> ",Related - but not informative,Tue Jan 29 20:02:05 +0000 2013,test
+823,296348557538115585,"cara , meus sinceros sentimentos pra quem perdeu alguém por causa daquele incendio na boate kiss ",Related - but not informative,Tue Jan 29 20:06:16 +0000 2013,test
+824,296351892013998080,que bonito ! :/ rt <USR> boate kiss foi condenada em 2012 por impedir cliente de sair sem pagar comanda <URL> ,Related and informative,Tue Jan 29 20:19:31 +0000 2013,test
+825,296353515213840384,lei de santa maria proibia revestimento acústico com material tóxico na boate kiss <URL> #uol ,Related and informative,Tue Jan 29 20:25:58 +0000 2013,test
+826,296360876200562690,#snn police say lit flare sparked devastating brazil nightclub fire : the lead police invest . . . <URL> #news #gcc #arab #us ,Related and informative,Tue Jan 29 20:55:13 +0000 2013,test
+827,296365603160219648,me arrepiei agora com o enterro do são paulino que morreu na boate kiss . . . ,Related - but not informative,Tue Jan 29 21:14:00 +0000 2013,test
+828,296369004778487808,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Tue Jan 29 21:27:31 +0000 2013,test
+829,296369982021959680,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Tue Jan 29 21:31:24 +0000 2013,test
+830,296373702398976000,<USR> great piece on the brazil nightclub fire . just saw it on abc . ,Related - but not informative,Tue Jan 29 21:46:11 +0000 2013,test
+831,296392065032523778,#santamaria triste domingo né :( ,Related - but not informative,Tue Jan 29 22:59:09 +0000 2013,test
+915,297867751211556864,dá angústia profunda esse vídeo . sem palavras . tragédia em santa maria boate kiss <URL> ,Related - but not informative,Sun Feb 03 00:43:00 +0000 2013,test
+916,297878073406283776,bombeiros reconhecem possível erro em concessão de alvará para boate kiss . <URL> ,Related and informative,Sun Feb 03 01:24:01 +0000 2013,test
+917,297881160409829376,na boate kiss ocorreu na noite do último domingo ( 27 ) . bruno portella fr . . . <URL> #garraseguros ,Related and informative,Sun Feb 03 01:36:17 +0000 2013,test
+918,297891012804747265,"megan fox : luan , kiss - me ! luan : ahh aaa kiss ? a boate pegou fogo , ficou sabendo não é ? kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk ri alto ! ",Related - but not informative,Sun Feb 03 02:15:26 +0000 2013,test
+919,297893432918159360,"centenas de pessoas fazem vigília silenciosa em frente à boate kiss : a maioria , vestidas de branco , contempla co . . . <URL> ",Related and informative,Sun Feb 03 02:25:03 +0000 2013,test
+920,297915440456409088,"santa maria tem vigília por mortos em incêndio na boate kiss : pelo menos 700 pessoas se reuniram , na noite deste . . . <URL> ",Related and informative,Sun Feb 03 03:52:30 +0000 2013,test
+921,297918418387091456,vigília em frente à boate kiss . queria estar lá dando uma força :/ mas hj vou ir na passeata daqui de poa . ,Related - but not informative,Sun Feb 03 04:04:20 +0000 2013,test
+922,297926060446736384,"exatamente a 7 dias atrás , mais ou menos neste horário , começava o inferno na boate kiss . . . que descansem em paz todos os que partiram ! ",Related - but not informative,Sun Feb 03 04:34:42 +0000 2013,test
+923,297931554959802368,"musica favorita ? ? ? — <URL> a ultima musica que tocou na boate kiss , nem e . . . <URL> ",Related - but not informative,Sun Feb 03 04:56:32 +0000 2013,test
+924,297939427660009472,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Sun Feb 03 05:27:49 +0000 2013,test
+925,298070818456477696,bocão news - geral - sobe para 237 número de mortos por incêndio em boate kiss - 03/02/2013 <URL> via <USR> ,Related and informative,Sun Feb 03 14:09:55 +0000 2013,test
+926,298109397660475393,death toll in brazil nightclub fire rises to 237 : state health officials say a 22 - year - old man injured in last w . . . <URL> ,Related and informative,Sun Feb 03 16:43:13 +0000 2013,test
+927,298119212340228096,softwares podem ajudar a evitar tragédias como a da boate kiss : programas de computador em estud . . . <URL> - carta capital ,Related and informative,Sun Feb 03 17:22:13 +0000 2013,test
+928,298140007695253504,us donates medicine for survivors of nightclub fire in brazil <URL> ,Related and informative,Sun Feb 03 18:44:51 +0000 2013,test
+929,298159578300940288,vou dar um ingresso pra boate kiss pra essa bandeirinha ,Not related,Sun Feb 03 20:02:37 +0000 2013,test
+930,298163411903188994,me desculpa por te feito piadinhas sobre a boate kiss ? ok eu desculpo (: aeee vamos ir comemorar em um churrasco la em santa maria ? *-* ,Related - but not informative,Sun Feb 03 20:17:51 +0000 2013,test
+931,298170881954430976,"santa maria : cinco vozes de uma tragédia : uma semana após o incêndio na boate kiss , em santa maria , no rio grand . . . <URL> ",Related and informative,Sun Feb 03 20:47:32 +0000 2013,test
+932,298177425077043200,boate kiss - 1 minuto antes da tragédia - cenas inéditas em celular de uma das sobreviventes - aqui fotos de vítimas . . . <URL> ,Related - but not informative,Sun Feb 03 21:13:32 +0000 2013,test
+933,298198144943013888,- uma semana hoje da #tragédia de #santamaria :/ ,Related - but not informative,Sun Feb 03 22:35:52 +0000 2013,test
+883,297146943296122881,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Fri Feb 01 00:58:46 +0000 2013,test
+884,297147727614193664,"union bank of ca in #santamaria , #ca - <URL> ",Not applicable,Fri Feb 01 01:01:53 +0000 2013,test
+885,297165888946331648,"acaba de falecer matheus raschen , mais uma vitima da boate kiss . vá em paz meu caro . . . <USR> <USR> ",Related and informative,Fri Feb 01 02:14:03 +0000 2013,test
+886,297180665508659201,envio minhas orações para as vítimas do incêndio no clube em #santamaria . o meu coração está com vocês #brasil . ❤ #prayforsa . . . ,Related - but not informative,Fri Feb 01 03:12:46 +0000 2013,test
+887,297181080748957696,abri a armário e ? ? ? sim um babaca do facebook falando da boate kiss ,Not related,Fri Feb 01 03:14:25 +0000 2013,test
+888,297209442632617984,que horas são ? a mesma de ontem ai nossa amg q engra vc toma aqui um ingresso pra curtir a night na boate kiss ,Related - but not informative,Fri Feb 01 05:07:07 +0000 2013,test
+889,297236051272024064,absurdo ! ! ! empresa de bombeiro executou obra do plano de segurança da boate kiss <URL> … p / isso não fizeram vistoria na data ? ,Related and informative,Fri Feb 01 06:52:51 +0000 2013,test
+890,297257895215640576,"santa maria : incêndio na boate kiss faz mais uma vítima ; total de mortos já é de 236 : morreu , na noite desta qui . . . <URL> ",Related and informative,Fri Feb 01 08:19:39 +0000 2013,test
+891,297306582679703553,"galera agora que ja abafou o caso , peço perdão por ter tocado fogo na boate kiss ",Related - but not informative,Fri Feb 01 11:33:07 +0000 2013,test
+892,297307652256583681,softwares podem ajudar a evitar tragédias como a da boate kiss : programas de computador em estudo em universidad . . . <URL> ,Not related,Fri Feb 01 11:37:22 +0000 2013,test
+893,297335213007204352,excelente palavra sobre #santamaria : https://t.co/opstpx7p ,Related - but not informative,Fri Feb 01 13:26:53 +0000 2013,test
+894,297338543284559873,destaque de hoje do boletim da <USR> : veja fotos da tragédia na boate kiss em santa maria . deprimente . tenho . . . ,Related and informative,Fri Feb 01 13:40:07 +0000 2013,test
+895,297348781601615872,"marcello reis , <USR> e <USR> serão processados pelo <USR> por calúnia <URL> #santamaria ",Related and informative,Fri Feb 01 14:20:48 +0000 2013,test
+896,297351017161449472,justiça concede prorrogação de prisões temporárias de donos da boate kiss e integrantes de banda . <URL> ,Related and informative,Fri Feb 01 14:29:41 +0000 2013,test
+897,297359447716683778,"marcello reis , <USR> e <USR> serão processados pelo <USR> por calúnia <URL> #santamaria ",Not related,Fri Feb 01 15:03:11 +0000 2013,test
+898,297369547579740164,advogado de sócio da boate kiss afirma que compra de espuma foi indicada por engenheiro <URL> ,Related and informative,Fri Feb 01 15:43:19 +0000 2013,test
+899,297389390840340480,a tragédia em #santamaria deixou todo mundo em estado de alerta : metade dos eventos o gov do #rio cancelou e metade cancel . . . ,Related and informative,Fri Feb 01 17:02:10 +0000 2013,test
+900,297392620437643264,funcionário da boate kiss acompanhou o trabalho da perícia : técnicos fazem nova perícia na boate kiss em santa maria <URL> ,Related and informative,Fri Feb 01 17:15:00 +0000 2013,test
+901,297393065063235585,"sessenta e quatro pessoas continuam internadas em estado grave , depois do incêndio na boate kiss , na cidade gaúcha . . . ",Related and informative,Fri Feb 01 17:16:46 +0000 2013,test
+902,297403332719431680,<USR> <USR> you mean even more trouble ! ! ! ! fingers are being pointed at luis for the nightclub fire in brazil last week ,Related - but not informative,Fri Feb 01 17:57:34 +0000 2013,test
+903,297424170017505280,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Fri Feb 01 19:20:22 +0000 2013,test
+904,297431279337623553,prisão de sócios da boate kiss e músicos é prorrogada por 30 dias : prorrogação foi concedida pelo juiz plantonis . . . <URL> ,Related and informative,Fri Feb 01 19:48:37 +0000 2013,test
+905,297447830065393666,"muito triste pelo acontecido na boate kiss , que deus conforte os familiares . ",Related - but not informative,Fri Feb 01 20:54:23 +0000 2013,test
+906,297449553945313280,por que a boate pegou fogo ? porque ela kiss kiss kiss kiss ,Related - but not informative,Fri Feb 01 21:01:14 +0000 2013,test
+907,297457678286999552,a bicha velha do <USR> tem um caso amoroso com o eduardo paes e será processada pelo <USR> #calúnia #santamaria ,Not related,Fri Feb 01 21:33:31 +0000 2013,test
+908,297476959536041984,tragédia na boate kiss aqui no rs 236 mortos . fiquem em paz ! ,Related and informative,Fri Feb 01 22:50:08 +0000 2013,test
+978,299324634308956160,vigília e ato profético em santa maria ( rs ) - boate kiss <URL> conto c / vc ! rt ,Related - but not informative,Thu Feb 07 01:12:08 +0000 2013,test
+979,299369521762942976,"policia federal , vai rastrear piadas com a boate kiss radical cara , com isso não pode brincar , mais zoar a nardoni , o . . . ",Related - but not informative,Thu Feb 07 04:10:30 +0000 2013,test
+980,299428976026337280,"seguro obrigatório : passada a tragédia da boate kiss , em santa maria , no rio grande do sul , as famílias das mai . . . <URL> ",Related - but not informative,Thu Feb 07 08:06:45 +0000 2013,test
+981,299587088708415488,encontro no sábado ( 9 ) em santa maria discutirá criação de associação de familiares de vítimas do incêndio na boate kiss . ,Related and informative,Thu Feb 07 18:35:02 +0000 2013,test
+982,299588875460964352,"os caras se prestam , haha #santamaria #ufsm <URL> ",Related - but not informative,Thu Feb 07 18:42:08 +0000 2013,test
+983,299622094352818176,"after the january nightclub fire in brazil , the american concert industry remains divided on safety regulations : http : . . . ",Related and informative,Thu Feb 07 20:54:08 +0000 2013,test
+832,296412797485592578,"tristeza e folia não combinam : desde a tragédia na boate kiss , que matou mais de 230 pessoas em santa maria , no . . . http :/ . . . ",Related and informative,Wed Jan 30 00:21:32 +0000 2013,test
+833,296419760047009793,my heart and prayers go out to santa maria #brazil #santamaria ,Related - but not informative,Wed Jan 30 00:49:12 +0000 2013,test
+834,296429897683959808,eu nao te odeio ate te pagaria uma entrada na boate kiss ,Related - but not informative,Wed Jan 30 01:29:29 +0000 2013,test
+835,296431642497667076,brazil nightclub tragedy | <URL> <URL> ,Related - but not informative,Wed Jan 30 01:36:25 +0000 2013,test
+836,296432447820816384,envio minhas orações para as vítimas do incêndio no clube em #santamaria . o meu coração está com vocês #brasil . ❤ #prayforsa . . . ,Related - but not informative,Wed Jan 30 01:39:37 +0000 2013,test
+837,296433748017311744,<USR> mando bem . tem coisa que nao se brinca . adimirei o respeito por #santamaria ,Related - but not informative,Wed Jan 30 01:44:47 +0000 2013,test
+838,296437837480488960,envio minhas orações para as vítimas do incêndio no clube em #santamaria . o meu coração está com vocês #brasil . ❤ #prayforsa . . . ,Related - but not informative,Wed Jan 30 02:01:02 +0000 2013,test
+839,296441591403520000,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Wed Jan 30 02:15:57 +0000 2013,test
+840,296455457759956992,brincando de boate kiss com aminha escola ,Related - but not informative,Wed Jan 30 03:11:03 +0000 2013,test
+841,296460021175300099,"polícia diz que kiko spohr , dono da boate kiss , tentou se matar no quarto do hospital em cruz alta : a polícia d . . . <URL> ",Related and informative,Wed Jan 30 03:29:11 +0000 2013,test
+842,296511665627865088,"tem gente curtindo a page da boate kiss no meu facebook , removo sim ou claro ? ",Related - but not informative,Wed Jan 30 06:54:24 +0000 2013,test
+843,296520360407486464,brasil : veja fotos do interior da boate kiss após tragédia em santa maria <URL> #g1 ,Related and informative,Wed Jan 30 07:28:57 +0000 2013,test
+844,296552081928622080,brazil police blame cheap fireworks for nightclub disaster - euronews : euronewsbrazil police blame cheap firewor . . . <URL> ,Related and informative,Wed Jan 30 09:35:00 +0000 2013,test
+845,296577604255891456,#forçasantamaria #santamaria guilherme pastl e emanuel pastl ( irmãos ) precisam de doação de sangue em canoas . . . . ht . . . ,Related and informative,Wed Jan 30 11:16:25 +0000 2013,test
+846,296577759470309376,#santamaria : sobe número de pessoas internadas com sintomas de pneumonia após tragédia => <URL> ,Related and informative,Wed Jan 30 11:17:02 +0000 2013,test
+847,296600601654087682,delegado diz estar com dificuldades para renovar prisões de donos da boate kiss e de músicos <URL> #uol ,Related and informative,Wed Jan 30 12:47:48 +0000 2013,test
+848,296602812056469504,"sócio da boate kiss tentou suicídio , informa polícia . <URL> ",Related and informative,Wed Jan 30 12:56:35 +0000 2013,test
+849,296624865685929984,sócio da boate kiss que está hospitalizado apresenta quadro depressivo <URL> ,Related and informative,Wed Jan 30 14:24:13 +0000 2013,test
+850,296633774379257858,"tuitada do dia . rt <USR> menos boate kiss , mais kiss . ",Not related,Wed Jan 30 14:59:37 +0000 2013,test
+851,296646466376712192,"neglect , errors to blame in brazil nightclub fire – the age <URL> #brazil #currency ",Related and informative,Wed Jan 30 15:50:03 +0000 2013,test
+852,296651432394891265,relato de um ex - pastor que escapou da morte na boate kiss : <URL> ,Related - but not informative,Wed Jan 30 16:09:47 +0000 2013,test
+853,296659116376600576,delegado confirma tentativa de suicídio de sócio da boate kiss <URL> ,Related and informative,Wed Jan 30 16:40:19 +0000 2013,test
+854,296662027227779072,"<USR> querido peço ajuda pra q doem sangue a pedro falcao pinheiro , ferido da boate kiss estado grave , encontrac no . . . ",Related and informative,Wed Jan 30 16:51:53 +0000 2013,test
+855,296667035205767168,corpo da capitã vítima do incêndio na boate kiss é enterrado no rio <URL> ,Related and informative,Wed Jan 30 17:11:47 +0000 2013,test
+856,296672655589928961,santa maria nightclub fire postpones world cup celebrations in brazil #brazil <URL> ,Related and informative,Wed Jan 30 17:34:07 +0000 2013,test
+857,296678280164175872,casal que morreram abraçados na boate kiss ! #forçasantamaria <URL> ,Related - but not informative,Wed Jan 30 17:56:28 +0000 2013,test
+858,296690510758809600,brazil nightclub owner blames country for fire <URL> ,Related and informative,Wed Jan 30 18:45:04 +0000 2013,test
+859,296704431624441856,"um vídeo simples , uma homenagem aos mortos no incêndio da boate kiss , em santa maria . <URL> <URL> ",Related - but not informative,Wed Jan 30 19:40:23 +0000 2013,test
+860,296716469276909569,vítimas de incêndio na boate kiss são enterradas primeiros enterros ocorreram na manhã desta segunda - feira ( 28 ) . . . <URL> ,Related and informative,Wed Jan 30 20:28:13 +0000 2013,test
+861,296717484319453184,polícia leva testemunhas a boate kiss e faz reconstituição do incêndio : três pessoas voltaram ao local e relembr . . . <URL> ,Related and informative,Wed Jan 30 20:32:15 +0000 2013,test
+862,296720168669818881,boate kiss teve plano de prevenção a incêndio feito por empresa de bombeiro - geral - zero hora <URL> ,Related and informative,Wed Jan 30 20:42:55 +0000 2013,test
+863,296734852907143169,brazilian nightclub owner blames ' whole country ' for fire deaths : the owner of a nightclub in southern brazil wh . . . <URL> ,Related and informative,Wed Jan 30 21:41:16 +0000 2013,test
+864,296749222605250560,esse negócio da boate kiss já ta me irritando ,Related - but not informative,Wed Jan 30 22:38:22 +0000 2013,test
+865,296753760846368769,foi muito interessante a #presidenta ter ido até #santamaria no mesmo dia ! e porque ela não ver e combater os efeito . . . ,Related - but not informative,Wed Jan 30 22:56:24 +0000 2013,test
+866,296756952699109378,bruno gissoni descobre que amigo está entre as vítimas de #santamaria <URL> ,Related - but not informative,Wed Jan 30 23:09:05 +0000 2013,test
+986,300036655191035905,hoje é dia de boate kiss ! <URL> ,Not related,Sat Feb 09 00:21:27 +0000 2013,test
+987,300297029177978883,everybody samba ! rio de janeiro carnival kicks off - but mourners remember the victims of brazil ' s nightclub fir . . . <URL> ,Related - but not informative,Sat Feb 09 17:36:05 +0000 2013,test
+988,300351517377060864,boate kiss : 12 vítimas recebem alta nas últimas 24 horas <URL> ,Related and informative,Sat Feb 09 21:12:36 +0000 2013,test
+970,298944991076708352,"sócio da boate kiss , kiko está na penitenciária estadual de santa maria <URL> ",Related and informative,Wed Feb 06 00:03:34 +0000 2013,test
+971,298953853653635072,secretário da saúde anuncia rede de assistência a feridos na boate kiss <URL> ,Related and informative,Wed Feb 06 00:38:47 +0000 2013,test
+972,298954432480174080,secretário da saúde anuncia rede de assistência a feridos na boate kiss : todos que tiverem alta serão acompanhad . . . <URL> ,Related and informative,Wed Feb 06 00:41:05 +0000 2013,test
+973,298987521327632384,"meu deus , a menina que programou a festa na boate kiss , não foi naquela noite porque o namorado pediu para ela não ir . . ",Related - but not informative,Wed Feb 06 02:52:34 +0000 2013,test
+974,299149090095247361,polícia faz buscas na casa de músicos que tocaram na boate kiss <URL> ,Related and informative,Wed Feb 06 13:34:35 +0000 2013,test
+975,299187631558893568,"oi fofa , gostei mt de vc inclusive toma aqui um ingresso da boate kiss ",Not related,Wed Feb 06 16:07:44 +0000 2013,test
+976,299267956699963393,seis bombeiros que trabalharam na tragédia da boate kiss prestaram depoimento nesta quarta - feira <URL> ,Related and informative,Wed Feb 06 21:26:55 +0000 2013,test
+977,299293755868065792,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Wed Feb 06 23:09:26 +0000 2013,test
+989,300650747429797888,ow vcs n tava de luto esses dias pela boate kiss agora ja tao chupando a rola de desconhecidos em bloco de rua ,Related - but not informative,Sun Feb 10 17:01:38 +0000 2013,test
+990,300655923179950082,ow vcs n tava de luto esses dias pela boate kiss agora ja tao chupando a rola de desconhecidos em bloco de rua ,Related - but not informative,Sun Feb 10 17:22:12 +0000 2013,test
+991,300684444455542784,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Sun Feb 10 19:15:32 +0000 2013,test
+992,300687128805908480,sem conseguir dormir pensando neste ocorrido em #santamaria . ,Related - but not informative,Sun Feb 10 19:26:12 +0000 2013,test
+993,300728933454848000,cai para 50 o número de pacientes internados após incêndio na boate kiss <URL> ,Related and informative,Sun Feb 10 22:12:19 +0000 2013,test
+994,300897225695952896,<USR> <USR> 238 people died in a nightclub in brazil . mostly trampled to death in stampede following . . . ,Related and informative,Mon Feb 11 09:21:03 +0000 2013,test
+995,300916116841177088,morre em porto alegre a 2 3 9 ª vítima do incêndio na boate kiss <URL> ,Related and informative,Mon Feb 11 10:36:07 +0000 2013,test
+996,300926229303934977,morre em porto alegre a 2 3 9 ª vítima do incêndio na boate kiss - geral - zero hora . onde estão os administradores e gestores públicos ? eita ! ,Related and informative,Mon Feb 11 11:16:18 +0000 2013,test
+997,300931107283664896,morre a 2 3 9 ª vítima do incêndio na boate kiss . <URL> [ <USR> ] ,Related and informative,Mon Feb 11 11:35:41 +0000 2013,test
+998,300940682858737664,número de vítimas fatais em incêndio na boate kiss chega a 239 com morte de jovem que estava internado <URL> ,Related and informative,Mon Feb 11 12:13:44 +0000 2013,test
+999,301104743072272385,jovem reencontra segurança que a salvou de incêndio na boate kiss : débora assumpção e rodrigo moura voltaram à b . . . <URL> ,Related - but not informative,Mon Feb 11 23:05:39 +0000 2013,test
+867,296779425796730881,"city officials probed for negligence in brazil nightclub fire : santa maria , brazil ( reuters ) - prosecutors in so . . . <URL> ",Related and informative,Thu Jan 31 00:38:23 +0000 2013,test
+868,296782575710658560,pf vai investigar comentários ofensivos nas redes sociais sobre #santamaria - <URL> / tds identificado . . . ,Related and informative,Thu Jan 31 00:50:54 +0000 2013,test
+869,296834018849193984,brazil nightclub owner blames the whole country for fire - #news #brazil headlinepong - news home <URL> ,Related and informative,Thu Jan 31 04:15:19 +0000 2013,test
+870,296839957983657985,"aquele incêndio da boate kiss la , me lembrou o filme a garota infernal d : ",Related - but not informative,Thu Jan 31 04:38:55 +0000 2013,test
+871,296915048616558592,brazil club fire : owner blames whole country the co - owner of a brazilian nightclub where more than 230 people died in a fire is blaming ,Related and informative,Thu Jan 31 09:37:18 +0000 2013,test
+872,296949911654629376,"brasil : boate kiss vendeu 830 ingressos , mas capacidade era de 691 pessoas <URL> ",Related and informative,Thu Jan 31 11:55:50 +0000 2013,test
+873,296959638253998080,"prefeitura interdita boate em campus , mas fecha os olhos para a kiss <URL> ",Related and informative,Thu Jan 31 12:34:29 +0000 2013,test
+874,296973370413686785,boate kiss passará por nova perícia nesta quinta - feira em santa maria . . . <URL> ,Related and informative,Thu Jan 31 13:29:03 +0000 2013,test
+875,296981922603749376,justiça de santa maria ( rs ) nega pedido de liberdade a sócio da boate kiss : a justiça de santa maria ( 301 km de . . . ht . . . ,Related and informative,Thu Jan 31 14:03:02 +0000 2013,test
+876,296987329069989888,perícia faz nova vistoria na boate kiss nesta quinta - r7 : diário do litoralperícia faz nova vistoria na boate k . . . <URL> ,Related and informative,Thu Jan 31 14:24:31 +0000 2013,test
+877,296989258445619200,boate kiss passará por nova perícia nesta quinta - feira em santa maria <URL> ,Related and informative,Thu Jan 31 14:32:11 +0000 2013,test
+878,297010439672442882,"mesmo com reação do deputado paulo pimenta ( pt ) , boatos sobre boate kiss continuam nas redes sociais e em sites . ",Related - but not informative,Thu Jan 31 15:56:21 +0000 2013,test
+879,297024222151180288,rs : justiça nega pedido de liberdade a um dos sócios de boate <URL> #santamaria ,Related and informative,Thu Jan 31 16:51:07 +0000 2013,test
+880,297049576731455489,justiça nega pedido de liberdade para um dos donos da boate kiss . <URL> ,Related and informative,Thu Jan 31 18:31:52 +0000 2013,test
+881,297050365235429377,justiça nega pedido de liberdade provisória a sócio da boate kiss <URL> ,Related and informative,Thu Jan 31 18:35:00 +0000 2013,test
+882,297062633603989504,"in the wake of brazil ' s deadly nightclub fire , special effects producers for live events are facing added scrutiny : ht . . . ",Related and informative,Thu Jan 31 19:23:45 +0000 2013,test
+909,297770695033765888,pqp ! que relevância . que notícia . “ <USR> : fogo na boate kiss começou durante hit de naldo <URL> . . . ,Related and informative,Sat Feb 02 18:17:20 +0000 2013,test
+910,297774369227284481,#fotosus : #fnsus em #santamaria recebe 140 kits do medicamento hidroxicobalamina do governo norte - americano . http :/ . . . ,Related and informative,Sat Feb 02 18:31:56 +0000 2013,test
+911,297793625264373760,medicamento para tratar vítimas de gás tóxico da boate kiss chega ao brasil . <URL> ,Related and informative,Sat Feb 02 19:48:27 +0000 2013,test
+912,297820917621465088,"homem que tentou ajudar bombeiros a salvar vítimas da boate kiss recebe alta : o jovem guilherme ferreira da luz , . . . <URL> ",Related and informative,Sat Feb 02 21:36:54 +0000 2013,test
+913,297833156579581952,"megan fox : luan , kiss me ? luan : ahh , a boate kiss ? pegou fogo , tá sabendo não é ? kkkkkkkkkkkkkkkkk ",Related - but not informative,Sat Feb 02 22:25:32 +0000 2013,test
+914,297848562253979649,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Sat Feb 02 23:26:45 +0000 2013,test
+470,295683106051076096,a pior imagen de tds ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! - boate kiss <URL> ,Related - but not informative,Mon Jan 28 00:02:00 +0000 2013,test
+471,295684632739995648,"just read about the brazil nightclub fire , absolutely shocking ! ",Related - but not informative,Mon Jan 28 00:08:04 +0000 2013,test
+472,295686063022829568,"we just need to pray , because god knows everything #prayforsantamaria #prayforbrazil ",Related - but not informative,Mon Jan 28 00:13:45 +0000 2013,test
+473,295686583116500992,já são 248 os mortos em santa maria no rs #boatekiss #tragédia ,Related and informative,Mon Jan 28 00:15:49 +0000 2013,test
+474,295687208063598592,e aumenta o número de mortos e o número de tristezas por uma fatalidade ( ou ñ ) #tristeza #santamaria ,Related and informative,Mon Jan 28 00:18:18 +0000 2013,test
+475,295689699471785984,"nossa veu , essa boate kiss era 4 quadras da minha casa ! ! ",Related - but not informative,Mon Jan 28 00:28:12 +0000 2013,test
+476,295691326857564160,pedido de oração : <URL> #santamaria ,Related - but not informative,Mon Jan 28 00:34:40 +0000 2013,test
+477,295691372990697472,"a fire that broke out early this morning at a nightclub in santa maria , brazil has killed hundreds : <URL> ",Related and informative,Mon Jan 28 00:34:51 +0000 2013,test
+478,295691754684968961,"video : nightclub fire kills at least 232 people in #santamaria , brazil <URL> wud ? ! ? ! ? ! ? ! 232 ? ? ? ? ? ",Related and informative,Mon Jan 28 00:36:22 +0000 2013,test
+479,295692425756819457,#luto #santamaria :( <URL> ,Related - but not informative,Mon Jan 28 00:39:02 +0000 2013,test
+480,295694179001040897,pagina 27 de 365 dia 27 ta marcado cara ' - ' #santamaria ,Not related,Mon Jan 28 00:46:00 +0000 2013,test
+481,295696276127883264,#rebeldesaovivonor7 foi muito linda a homenagem para as vitimas de #santamaria #forçasantamaria ,Related - but not informative,Mon Jan 28 00:54:20 +0000 2013,test
+482,295697698009534464,"um dia tenso 27/01/2013 , um dia que para as pessoas que foram na boate kiss , seria um dia de diversão se tornou em tragédia . ",Related - but not informative,Mon Jan 28 00:59:59 +0000 2013,test
+483,295698088084008961,#santamaria meus sinceros sentimentos aos familiares pela perda . q deus console seus corações . #prayforsantamaria ,Related - but not informative,Mon Jan 28 01:01:32 +0000 2013,test
+484,295698515890421762,"mano , a ultima musica q tocou na boate kiss , foi die young da kesha ! ! que medo caralhoo ",Related - but not informative,Mon Jan 28 01:03:14 +0000 2013,test
+485,295699254087933953,eu não sei se vou conseguir dormir . pensando nas portas fechadas em #santamaria . que dor . as portas fechadas . foi crime . fechadas ! não . . . ,Related - but not informative,Mon Jan 28 01:06:10 +0000 2013,test
+486,295700248163139584,praying for the hundreds killed in nightclub fire in brazil . so tragic :( ,Related - but not informative,Mon Jan 28 01:10:07 +0000 2013,test
+487,295700273299603456,prestamos nossas solidariedades às vítimas de #santamaria ,Related - but not informative,Mon Jan 28 01:10:13 +0000 2013,test
+488,295700315263614976,mãe vindo da praia com o sobrinho . a cunhada tem uma prima entre os mortos da boate kiss em santa maria . que tristeza . . . ,Related - but not informative,Mon Jan 28 01:10:23 +0000 2013,test
+489,295700747276931072,"gruta azul : após o incendio na boate kiss , a boate gruta azul , de porto alegre teve um principio de incêndio mas os bombe . . . ",Related and informative,Mon Jan 28 01:12:06 +0000 2013,test
+490,295704882856472577,"imagem triste , lamentável :c #santamaria <URL> ",Related - but not informative,Mon Jan 28 01:28:32 +0000 2013,test
+491,295705537184661506,aconteceu essa tragedia em #santamaria e me lembra alguns filme tipo premonição . cada um que escapar de uma trag . . . ,Related - but not informative,Mon Jan 28 01:31:08 +0000 2013,test
+492,295705700758331392,o que você estava fazendo hoje de madrugada enquanto a boate kiss pegava fogo ? ,Related - but not informative,Mon Jan 28 01:31:47 +0000 2013,test
+493,295706522829332480,"' ' se é triste ver uma mãe chorar , imagine 245 . ' ' #santamaria #forçasantamaria ",Related - but not informative,Mon Jan 28 01:35:03 +0000 2013,test
+494,295706560594849794,<URL> #santamaria ,Not applicable,Mon Jan 28 01:35:12 +0000 2013,test
+495,295708309623803904,que tal ganhar muitos seguidores reais ? só hoje 28 / 01 #addseguidores <URL> #santamaria ,Not related,Mon Jan 28 01:42:09 +0000 2013,test
+496,295709341414199297,e foi à boate kiss na noite de ontem . e morreu no incêndio . a mãe disse que a última lembrança era a filha dizendo t . . . ,Related - but not informative,Mon Jan 28 01:46:15 +0000 2013,test
+497,295709446259224576,e foi à boate kiss na noite de ontem . e morreu no incêndio . a mãe disse que a última lembrança era a filha dizendo t . . . ,Related and informative,Mon Jan 28 01:46:40 +0000 2013,test
+498,295709819564879872,"yung nangyaring sunog sa nightclub sa brazil , parang yung nangyari sa ozone sa tomas morato . :( ",Not applicable,Mon Jan 28 01:48:09 +0000 2013,test
+499,295710964614057985,e foi à boate kiss na noite de ontem . e morreu no incêndio . a mãe disse que a última lembrança era a filha dizendo t . . . ,Related - but not informative,Mon Jan 28 01:52:42 +0000 2013,test
+500,295711191110651905,gostei de um vídeo <USR> <URL> às vítimas do incêndio na boate kiss ,Related - but not informative,Mon Jan 28 01:53:36 +0000 2013,test
+501,295712550048378880,estou perplexo e abalado com o incêndio na boate kiss . meus sentimentos aos familiares . estou muito triste . ,Related - but not informative,Mon Jan 28 01:59:00 +0000 2013,test
+502,295713292427595777,brazil nightclub fire kills 233 <URL> ,Related and informative,Mon Jan 28 02:01:57 +0000 2013,test
+503,295714689160204288,maan só eu q to achando q o incêndio la na boate kiss nao foi acidente e sim proposital ? cara ta aparecendo várias coisas q dá p suspeitar ,Related - but not informative,Mon Jan 28 02:07:30 +0000 2013,test
+504,295715775468150784,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:11:49 +0000 2013,test
+505,295715855138959360,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:12:08 +0000 2013,test
+506,295715871920377856,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:12:12 +0000 2013,test
+507,295715905474813952,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:12:20 +0000 2013,test
+508,295715926442127361,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:12:25 +0000 2013,test
+509,295715934868475905,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:12:27 +0000 2013,test
+510,295715972579487745,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:12:36 +0000 2013,test
+511,295715997783040001,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:12:42 +0000 2013,test
+512,295716211659010049,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:13:33 +0000 2013,test
+513,295716253627203584,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:13:43 +0000 2013,test
+514,295716295574421505,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:13:53 +0000 2013,test
+515,295716303958859777,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:13:55 +0000 2013,test
+516,295716400423632896,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:14:18 +0000 2013,test
+517,295716488508211200,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:14:39 +0000 2013,test
+518,295716698223411200,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:15:29 +0000 2013,test
+519,295717172188164096,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:17:22 +0000 2013,test
+520,295717188952813568,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:17:26 +0000 2013,test
+521,295717201548296193,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:17:29 +0000 2013,test
+522,295717268627804161,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:17:45 +0000 2013,test
+523,295717268652974081,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:17:45 +0000 2013,test
+524,295717281235881985,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:17:48 +0000 2013,test
+525,295717499335503873,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:18:40 +0000 2013,test
+526,295717612577517568,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:19:07 +0000 2013,test
+527,295717662883991553,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:19:19 +0000 2013,test
+528,295717860028866560,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:20:06 +0000 2013,test
+529,295717960687968257,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:20:30 +0000 2013,test
+530,295717964886454272,"precisam - se de doadores de sangue urgente , repassem o endereço do hemocentro de #santamaria : av . pres . . . . <URL> ",Related and informative,Mon Jan 28 02:20:31 +0000 2013,test
+531,295718086517063680,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:21:00 +0000 2013,test
+532,295718417875484672,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:22:19 +0000 2013,test
+533,295718489191239680,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:22:36 +0000 2013,test
+534,295718518551355392,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:22:43 +0000 2013,test
+535,295718581461716992,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:22:58 +0000 2013,test
+536,295718673719640064,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:23:20 +0000 2013,test
+537,295718740824301568,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:23:36 +0000 2013,test
+538,295719248360267778,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:25:37 +0000 2013,test
+539,295719990739472386,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:28:34 +0000 2013,test
+540,295720133358387201,todo mundo ta falando da boate kiss todos desejando forças pras familias que lindo ,Related - but not informative,Mon Jan 28 02:29:08 +0000 2013,test
+541,295720938643800064,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:32:20 +0000 2013,test
+542,295722381484371968,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:38:04 +0000 2013,test
+543,295722800906371072,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:39:44 +0000 2013,test
+544,295722989671022592,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:40:29 +0000 2013,test
+545,295723899834994689,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:44:06 +0000 2013,test
+546,295724000515080192,"<USR> david , it was a fire on a nightclub here on brazil and more than 230 teenagers died . we need you now :( 5 ",Related and informative,Mon Jan 28 02:44:30 +0000 2013,test
+547,295724189225209857,"dono da boate kiss , de santa maria ( rs ) , elissandro kiko é réu em processo por lesões corporais graves , na 4 ª vara criminal da cidade . ",Related and informative,Mon Jan 28 02:45:15 +0000 2013,test
+548,295724520600395776,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:46:34 +0000 2013,test
+549,295725044884176897,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:48:39 +0000 2013,test
+550,295725598528110592,"e tanta gente por ai procurando aos poucos se matar . não deixe que coisas , pessoas e situações destrua o seu bem mais precioso . #santamaria ",Not related,Mon Jan 28 02:50:51 +0000 2013,test
+551,295725871174672385,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:51:56 +0000 2013,test
+552,295726282199678976,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 02:53:34 +0000 2013,test
+553,295730170311106561,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 03:09:01 +0000 2013,test
+554,295733546713223168,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 03:22:26 +0000 2013,test
+555,295733693543227392,un minuto de silencio por los jóvenes que fallecieron en brasil por el incendio #prayforbrazil . ,Related - but not informative,Mon Jan 28 03:23:01 +0000 2013,test
+556,295733781598461953,"brasil , onde o dinheiro vale mais que a vida ;/ infelismente , é por isso que o país não se desenvolve ! #santamaria ",Related - but not informative,Mon Jan 28 03:23:22 +0000 2013,test
+557,295734305899024384,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 03:25:27 +0000 2013,test
+558,295734578528800768,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 03:26:32 +0000 2013,test
+559,295734649844547585,my heart and prayers go out to santa maria #brazil #santamaria ,Related - but not informative,Mon Jan 28 03:26:49 +0000 2013,test
+560,295735811649970176,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 03:31:26 +0000 2013,test
+561,295736897966338048,status : assada também tava na boate kiss ? que deus me perdoe por ter rido disso ! ,Related - but not informative,Mon Jan 28 03:35:45 +0000 2013,test
+562,295737837490405377,"dios llene de fuerza a cada una de las familias que hoy se encuentran de luto en el país hermano , #prayforbrazil #pr . . . ",Related - but not informative,Mon Jan 28 03:39:29 +0000 2013,test
+563,295739813003407361,"nightclub fire in #brazil : club was 1,000 people over capacity , official says . <URL> ",Related and informative,Mon Jan 28 03:47:20 +0000 2013,test
+564,295740505084551168,mi abrazo para las familias #prayforbrazil rt <USR> : #prayforbrazil <USR> por todos los jovenes . . . ,Related - but not informative,Mon Jan 28 03:50:05 +0000 2013,test
+565,295742660965183488,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 03:58:39 +0000 2013,test
+566,295744015729577984,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 04:04:02 +0000 2013,test
+567,295744686801420288,230 ppl killed in nightclub n #brazil smh terrible ,Related and informative,Mon Jan 28 04:06:42 +0000 2013,test
+568,295745106236035072,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 04:08:22 +0000 2013,test
+569,295745181750280192,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 04:08:40 +0000 2013,test
+570,295745584386686976,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 04:10:16 +0000 2013,test
+571,295745659875778560,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 04:10:34 +0000 2013,test
+572,295746280624369664,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 04:13:02 +0000 2013,test
+573,295749208273723392,<USR> : corpos ainda estão sendo retirados da boate kiss . são oficialmente confirmados 20 mortos . e pensar que esse num subiu tanto . . . =/ ,Related and informative,Mon Jan 28 04:24:40 +0000 2013,test
+574,295750441382313984,"bem - aventurados os que choram , pois serão consolados . ( mateus 5 : 4 nvi ) que o consolo venha em #santamaria . #todosdese . . . ",Related - but not informative,Mon Jan 28 04:29:34 +0000 2013,test
+575,295752945398599680,"it is yet again proven by the #fire in #brazil that #death could be sudden , u dont have 2 b sick or old 2 die . spend life obeying #allah ",Related - but not informative,Mon Jan 28 04:39:31 +0000 2013,test
+576,295753792618639360,my heart goes out to the families and friends of the victims of the nightclub tragedy in brazil . prayforsantamaria ,Related - but not informative,Mon Jan 28 04:42:53 +0000 2013,test
+577,295755390673641472,a #santamaria e seu querido povo ! <URL> #joshgroban ,Not related,Mon Jan 28 04:49:14 +0000 2013,test
+578,295760084099821568,"update : at least 233 people have died in a fire at kiss nightclub in #santamaria , #brazil <URL> ",Related and informative,Mon Jan 28 05:07:53 +0000 2013,test
+579,295760499319123968,“ <USR> : at least 233 people have died in a fire at kiss nightclub in #santamaria #brazil <URL> heart goes out ❤ ,Related and informative,Mon Jan 28 05:09:32 +0000 2013,test
+580,295760834871844864,"update : at least 233 people have died in a fire at kiss nightclub in #santamaria , #brazil <URL> ",Related and informative,Mon Jan 28 05:10:52 +0000 2013,test
+581,295761434648928258,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 05:13:15 +0000 2013,test
+582,295761916998078464,so sad ! horrific nightclub fire in brazil takes the lives of 245 people . <URL> ,Related and informative,Mon Jan 28 05:15:10 +0000 2013,test
+583,295762168643731456,"update : at least 233 people have died in a fire at kiss nightclub in #santamaria , #brazil <URL> ",Related and informative,Mon Jan 28 05:16:10 +0000 2013,test
+584,295763284332789761,"update : at least 233 people have died in a fire at kiss nightclub in #santamaria , #brazil <URL> ",Related and informative,Mon Jan 28 05:20:36 +0000 2013,test
+585,295763284341190656,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 05:20:36 +0000 2013,test
+586,295765222130593792,"o foda eh vc entrar no perfil da pessoa , ver que ela passou na faculdade , que estava feliz e que morreu na boate kiss ",Related - but not informative,Mon Jan 28 05:28:18 +0000 2013,test
+587,295765717050068992,<USR> check cnn . over 200 + people died in a nightclub in brazil and most were in their late teens and early 2 0 s . ,Related and informative,Mon Jan 28 05:30:16 +0000 2013,test
+588,295766031610298368,photos : hundreds dead after brazil nightclub fire <URL> ,Related and informative,Mon Jan 28 05:31:31 +0000 2013,test
+589,295766337781891072,you guys here about that brazil nightclub fire ? guess they took shorty fire burnin on the dance floor too literally . ,Related - but not informative,Mon Jan 28 05:32:44 +0000 2013,test
+590,295769156362567680,dulce maría comenta no twitter sobre o incêndio na boate kiss – rs . : o mundo todo está solidário com a tragédia . . . . . . ,Related - but not informative,Mon Jan 28 05:43:56 +0000 2013,test
+591,295770666316214272,will the violence ever stop ? my condolences to all those affected by the #santamaria tragedy . 🙏 for them . ,Related - but not informative,Mon Jan 28 05:49:56 +0000 2013,test
+592,295773392618000384,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 06:00:46 +0000 2013,test
+593,295774957085007872,brazil mourns nightclub fire dead : brazil declares three days of national mourning for 231 people killed in a ni . . . <URL> ,Related and informative,Mon Jan 28 06:06:59 +0000 2013,test
+594,295775145828683776,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 06:07:44 +0000 2013,test
+595,295776462844358656,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 06:12:58 +0000 2013,test
+596,295777104585424896,"gente eu ainda to muito chocada e triste com o incêndio na boate kiss , sério ",Related - but not informative,Mon Jan 28 06:15:31 +0000 2013,test
+597,295787443536396288,hundreds killed in brazil nightclub fire <URL> ,Related and informative,Mon Jan 28 06:56:36 +0000 2013,test
+598,295788307575631872,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 07:00:02 +0000 2013,test
+599,295788823483387904,#worldnews #news hundreds dead in brazil nightclub fire : cnn ' s shasta darlington reports on the chaos following . . . <URL> ,Related and informative,Mon Jan 28 07:02:05 +0000 2013,test
+600,295791952425783296,que deus conforte o coração desses pais . . . #luto #santamaria <URL> ,Related - but not informative,Mon Jan 28 07:14:31 +0000 2013,test
+601,295793567228637184,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 07:20:56 +0000 2013,test
+602,295794993304596480,"esse incêndio na boate kiss não foi acidental , eu vou virar investigador e descobrir essa porra ! ",Related - but not informative,Mon Jan 28 07:26:36 +0000 2013,test
+603,295805101556260864,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 08:06:46 +0000 2013,test
+604,295806716350693376,( video ) brazil nightclub fire kills about 180 people : follow <USR> a fire swept through a crowded nightcl . . . <URL> ,Related and informative,Mon Jan 28 08:13:11 +0000 2013,test
+605,295817323779072001,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 08:55:20 +0000 2013,test
+606,295819043443707904,"245 people killed in brazil nightclub fire , r . i . p to them all . #prayforsantamaria ",Related and informative,Mon Jan 28 09:02:10 +0000 2013,test
+607,295819659998023680,starssoft brazil nightclub fire kills more than 230 - financial times : globe and mailbrazil nightclub fire kills . . . <URL> ,Related and informative,Mon Jan 28 09:04:37 +0000 2013,test
+608,295822533096247296,"boate kiss não atendia normas de segurança , diz engenheiro do corpo de bombeiros #santamaria <URL> ",Related and informative,Mon Jan 28 09:16:02 +0000 2013,test
+609,295824747692961792,"fogo boate kiss brasil rio grande do sul , santa maria 245 mortos : <URL> via <USR> ",Related and informative,Mon Jan 28 09:24:50 +0000 2013,test
+610,295826106618105856,"fogo boate kiss brasil rio grande do sul , santa maria 245 mortos : <URL> via <USR> ",Related and informative,Mon Jan 28 09:30:14 +0000 2013,test
+611,295826198926352384,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 09:30:36 +0000 2013,test
+612,295827503325523968,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 09:35:47 +0000 2013,test
+613,295832083534848000,"tristeza , dor , solidariedade . . . da festa ao luto . #santamaria ",Related - but not informative,Mon Jan 28 09:53:59 +0000 2013,test
+614,295835447349882882,#news brazil nightclub fire : ' like a war zone ' with bodies piled <URL> ,Related and informative,Mon Jan 28 10:07:21 +0000 2013,test
+615,295835480895913984,"brazil nightclub fire kills at least 232 people ( videos , photos ) : <URL> ",Related and informative,Mon Jan 28 10:07:29 +0000 2013,test
+616,295839457117077505,vejam os nomes dos mortos no inferno da boate kiss <URL> <URL> ,Related and informative,Mon Jan 28 10:23:17 +0000 2013,test
+617,295840962847059969,<USR> so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 10:29:16 +0000 2013,test
+618,295845123588255744,brazil nightclub fire : ' like a war zone ' with bodies piled - cnn : times of indiabrazil nightclub fire : ' like a w . . . <URL> ,Related and informative,Mon Jan 28 10:45:48 +0000 2013,test
+619,295845366857875456,"holy shit ! ! ! ! ! ! ! ! ! rt <USR> : 245 people killed in brazil nightclub fire , police tell state news agency . <URL> ",Related and informative,Mon Jan 28 10:46:46 +0000 2013,test
+620,295846776148213764,<USR> : la puta madre < / 3 demasiado fuerte #prayforbrazil <URL> hija de puta ☹ ,Not related,Mon Jan 28 10:52:22 +0000 2013,test
+621,295848290308747264,"batman achou que quando robin disse santa maria , batman ! fosse só uma objeção qualquer e não interviu na boate kiss , por liga da justiça . ",Related - but not informative,Mon Jan 28 10:58:23 +0000 2013,test
+622,295849368228077570,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 11:02:40 +0000 2013,test
+623,295850580394508288,o número de mortos no incêndio que atingiu a boate kiss foi revisado para 231 . segundo a chefe geral de perícia . . . <URL> ,Related and informative,Mon Jan 28 11:07:29 +0000 2013,test
+624,295851373130547201,assunto da manhã . #santamaria . . ,Not related,Mon Jan 28 11:10:38 +0000 2013,test
+625,295851779948687360,[ #wnewsireland ] : at least 232 killed in brazil nightclub blaze ' after musician set fireworks of . . . <URL> #ireland #dublin ,Related and informative,Mon Jan 28 11:12:15 +0000 2013,test
+626,295852354576736256,china expressed concern for brazilian nightclub fire victims ( brazilsun ) : share with friends : | . . . <URL> #brazil #news ,Related and informative,Mon Jan 28 11:14:32 +0000 2013,test
+627,295853931639238656,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 11:20:48 +0000 2013,test
+628,295854774715289600,brazil nightclub fire ' like a war zone ' with bodies piled : most of the bodies of 231 people killed in a brazil n . . . <URL> ,Related and informative,Mon Jan 28 11:24:09 +0000 2013,test
+629,295855659696672768,brazil nightclub fire ' like a war zone ' with bodies piled : most of the bodies of 231 people killed in a brazil n . . . <URL> ,Related and informative,Mon Jan 28 11:27:40 +0000 2013,test
+630,295855676461289472,brazil nightclub fire ' like a war zone ' with bodies piled : most of the bodies of 231 people killed in a brazil n . . . <URL> ,Related and informative,Mon Jan 28 11:27:44 +0000 2013,test
+631,295856959935102976,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 11:32:50 +0000 2013,test
+632,295857895260688385,grupo rbs está de parabéns ! planeta atlântida cancelado ( este final de semana ) . #santamaria ,Not related,Mon Jan 28 11:36:33 +0000 2013,test
+633,295858121736327169,#santamaria ' liguei para meu filho . uma policial atendeu e disse que ele tinha morrido ' : <URL> ,Related and informative,Mon Jan 28 11:37:27 +0000 2013,test
+634,295859933692432384,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 11:44:39 +0000 2013,test
+635,295859950473867264,"<USR> sim , um primo , uma prima e um amigo . na tragedia da boate kiss ! :/ ",Related - but not informative,Mon Jan 28 11:44:43 +0000 2013,test
+636,295865386279256064,tragedy in brazil nightclub ! <URL> ,Related and informative,Mon Jan 28 12:06:19 +0000 2013,test
+637,295866497782411265,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 12:10:44 +0000 2013,test
+638,295867407946362882,assistindo a cobertura completa na #globonews <USR> sobre o incêndio na boate kiss em santa maria / rs #forçasantamaria ,Related - but not informative,Mon Jan 28 12:14:21 +0000 2013,test
+639,295870570459955200,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 12:26:55 +0000 2013,test
+640,295870603993440256,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 12:27:03 +0000 2013,test
+641,295871069577961473,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 12:28:54 +0000 2013,test
+642,295875150623170561,my heart goes out to those who were trapped in the fire at kiss nightclub in brazil . ,Related - but not informative,Mon Jan 28 12:45:07 +0000 2013,test
+643,295875964305563648,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 12:48:21 +0000 2013,test
+644,295876341830668289,"meu personal da academia disse que seu primo ia ir mais desistiu , e ele ja frequentou a boate kiss d : ",Related - but not informative,Mon Jan 28 12:49:51 +0000 2013,test
+645,295878921306660865,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 13:00:06 +0000 2013,test
+646,295883568591282176,praying for the people of brazil . many heavy hearts today because of the lost lives . #prayforbrazil ,Related - but not informative,Mon Jan 28 13:18:34 +0000 2013,test
+647,295883677639008258,owner of kiss nightclub and 2 members of band arrested in #brazil . nightclub fire killed 231 people . <URL> ,Related and informative,Mon Jan 28 13:19:00 +0000 2013,test
+648,295884612989763584,"força para as pessoas que perderam amigos , parentes , e conhecidos em #santamaria . . meus sentimentos . ",Related - but not informative,Mon Jan 28 13:22:43 +0000 2013,test
+649,295888249430347776,o namorado não conseguiu sair da boate kiss em santa maria e a namorada sim . mensagem do namorado eu não vou conseg . . . ,Related - but not informative,Mon Jan 28 13:37:10 +0000 2013,test
+650,295892053680873474,desculpa mas eu não consigo tirar ´ ´ boate kiss ´ ´ ´ ´ incêndio ´ ´ ´ ´ 245 mortos ´ ´ ´ ´ michele cardoso ´ ´ ´ ´ sinalizador ´ ´ ´ ´ caveir . . . ,Related - but not informative,Mon Jan 28 13:52:17 +0000 2013,test
+651,295892980626255874,"quantas almas sem salvaçao ! enquanto nos os ´ ´ salvos ´ ´ ficamos em nosso clubinho social . . crentes : salvos , sentados , satisfeitos #santamaria ",Related - but not informative,Mon Jan 28 13:55:58 +0000 2013,test
+652,295894415053041664,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 14:01:40 +0000 2013,test
+653,295895698543628289,brazil nightclub guards stopped partiers from fleeing deadly blaze <URL> ,Related and informative,Mon Jan 28 14:06:46 +0000 2013,test
+654,295895941783908352,100 people in hospital following brazil nightclub fire that killed 233 : about 100 people remain in hospital in b . . . <URL> ,Related and informative,Mon Jan 28 14:07:44 +0000 2013,test
+655,295896545784655872,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 14:10:08 +0000 2013,test
+656,295898324177928194,"a nossa oração é capaz de cruzar fronteiras ! hj , em especial , pedimos a ação de deus sobre as vítimas de #santamaria #luto ",Related - but not informative,Mon Jan 28 14:17:12 +0000 2013,test
+657,295898827490209792,#canada offers condolences following nightclub fire in #brazil <URL> <USR> #dfait ,Related and informative,Mon Jan 28 14:19:12 +0000 2013,test
+658,295899947356807168,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 14:23:39 +0000 2013,test
+659,295900119306473473,fiquei com um aperto no coração só de imaginar isso #santamaria <URL> ,Related - but not informative,Mon Jan 28 14:24:20 +0000 2013,test
+660,295901948048191491,sócio da boate kiss e dois integrantes da banda gurizada fandangueira são presos <URL> ,Related and informative,Mon Jan 28 14:31:36 +0000 2013,test
+661,295902086468612097,tem q ser assinante para saber como ajudar . ‏ rt <USR> #santamaria rede de solidariedade é criada ; veja como ajudarhttp :// bit . ly / ybhujh ,Related - but not informative,Mon Jan 28 14:32:09 +0000 2013,test
+662,295903059547136000,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 14:36:01 +0000 2013,test
+663,295903231488434177,thouhhts and prayers to the families of the ones lost in that horrific fire at a nightclub in brazil . ,Related - but not informative,Mon Jan 28 14:36:42 +0000 2013,test
+664,295903680274784257,que deus conforte o coração dos familiares das vítimas da tragédia em #santamaria força as famílias . #feenjesus #estamosconu . . . ,Related - but not informative,Mon Jan 28 14:38:29 +0000 2013,test
+665,295905521574219776,"tragédia em boate de #santamaria é ‘ terceira mais fatal da história ' de casas noturnas , diz ranking - <URL> ",Related and informative,Mon Jan 28 14:45:48 +0000 2013,test
+666,295907010564747264,falou tudo ! #santamaria rt <USR> : deveria existir uma lei divina que os pais nunca deveriam enterrar seus filhos . . . . ,Related - but not informative,Mon Jan 28 14:51:43 +0000 2013,test
+667,295910076596764673,ócio da boate kiss e dois integrantes da banda gurizada fandangueira são presos delegado confirma que uso de . . . <URL> ,Related and informative,Mon Jan 28 15:03:54 +0000 2013,test
+668,295910638616707072,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 15:06:08 +0000 2013,test
+669,295911024492695556,brazil nightclub fire : arrests made as funerals begin : police seize three people over the nightclub fire that ki . . . <URL> ,Related and informative,Mon Jan 28 15:07:40 +0000 2013,test
+670,295911393629188097,brazil nightclub fire : arrests made as funerals begin : police seize three people over the nightclub fire that ki . . . <URL> ,Related and informative,Mon Jan 28 15:09:08 +0000 2013,test
+671,295911779488378880,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 15:10:40 +0000 2013,test
+672,295912328942219265,"graças a deus diminuiu o numero de mortes em #santamaria 231 agora , mas ainda é muito triste =/ ",Related and informative,Mon Jan 28 15:12:51 +0000 2013,test
+673,295912417039351811,"one of owners of kiss nightclub and 2 members of a band arrested in #brazil , where nightclub fire killed 231 people htt . . . ",Related and informative,Mon Jan 28 15:13:12 +0000 2013,test
+674,295913570447785984,#santamaria #ajuda #help #amor #carinho #abraço #esperança #brasil <URL> ,Related - but not informative,Mon Jan 28 15:17:47 +0000 2013,test
+675,295913901802004480,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 15:19:06 +0000 2013,test
+676,295914358972764160,my heart and prayers go out to santa maria #brazil #santamaria ,Related - but not informative,Mon Jan 28 15:20:55 +0000 2013,test
+677,295915009094074368,"embora venhamos de lugares diferentes , falemos línguas diferentes , nossos corações batem como um só . #santamaria ",Related - but not informative,Mon Jan 28 15:23:30 +0000 2013,test
+678,295916800074457088,three arrests so far in brazil nightclub blaze : wakes and burials begin for 233 victims - mostly university stud . . . <URL> ,Related and informative,Mon Jan 28 15:30:37 +0000 2013,test
+679,295917706018975745,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 15:34:13 +0000 2013,test
+680,295919018844495872,233 killed in toxic smoke due to nightclub fire in brazil | <URL> via <USR> thoughts go out to those family members . ,Related and informative,Mon Jan 28 15:39:26 +0000 2013,test
+681,295919337640980482,three held over brazil club fire : brazilian police arrest three people in connection with a fire at a nightclub . . . <URL> ,Related and informative,Mon Jan 28 15:40:42 +0000 2013,test
+682,295920361034362881,brazil nightclub fire leaves 233 people dead – washington post : <URL> brazil nightclub fire leaves . . . <URL> ,Related and informative,Mon Jan 28 15:44:46 +0000 2013,test
+683,295922575605907457,three held over brazil deadly nightclub fire : club owner and two band members are held in connection with the de . . . <URL> ,Related and informative,Mon Jan 28 15:53:34 +0000 2013,test
+684,295922978284257280,#231 #santamaria meus pêsames ,Related - but not informative,Mon Jan 28 15:55:10 +0000 2013,test
+685,295923968119013376,brazil nightclub fire : lady gaga prays for victims as police make arrests : the paparazzi hitmaker amongst stars . . . <URL> ,Related - but not informative,Mon Jan 28 15:59:06 +0000 2013,test
+686,295926249828777984,<USR> : la puta madre < / 3 demasiado fuerte #prayforbrazil <URL> < / 3 ,Not related,Mon Jan 28 16:08:10 +0000 2013,test
+687,295926992241586177,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 16:11:07 +0000 2013,test
+688,295927646519443457,o brasil está de luto . força #santamaria que deus conforte essas famílias ,Related - but not informative,Mon Jan 28 16:13:43 +0000 2013,test
+689,295927646527832064,o brasil está de luto . força #santamaria que deus conforte essas famílias ,Related - but not informative,Mon Jan 28 16:13:43 +0000 2013,test
+690,295927646540419072,o brasil está de luto . força #santamaria que deus conforte essas famílias ,Related - but not informative,Mon Jan 28 16:13:43 +0000 2013,test
+691,295932658729488384,my heart and prayers go out to santa maria #brazil #santamaria ,Related - but not informative,Mon Jan 28 16:33:38 +0000 2013,test
+692,295935640862855168,hipocrisia mesmo é o dono da boate kiss falar que o acidente foi uma fatalidade . #vergonha ,Related - but not informative,Mon Jan 28 16:45:29 +0000 2013,test
+693,295936337146699777,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 16:48:15 +0000 2013,test
+694,295936559432212480,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 16:49:08 +0000 2013,test
+695,295938555941888001,"ajudem os acidentados de #santamaria doando sangue ! → av . pres . vargas , 2291 - santa maria - rs , 97015 - 513 . #forçasan . . . ",Related and informative,Mon Jan 28 16:57:04 +0000 2013,test
+696,295938602075054080,tem que ser forte pra poder assistir as reportagem sobre #santamaria . //; ,Related - but not informative,Mon Jan 28 16:57:15 +0000 2013,test
+697,295938681745838082,"na tragedia da boate kiss foi encontrado um casal mor . . . — não é bem assim maus amigos , se tu não tava la pra v . . . <URL> ",Related - but not informative,Mon Jan 28 16:57:34 +0000 2013,test
+698,295939067646976000,"245 mortos , 245 futuros destruídos , 245 famílias com o coração partido e 245 sonhos sem se tornarem realidade . #santamaria ",Related and informative,Mon Jan 28 16:59:06 +0000 2013,test
+699,295941420647337984,"brazil , mexico and other deadly nightclub fires in latin america <URL> ",Related and informative,Mon Jan 28 17:08:27 +0000 2013,test
+700,295942053966266368,que deus conforte cada familia da #tragedia #rs #santamaria #forçasantamaria ,Related - but not informative,Mon Jan 28 17:10:58 +0000 2013,test
+701,295943865930760192,"my thoughts & prayers go out 2 the #santamaria nightclub fire victims , their families & loved ones . my ❤ is w / u #br . . . ",Related - but not informative,Mon Jan 28 17:18:10 +0000 2013,test
+702,295944226636713984,noticia triste e lamentável . chocado com o número de pessoas q foram atingidas nesse acidente em #santamaria . que deus c . . . ,Related - but not informative,Mon Jan 28 17:19:36 +0000 2013,test
+703,295946281841483776,my heart goes out to all those who lost their lives in the brazil nightclub fire and to everyone affected by such a tragedy . ,Related - but not informative,Mon Jan 28 17:27:46 +0000 2013,test
+704,295946437026516992,<USR> hi justine ! ! ! did you know about the tragedy in the nightclub on my country ( brazil ) ? ? ? ? ? ,Related - but not informative,Mon Jan 28 17:28:23 +0000 2013,test
+705,295948597084712962,my heart and prayers go out to santa maria #brazil #santamaria ,Related - but not informative,Mon Jan 28 17:36:58 +0000 2013,test
+706,295948722926395394,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 17:37:28 +0000 2013,test
+707,295948987146592256,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 17:38:31 +0000 2013,test
+708,295949146534313985,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 17:39:09 +0000 2013,test
+709,295949595316453376,"my thoughts & prayers go out 2 the #santamaria nightclub fire victims , their families & loved ones . my ❤ is w / u #br . . . ",Related - but not informative,Mon Jan 28 17:40:56 +0000 2013,test
+710,295953953219309568,"update : at least 233 people have died in a fire at kiss nightclub in #santamaria , #brazil <URL> ",Related and informative,Mon Jan 28 17:58:15 +0000 2013,test
+711,295954443957043200,over 200 die in kiss nightclub disaster . only one exit ! ! ! planning regs need a serious review in brazil . shame . . . ,Related and informative,Mon Jan 28 18:00:12 +0000 2013,test
+712,295957430301507584,nome e fotos das vítimas do incêndio em santa maria ( rs ) | confiraqui : <URL> #luto #forçasantamaria #santamaria #12hours ,Related and informative,Mon Jan 28 18:12:04 +0000 2013,test
+713,295958269166501888,3 arrested in deadly brazil nightclub fire : police arrested three people and are hunting a fourth after a fire i . . . <URL> ,Related and informative,Mon Jan 28 18:15:24 +0000 2013,test
+714,295961209340051457,"#27 / 01/2013 boate kiss morri em santa maria hoje . quem não morreu ? morri na rua dos andradas , 1925 . numa ladeira . . . <URL> ",Not related,Mon Jan 28 18:27:05 +0000 2013,test
+715,295964174738128896,"my thoughts & prayers go out 2 the #santamaria nightclub fire victims , their families & loved ones . my ❤ is w / u #br . . . ",Related - but not informative,Mon Jan 28 18:38:52 +0000 2013,test
+716,295965852442963968,só existe um remédio para evitar tragédias como #santamaria . . . prevenção . ,Related - but not informative,Mon Jan 28 18:45:32 +0000 2013,test
+717,295968134148538368,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 18:54:36 +0000 2013,test
+718,295970491355774977,"parei pra pensar no pessoal de #santamaria , deve ter sido o domingo mais foda da vida das famílias ;s coitados ",Related - but not informative,Mon Jan 28 19:03:58 +0000 2013,test
+719,295970784969625602,nightclub fire kills at least 245 in southern brazil ( photos ) <URL> ,Related and informative,Mon Jan 28 19:05:08 +0000 2013,test
+720,295972219396431872,"nem prefeitura de santa maria , nem bombeiros liberam acesso a alvarás da boate kiss . o que têm a esconder ? ",Related and informative,Mon Jan 28 19:10:50 +0000 2013,test
+721,295976547918163968,"o namorado não conseguiu sair da boate kiss em santa maria e a namorada sim . mensagem do namorado eu não vou conseguir sair , te amo ",Related - but not informative,Mon Jan 28 19:28:02 +0000 2013,test
+722,295978280182509568,"boate kiss está em nome de 2 mulheres , parentes dos donos <URL> #santamaria ",Related and informative,Mon Jan 28 19:34:55 +0000 2013,test
+723,295979844653707264,"sinistro , leiam os últimos tweets da jovem que morreu na boate kiss em santa maria / rs https://t.co/jjs7hbvg … … https :// . . . ",Related - but not informative,Mon Jan 28 19:41:08 +0000 2013,test
+724,295983233647120385,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 19:54:36 +0000 2013,test
+725,295983346905915393,senhor conforte as familias #santamaria ,Related - but not informative,Mon Jan 28 19:55:03 +0000 2013,test
+726,295983867003801600,envio minhas orações para as vítimas do incêndio no clube em #santamaria . o meu coração está com vocês #brasil . ❤ #prayforsa . . . ,Related - but not informative,Mon Jan 28 19:57:07 +0000 2013,test
+727,295984919757352960,incêndio em boate kiss : acidente ou sacrifício ? <URL> ,Related - but not informative,Mon Jan 28 20:01:18 +0000 2013,test
+728,295988682039640064,envio minhas orações para as vítimas do incêndio no clube em #santamaria . o meu coração está com vocês #brasil . ❤ #prayforsa . . . ,Related - but not informative,Mon Jan 28 20:16:15 +0000 2013,test
+729,295990066159960064,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 20:21:46 +0000 2013,test
+730,295991819395792897,four people arrested over brazil nightclub fire : brazilian police have so far arrested four people in connection . . . <URL> ,Related and informative,Mon Jan 28 20:28:43 +0000 2013,test
+731,295995451650482178,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 20:43:09 +0000 2013,test
+732,295997842412150784,"#chorando  cara , olha só o ultimo tuite da vítima la da boate kiss . só mais um futuro que não pode ser concluído ! ",Related - but not informative,Mon Jan 28 20:52:39 +0000 2013,test
+733,295998815482294272,"#santamaria : garota pediu socorro pelo facebook : ' incêndio na kiss socorro ' , postou às 0 3 h20 : <URL> ",Related and informative,Mon Jan 28 20:56:31 +0000 2013,test
+734,295999578866601986,pq diabos a merda da tv não para de falar da boate kiss ? ,Related - but not informative,Mon Jan 28 20:59:33 +0000 2013,test
+735,296000996541353984,very upset about #santamaria tragedy . kids went out to have fun at a club & died due to a preventable fire . so sorry for . . . ,Related - but not informative,Mon Jan 28 21:05:11 +0000 2013,test
+736,296001197859536897,igrejas e voluntários levam assistência às famílias e vítimas do incêndio na boate kiss em santa maria . saiba co . . . <URL> ,Related and informative,Mon Jan 28 21:05:59 +0000 2013,test
+737,296001415959179267,please please every #prayforsantamaria #prayforbrazil y ' all are in my thoughts and prayers <3 ,Related - but not informative,Mon Jan 28 21:06:51 +0000 2013,test
+738,296001445319282688,“ … chorai com os que choram . ” ( romanos 12:15 ) . . . hj é dia de chorar e orar pelos familiares das vitimas em #santamaria ,Related - but not informative,Mon Jan 28 21:06:58 +0000 2013,test
+739,296001449509412865,google presta homenagem às vítimas do incêndio na boate kiss <URL> ,Related and informative,Mon Jan 28 21:06:59 +0000 2013,test
+740,296008953102467072,vejam recado deixado no face por cliente que diz ter estado na boate kiss e viu seguranças fecharem a saida ! http :// t . . . ,Related and informative,Mon Jan 28 21:36:48 +0000 2013,test
+741,296009901019373569,#xxx #taylorswift lady gaga prays for brazil nightclub victims including ' little monster ' fan [ photo ] : lady gag . . . <URL> ,Related - but not informative,Mon Jan 28 21:40:34 +0000 2013,test
+742,296011394212577281,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 21:46:30 +0000 2013,test
+743,296014548333367296,defensoria pública pede bloqueio de bens de donos da boate kiss : a defensoria pública do rio grande do sul ajuiz . . . <URL> ,Related and informative,Mon Jan 28 21:59:02 +0000 2013,test
+744,296015903072608258,"ap news - neglect , errors to blame in brazil nightclub fire <URL> ",Related and informative,Mon Jan 28 22:04:25 +0000 2013,test
+745,296017983451582465,envio minhas orações para as vítimas do incêndio no clube em #santamaria . o meu coração está com vocês #brasil . ❤ #prayforsa . . . ,Related - but not informative,Mon Jan 28 22:12:41 +0000 2013,test
+746,296018784551051264,envio minhas orações para as vítimas do incêndio no clube em #santamaria . o meu coração está com vocês #brasil . ❤ #prayforsa . . . ,Related - but not informative,Mon Jan 28 22:15:52 +0000 2013,test
+747,296025172497018880,so sad to hear about the nightclub fire in brazil . such a tragedy . praying for everyone affected down there . ,Related - but not informative,Mon Jan 28 22:41:15 +0000 2013,test
+748,296026992824963072,bombeiros : os celulares não param de tocar nos bolsos das pessoas mortas e isso está doendo na gente . #santamaria ,Related and informative,Mon Jan 28 22:48:29 +0000 2013,test
+749,296028444045742081,"brazil detains band , club owners after deadly nightclub fire <URL> ",Related and informative,Mon Jan 28 22:54:15 +0000 2013,test
+750,296028532134514688,i love yall too ! thanks for this my new pet ! :) #prayforsantamaria #santamaria #brazil <URL> ,Related - but not informative,Mon Jan 28 22:54:36 +0000 2013,test
+751,296031887594504192,ontem o dia amanheceu sombrio e escuro em #santamaria / rs e a semana continua sombria e escura no brasil todo todos continuam de luto . ,Related - but not informative,Mon Jan 28 23:07:56 +0000 2013,test
+752,296031958876696576,"a namorada de um dos caras que ficaram presos na boate kiss , recebeu uma sms ' ' estou morrendo , não vou conseguir sair daqui , eu te amo ' ' ",Related - but not informative,Mon Jan 28 23:08:13 +0000 2013,test
+753,296033183600893952,chorando aqui com a morte de uma das negas da nossa família . . . lá na tragédia da boate kiss em santa maria ='( ,Related - but not informative,Mon Jan 28 23:13:05 +0000 2013,test
+754,296035452719337472,boate kiss o beijo da morte ! ,Related - but not informative,Mon Jan 28 23:22:06 +0000 2013,test
+755,296038489395458048,"ai , como eu continuo triste por conta da tragédia de #santamaria ",Related - but not informative,Mon Jan 28 23:34:10 +0000 2013,test
+756,296039223394443264,"my thoughts & prayers go out 2 the #santamaria nightclub fire victims , their families & loved ones . my ❤ is w / u #br . . . ",Related - but not informative,Mon Jan 28 23:37:05 +0000 2013,test

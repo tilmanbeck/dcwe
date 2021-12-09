@@ -7,7 +7,7 @@ import pandas as pd
 import torch
 from nltk.corpus import stopwords
 from torch.utils.data import Dataset
-from torch_geometric.data import Data
+#from torch_geometric.data import Data
 from transformers import BertTokenizer
 
 stops = set(stopwords.words('english'))
@@ -74,9 +74,9 @@ class MLMDataset(Dataset):
 class SADataset(Dataset):
     """Dataset class for sentiment analysis."""
 
-    def __init__(self, name, split, social_dim, data_dir):
+    def __init__(self, name, split, social_dim, data_dir, lm_model='bert-base-uncased'):
 
-        self.tok = BertTokenizer.from_pretrained('bert-base-uncased')
+        self.tok = BertTokenizer.from_pretrained(lm_model)
 
         data = pd.read_csv('{}/{}_{}.csv'.format(data_dir, name, split), parse_dates=['time'])
 
@@ -127,6 +127,64 @@ class SADataset(Dataset):
 
         return label, user, time, year, month, day, review
 
+class TemporalClassificationDataset(Dataset):
+    """Dataset class for any temporal classification task."""
+
+    def __init__(self, name, filepath, split, begin_date, label_field='label', time_field='time', lm_model='bert-base-uncased'):
+
+        self.tok = BertTokenizer.from_pretrained(lm_model)
+
+        data = pd.read_csv(filepath, parse_dates=[time_field])
+        # take the corresponding split
+        data = data[data['partition'] == split]
+        # rename data columns to common format
+        data.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
+        # convert string labels to numeric
+        data['label'] = data['label'].replace({'claim': 1, 'noclaim': 2})
+
+        data.dropna(inplace=True)
+        data.time = pd.to_datetime(data.time)
+        data.reset_index(inplace=True, drop=True)
+
+        self.labels = list(data.label)
+        self.years = [i.year for i in data.time]
+        self.months = [i.month for i in data.time]
+        self.days = [i.day for i in data.time]
+
+        #self.times = list(data.year.apply(convert_times, name=name, begin_date=begin_date))
+        self.times = [convert_times(i, name=name, begin_date=begin_date) for i in data.time]
+        self.n_times = max(self.times)#len(set(self.times))
+
+        vocab = defaultdict(Counter)
+        for text, time in zip(data.text, self.times):
+            vocab[time].update(text.strip().split())
+        for time in vocab:
+            total = sum(vocab[time].values())
+            vocab[time] = {w: count / total for w, count in vocab[time].items()}
+        w_counts = dict()
+        for time in vocab:
+            for w in vocab[time]:
+                w_counts[w] = w_counts.get(w, 0) + vocab[time][w]
+        w_top = sorted(w_counts.keys(), key=lambda x: w_counts[x], reverse=True)[:100000]
+        filter_list = [w for w in w_top if w not in stops and w in self.tok.vocab and w.isalpha()]
+        self.filter_tensor = torch.tensor([t for t in self.tok.encode(filter_list) if t >= 2100])
+
+        self.texts = list(data.text.apply(self.tok.encode, add_special_tokens=True))
+        self.texts = truncate(self.texts)
+
+    def __len__(self):
+        return len(self.texts)
+
+    def __getitem__(self, idx):
+
+        label = self.labels[idx]
+        year = self.years[idx]
+        month = self.months[idx]
+        day = self.days[idx]
+        time = self.times[idx]
+        text = self.texts[idx]
+
+        return label, time, year, month, day, text
 
 class MLMCollator:
     """Collator class for masked language modeling."""
@@ -208,7 +266,32 @@ class SACollator:
         return labels, users, times, years, months, days, reviews_pad, masks_pad, segs_pad
 
 
-def convert_times(time, name):
+class TemporalClassificationCollator:
+    """Collator class for any temporal classification task."""
+
+    def __call__(self, batch):
+
+        batch_size = len(batch)
+
+        labels = torch.tensor([l for l, _, _, _, _, _ in batch]).float()
+        times = torch.tensor([t for _, t, _, _, _, _ in batch]).long()
+        years = torch.tensor([y for _, _, y, _, _, _ in batch]).long()
+        months = torch.tensor([m for _, _, _, m, _, _ in batch]).long()
+        days = torch.tensor([d for _, _, _, _, d, _ in batch]).long()
+        texts = [r for _, _, _, _, _, r in batch]
+
+        max_len = max(len(r) for r in texts)
+        texts_pad = torch.zeros((batch_size, max_len)).long()
+        masks_pad = torch.zeros((batch_size, max_len)).long()
+        segs_pad = torch.zeros((batch_size, max_len)).long()
+
+        for i, r in enumerate(texts):
+            texts_pad[i, :len(r)] = torch.tensor(r)
+            masks_pad[i, :len(r)] = 1
+
+        return labels, times, years, months, days, texts_pad, masks_pad, segs_pad
+
+def convert_times(time, name, begin_date=None):
 
     if name == 'arxiv':
         return time - 2001
@@ -222,6 +305,9 @@ def convert_times(time, name):
     elif name == 'reddit':
         return time - 9
 
+    elif name == 'debatenet':
+        return abs(time.date() - begin_date).days
+        #return abs(time.date().month - begin_date.month)
 
 def truncate(reviews):
 
@@ -235,58 +321,58 @@ def truncate(reviews):
     return truncated
 
 
-def load_external_data(name, social_dim, data_dir):
-    """Function to load and preprocess graph data and node2vec input embeddings."""
-
-    with open('{}/{}_edges.p'.format(data_dir, name), 'rb') as f:
-        edge_set = pickle.load(f)
-        if name == 'reddit' or name == 'arxiv':
-            edge_set = set(e[:2] for e in edge_set if e[2] > 0.01)
-
-    with open('{}/{}_users.p'.format(data_dir, name), 'rb') as f:
-        users = pickle.load(f)
-
-    if name == 'arxiv' or name == 'reddit':
-        graph = nx.Graph()
-    else:
-        graph = nx.DiGraph()
-
-    graph.add_nodes_from(users)
-    graph.add_edges_from(edge_set)
-
-    assert graph.number_of_nodes() == len(users)
-    assert graph.number_of_edges() == len(edge_set)
-
-    user2id = {u: i for i, u in enumerate(users)}
-
-    vectors = dict()
-
-    with open('{}/{}_vectors_{}.txt'.format(data_dir, name, social_dim), 'r') as f:
-
-        for i, l in enumerate(f):
-
-            if i == 0:
-                continue
-
-            if l.strip() == '':
-                continue
-
-            if name == 'ciao':
-                vectors[int(l.strip().split()[0])] = np.array(l.strip().split()[1:], dtype=float)
-            elif name == 'arxiv' or name == 'reddit' or name == 'yelp':
-                vectors[str(l.strip().split()[0])] = np.array(l.strip().split()[1:], dtype=float)
-
-    vector_matrix = np.zeros((len(users), social_dim))
-
-    for i, n in enumerate(users):
-        vector_matrix[i, :] = vectors[n]
-
-    x = torch.tensor(vector_matrix, dtype=torch.float)
-
-    a = nx.adjacency_matrix(graph, nodelist=users)
-    edge_index = torch.tensor(np.stack((a.tocoo().row, a.tocoo().col)).astype(np.int32), dtype=torch.long)
-
-    return user2id, Data(edge_index=edge_index, x=x)
+# def load_external_data(name, social_dim, data_dir):
+#     """Function to load and preprocess graph data and node2vec input embeddings."""
+#
+#     with open('{}/{}_edges.p'.format(data_dir, name), 'rb') as f:
+#         edge_set = pickle.load(f)
+#         if name == 'reddit' or name == 'arxiv':
+#             edge_set = set(e[:2] for e in edge_set if e[2] > 0.01)
+#
+#     with open('{}/{}_users.p'.format(data_dir, name), 'rb') as f:
+#         users = pickle.load(f)
+#
+#     if name == 'arxiv' or name == 'reddit':
+#         graph = nx.Graph()
+#     else:
+#         graph = nx.DiGraph()
+#
+#     graph.add_nodes_from(users)
+#     graph.add_edges_from(edge_set)
+#
+#     assert graph.number_of_nodes() == len(users)
+#     assert graph.number_of_edges() == len(edge_set)
+#
+#     user2id = {u: i for i, u in enumerate(users)}
+#
+#     vectors = dict()
+#
+#     with open('{}/{}_vectors_{}.txt'.format(data_dir, name, social_dim), 'r') as f:
+#
+#         for i, l in enumerate(f):
+#
+#             if i == 0:
+#                 continue
+#
+#             if l.strip() == '':
+#                 continue
+#
+#             if name == 'ciao':
+#                 vectors[int(l.strip().split()[0])] = np.array(l.strip().split()[1:], dtype=float)
+#             elif name == 'arxiv' or name == 'reddit' or name == 'yelp':
+#                 vectors[str(l.strip().split()[0])] = np.array(l.strip().split()[1:], dtype=float)
+#
+#     vector_matrix = np.zeros((len(users), social_dim))
+#
+#     for i, n in enumerate(users):
+#         vector_matrix[i, :] = vectors[n]
+#
+#     x = torch.tensor(vector_matrix, dtype=torch.float)
+#
+#     a = nx.adjacency_matrix(graph, nodelist=users)
+#     edge_index = torch.tensor(np.stack((a.tocoo().row, a.tocoo().col)).astype(np.int32), dtype=torch.long)
+#
+#     return user2id, Data(edge_index=edge_index, x=x)
 
 
 def get_best(file, metric):

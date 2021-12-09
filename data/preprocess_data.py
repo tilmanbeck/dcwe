@@ -15,7 +15,7 @@ def rating_to_label(r):
 def main():
 
     user_times = defaultdict(list)
-    for c in pd.read_json('yelp_academic_dataset_review.json', chunksize=1000, lines=True):
+    for c in pd.read_json('yelp_dataset/yelp_academic_dataset_review.json', chunksize=1000, lines=True):
         for user, time in zip(c['user_id'], c['date']):
             user_times[user].append(time)
 
@@ -26,7 +26,7 @@ def main():
             users.add(user)
 
     data = None
-    for c in pd.read_json('yelp_academic_dataset_review.json', chunksize=10000, lines=True):
+    for c in pd.read_json('yelp_dataset/yelp_academic_dataset_review.json', chunksize=10000, lines=True):
         c = c[(c['stars'].isin([1, 2, 4, 5])) & (c['user_id'].isin(users)) & (c.date.dt.year >= 2010)]
         if data is None:
             data = c[['user_id', 'date', 'text', 'stars']]
@@ -60,7 +60,7 @@ def main():
     edge_set = set()
     users = set(data.user)
 
-    for c in pd.read_json('yelp_academic_dataset_user.json', lines=True, chunksize=10000):
+    for c in pd.read_json('yelp_dataset/yelp_academic_dataset_user.json', lines=True, chunksize=10000):
 
         c_users = c.user_id
         c_friends = c.friends.apply(lambda x: x.strip().split(', '))
