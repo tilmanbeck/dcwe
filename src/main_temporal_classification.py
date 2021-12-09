@@ -60,7 +60,8 @@ def main():
     device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() else 'cpu')
 
     model = TemporalClassificationModel(
-        n_times=train_dataset.n_times,
+        #n_times=train_dataset.n_times,
+        n_times=test_dataset.n_times, # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
         nr_classes=nr_classes
     )
 
