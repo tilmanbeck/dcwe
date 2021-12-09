@@ -157,7 +157,6 @@ class TemporalClassificationDataset(Dataset):
         # because we have gaps in the data, we set it to the max instead of the unique count
         # otherwise it will lead to an IndexOutOfBound Error when accessing indices of days because the array
         # was not long enough
-        self.n_times = max(self.times)#len(set(self.times))
 
         vocab = defaultdict(Counter)
         for text, time in zip(data.text, self.times):
