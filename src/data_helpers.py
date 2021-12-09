@@ -153,6 +153,7 @@ class TemporalClassificationDataset(Dataset):
 
         #self.times = list(data.year.apply(convert_times, name=name, begin_date=begin_date))
         self.times = [convert_times(i, name=name, begin_date=begin_date) for i in data.time]
+        self.n_times = max(self.times) + 1#len(set(self.times))
         # because we have gaps in the data, we set it to the max instead of the unique count
         # otherwise it will lead to an IndexOutOfBound Error when accessing indices of days because the array
         # was not long enough
