@@ -141,7 +141,7 @@ def main():
 
             for batch in test_loader:
 
-                labels, users, times, years, months, days, reviews, masks, segs = batch
+                labels, times, years, months, days, reviews, masks, segs = batch
 
                 labels = labels.to(device)
                 reviews = reviews.to(device)
