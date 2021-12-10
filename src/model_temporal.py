@@ -7,7 +7,7 @@ from data_helpers import isin
 
 class TemporalClassificationModel(nn.Module):
     """"Class to train dynamic contextualized word embeddings for any classification task."""
-    def __init__(self, nr_classes, n_times=1):
+    def __init__(self, nr_classes, n_times=1, lm_model='bert-base-uncased'):
         """Initialize dynamic contextualized word embeddings model.
 
         Args:
@@ -18,7 +18,7 @@ class TemporalClassificationModel(nn.Module):
 
         super(TemporalClassificationModel, self).__init__()
 
-        self.bert = BertModel.from_pretrained('bert-base-uncased')
+        self.bert = BertModel.from_pretrained(lm_model)
         self.bert_emb_layer = self.bert.get_input_embeddings()
         self.offset_components = nn.ModuleList([OffsetComponent() for _ in range(n_times)])
         #self.social_components = nn.ModuleList([SocialComponent(social_dim, gnn) for _ in range(n_times)])

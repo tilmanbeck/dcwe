@@ -31,16 +31,19 @@ def main():
     parser.add_argument('--lambda_a', default=0.1, type=float, help='Regularization constant a.')
     parser.add_argument('--lambda_w', default=0, type=float, help='Regularization constant w.')
     parser.add_argument('--device', default=0, type=int, help='Selected CUDA device.')
+    parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
     args = parser.parse_args()
+
+    lm_model = args.lm_model
 
     begin_date = datetime.date(2015, 1, 1) # debatenet begin date
     print('Load training data...')
     train_dataset = TemporalClassificationDataset(args.data_name, args.data_dir, 'train', begin_date, label_field='tag',
-                                                 time_field='date', lm_model='bert-base-german-cased')
+                                                 time_field='date', lm_model=lm_model)
     # eval_dataset = TemporalClassificatonDataset()
     print('Load test data...')
     test_dataset = TemporalClassificationDataset(args.data_name, args.data_dir, 'test', begin_date, label_field='tag',
-                                                 time_field='date', lm_model='bert-base-german-cased')
+                                                 time_field='date', lm_model=lm_model)
 
     print('Lambda a: {:.0e}'.format(args.lambda_a))
     print('Lambda w: {:.0e}'.format(args.lambda_w))
@@ -61,8 +64,9 @@ def main():
 
     model = TemporalClassificationModel(
         #n_times=train_dataset.n_times,
-        n_times=test_dataset.n_times, # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
-        nr_classes=nr_classes
+        n_times=max(train_dataset.times + test_dataset.times) + 1, # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
+        nr_classes=nr_classes,
+        lm_model=lm_model
     )
 
     optimizer = optim.Adam(model.parameters(), lr=args.lr)

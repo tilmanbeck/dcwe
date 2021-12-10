@@ -135,12 +135,12 @@ class TemporalClassificationDataset(Dataset):
         self.tok = BertTokenizer.from_pretrained(lm_model)
 
         data = pd.read_csv(filepath, parse_dates=[time_field])
-        # take the corresponding split
+        # take the corresponding split (if it exists otherwise take random split)
         data = data[data['partition'] == split]
         # rename data columns to common format
         data.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
         # convert string labels to numeric
-        data['label'] = data['label'].replace({'claim': 1, 'noclaim': 2})
+        data['label'] = data['label'].replace({'claim': 1, 'noclaim': 0})
 
         data.dropna(inplace=True)
         data.time = pd.to_datetime(data.time)
