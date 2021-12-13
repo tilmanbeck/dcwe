@@ -23,6 +23,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_name", default=None, type=str, required=True, help='Name of the dataset.')
     parser.add_argument('--data_dir', default=None, type=str, required=True, help='Data directory.')
+    parser.add_argument('--partition', default='time_stratified_partition', type=str, help='The data partition.')
     parser.add_argument('--results_dir', default='../results_dir', type=str, help='Results directory.')
     parser.add_argument('--trained_dir', default='../trained_dir', type=str, help='Trained model directory.')
     parser.add_argument('--batch_size', default=4, type=int, help='Batch size.')
@@ -36,14 +37,21 @@ def main():
 
     lm_model = args.lm_model
 
-    begin_date = datetime.date(2015, 1, 1) # debatenet begin date
-    print('Load training data...')
-    train_dataset = TemporalClassificationDataset(args.data_name, args.data_dir, 'train', begin_date, label_field='tag',
-                                                 time_field='date', lm_model=lm_model)
-    # eval_dataset = TemporalClassificatonDataset()
-    print('Load test data...')
-    test_dataset = TemporalClassificationDataset(args.data_name, args.data_dir, 'test', begin_date, label_field='tag',
-                                                 time_field='date', lm_model=lm_model)
+
+    print('Loading data...')
+    time_field = 'date'
+    label_field = 'tag'
+    dataframe = pd.read_csv(args.data_dir, parse_dates=[time_field])
+    nr_classes = len(set(dataframe[label_field].values))
+    begin_date = dataframe[time_field].min().to_pydatetime().date() # debatenet begin date
+
+    train_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'train', begin_date,
+                                                  partition=args.partition, label_field=label_field,
+                                                  time_field=time_field, lm_model=lm_model)
+    dev_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'dev', begin_date, partition=args.partition,
+                                                label_field=label_field, time_field=time_field, lm_model=lm_model)
+    test_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'test', begin_date, partition=args.partition,
+                                                 label_field=label_field, time_field=time_field, lm_model=lm_model)
 
     print('Lambda a: {:.0e}'.format(args.lambda_a))
     print('Lambda w: {:.0e}'.format(args.lambda_w))
@@ -53,18 +61,16 @@ def main():
     collator = TemporalClassificationCollator()
 
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, collate_fn=collator)#, shuffle=True)
-    # dev_loader = DataLoader(dev_dataset, batch_size=args.batch_size, collate_fn=collator)
+    dev_loader = DataLoader(dev_dataset, batch_size=args.batch_size, collate_fn=collator)
     test_loader = DataLoader(test_dataset, batch_size=args.batch_size, collate_fn=collator)
 
-    nr_classes = 2 #TODO
-
-    filename = 'dcwe_{}'.format(args.data_name)
+    filename = 'dcwe_{}_{}'.format(args.data_name, args.partition)
 
     device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() else 'cpu')
 
     model = TemporalClassificationModel(
         #n_times=train_dataset.n_times,
-        n_times=max(train_dataset.times + test_dataset.times) + 1, # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
+        n_times=max(train_dataset.times + dev_dataset.times + test_dataset.times) + 1, # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
         nr_classes=nr_classes,
         lm_model=lm_model
     )
@@ -112,30 +118,29 @@ def main():
             optimizer.step()
 
         model.eval()
-        # NO DEV DATA SO FAR
-        # print('Evaluate model...')
+        print('Evaluate model...')
 
-        # y_true = list()
-        # y_pred = list()
-        #
-        # with torch.no_grad():
-        #
-        #     for batch in dev_loader:
-        #
-        #         labels, times, years, months, days, reviews, masks, segs = batch
-        #
-        #         labels = labels.to(device)
-        #         reviews = reviews.to(device)
-        #         masks = masks.to(device)
-        #         segs = segs.to(device)
-        #
-        #         offset_t0, offset_t1, output = model(reviews, masks, segs, times, vocab_filter)
-        #
-        #         y_true.extend(labels.tolist())
-        #         y_pred.extend(torch.round(output).tolist())
-        #
-        # f1_dev = f1_score(y_true, y_pred, average='macro')
-        f1_dev = 0.0
+        y_true = list()
+        y_pred = list()
+
+        with torch.no_grad():
+
+            for batch in dev_loader:
+
+                labels, times, years, months, days, reviews, masks, segs = batch
+
+                labels = labels.to(device)
+                reviews = reviews.to(device)
+                masks = masks.to(device)
+                segs = segs.to(device)
+
+                offset_t0, offset_t1, output = model(reviews, masks, segs, times, vocab_filter)
+
+                y_true.extend(labels.tolist())
+                y_pred.extend(torch.round(output).tolist())
+
+        f1_dev_macro = f1_score(y_true, y_pred, average='macro')
+        f1_dev_micro = f1_score(y_true, y_pred, average='micro')
 
         print('Test model...')
 
@@ -158,9 +163,12 @@ def main():
                 y_true.extend(labels.tolist())
                 y_pred.extend(torch.round(output).tolist())
 
-        f1_test = f1_score(y_true, y_pred, average='macro')
+        f1_test_macro = f1_score(y_true, y_pred, average='macro')
+        f1_test_micro = f1_score(y_true, y_pred, average='micro')
 
-        print(f1_dev, f1_test)
+        # currently, we use macro-f1 as the important metric
+        f1_dev = f1_dev_macro
+        f1_test = f1_test_macro
 
         with open('{}/{}.txt'.format(args.results_dir, filename), 'a+') as f:
             f.write('{}\t{}\t{:.0e}\t{:.0e}\t{:.0e}\n'.format(f1_dev, f1_test, args.lr, args.lambda_a, args.lambda_w))

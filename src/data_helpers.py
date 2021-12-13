@@ -130,13 +130,14 @@ class SADataset(Dataset):
 class TemporalClassificationDataset(Dataset):
     """Dataset class for any temporal classification task."""
 
-    def __init__(self, name, filepath, split, begin_date, label_field='label', time_field='time', lm_model='bert-base-uncased'):
+    def __init__(self, name, dataframe, split, begin_date, partition, label_field='label',
+                 time_field='time', lm_model='bert-base-uncased'):
 
         self.tok = BertTokenizer.from_pretrained(lm_model)
 
-        data = pd.read_csv(filepath, parse_dates=[time_field])
+        data = dataframe
         # take the corresponding split (if it exists otherwise take random split)
-        data = data[data['partition'] == split]
+        data = data[data[partition] == split]
         # rename data columns to common format
         data.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
         # convert string labels to numeric
