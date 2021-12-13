@@ -93,12 +93,12 @@ def main():
     model = model.to(device)
     vocab_filter = train_dataset.filter_tensor.to(device)
 
-    best_result = get_best('{}/{}.txt'.format(args.results_dir, filename), metric='f1')
-    if best_result:
-        best_f1 = best_result[0]
-    else:
-        best_f1 = None
-    print('Best F1 so far: {}'.format(best_f1))
+    # best_result = get_best('{}/{}.txt'.format(args.results_dir, filename), metric='f1')
+    # if best_result:
+    #     best_f1 = best_result[0]
+    # else:
+    #     best_f1 = None
+    # print('Best F1 so far: {}'.format(best_f1))
 
     print('Train model...')
     for epoch in range(1, args.n_epochs + 1):
