@@ -11,6 +11,19 @@ from torch.utils.data import DataLoader
 from data_helpers import *
 from model_temporal import TemporalClassificationModel
 
+label_maps = {
+    'debate': {'claim': 1, 'noclaim': 0},
+    'sandy': {'y': 1, 'n': 0},
+    'rumours':  {'comment': 0, 'deny': 1, 'support': 2, 'query': 3},
+    'clex': {} #TODO
+}
+#
+# date_maps = {
+#     'debate': 'date',
+#     ''
+# }
+
+
 
 def main():
 
@@ -21,7 +34,8 @@ def main():
     torch.manual_seed(123)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_name", default=None, type=str, required=True, help='Name of the dataset.')
+    parser.add_argument("--data_name", default=None, type=str, required=True, help='Name of the dataset.',
+                        choices=['debate', 'sandy', 'clex', 'rumours'])
     parser.add_argument('--data_dir', default=None, type=str, required=True, help='Data directory.')
     parser.add_argument('--partition', default='time_stratified_partition', type=str, help='The data partition.')
     parser.add_argument('--results_dir', default='../results_dir', type=str, help='Results directory.')
@@ -41,16 +55,18 @@ def main():
     print('Loading data...')
     time_field = 'date'
     label_field = 'tag'
-    dataframe = pd.read_csv(args.data_dir, parse_dates=[time_field])
+    dataframe = pd.read_csv(args.data_dir, parse_dates=[time_field], encoding='utf-8')
     nr_classes = len(set(dataframe[label_field].values))
     begin_date = dataframe[time_field].min().to_pydatetime().date() # debatenet begin date
 
-    train_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'train', begin_date,
-                                                  partition=args.partition, label_field=label_field,
-                                                  time_field=time_field, lm_model=lm_model)
+    train_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'train', begin_date=begin_date,
+                                                  partition=args.partition, label_mapping=label_maps[args.data_name],
+                                                  label_field=label_field, time_field=time_field, lm_model=lm_model)
     dev_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'dev', begin_date, partition=args.partition,
+                                                label_mapping=label_maps[args.data_name],
                                                 label_field=label_field, time_field=time_field, lm_model=lm_model)
-    test_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'test', begin_date, partition=args.partition,
+    test_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'test', begin_date,
+                                                 partition=args.partition, label_mapping=label_maps[args.data_name],
                                                  label_field=label_field, time_field=time_field, lm_model=lm_model)
 
     print('Lambda a: {:.0e}'.format(args.lambda_a))
@@ -76,7 +92,8 @@ def main():
     )
 
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
-    criterion = nn.BCELoss()
+    #criterion = nn.BCELoss()
+    criterion = nn.CrossEntropyLoss()
 
     model = model.to(device)
     vocab_filter = train_dataset.filter_tensor.to(device)
@@ -109,7 +126,7 @@ def main():
 
             offset_t0, offset_t1, output = model(reviews, masks, segs, times, vocab_filter)
 
-            loss = criterion(output, labels)
+            loss = criterion(output, labels.long().view(-1))
             loss += args.lambda_a * torch.norm(offset_t1, dim=-1).pow(2).mean()
             loss += args.lambda_w * torch.norm(offset_t1 - offset_t0, dim=-1).pow(2).mean()
 
@@ -137,7 +154,9 @@ def main():
                 offset_t0, offset_t1, output = model(reviews, masks, segs, times, vocab_filter)
 
                 y_true.extend(labels.tolist())
-                y_pred.extend(torch.round(output).tolist())
+                # old code for binary classification
+                # y_pred.extend(torch.round(output).tolist())
+                y_pred.extend(torch.argmax(output, axis=-1).tolist())
 
         f1_dev_macro = f1_score(y_true, y_pred, average='macro')
         f1_dev_micro = f1_score(y_true, y_pred, average='micro')
@@ -161,17 +180,17 @@ def main():
                 offset_t0, offset_t1, output = model(reviews, masks, segs, times, vocab_filter)
 
                 y_true.extend(labels.tolist())
-                y_pred.extend(torch.round(output).tolist())
+                # y_pred.extend(torch.round(output).tolist())
+                y_pred.extend(torch.argmax(output, axis=-1).tolist())
 
         f1_test_macro = f1_score(y_true, y_pred, average='macro')
         f1_test_micro = f1_score(y_true, y_pred, average='micro')
 
-        # currently, we use macro-f1 as the important metric
-        f1_dev = f1_dev_macro
-        f1_test = f1_test_macro
 
-        with open('{}/{}.txt'.format(args.results_dir, filename), 'a+') as f:
-            f.write('{}\t{}\t{:.0e}\t{:.0e}\t{:.0e}\n'.format(f1_dev, f1_test, args.lr, args.lambda_a, args.lambda_w))
+        with open('{}/{}.txt'.format(args.results_dir, filename), 'w') as f:
+            f.write('macro-F1 dev\tmicro-F1 dev\tmacro-F1 test\tmicro-F1 test\tlr\tlambda_a\tlambda_w\n')
+            f.write('{}\t{}\t{}\t{}\t{:.0e}\t{:.0e}\t{:.0e}\n'.format(f1_dev_macro, f1_dev_micro, f1_test_macro, f1_test_micro,
+                                                              args.lr, args.lambda_a, args.lambda_w))
 
         # if best_f1 is None or f1_dev > best_f1:
         #

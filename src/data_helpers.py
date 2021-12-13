@@ -130,20 +130,19 @@ class SADataset(Dataset):
 class TemporalClassificationDataset(Dataset):
     """Dataset class for any temporal classification task."""
 
-    def __init__(self, name, dataframe, split, begin_date, partition, label_field='label',
+    def __init__(self, name, data, split, begin_date, partition, label_mapping, label_field='label',
                  time_field='time', lm_model='bert-base-uncased'):
 
         self.tok = BertTokenizer.from_pretrained(lm_model)
 
-        data = dataframe
         # take the corresponding split (if it exists otherwise take random split)
         data = data[data[partition] == split]
         # rename data columns to common format
         data.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
         # convert string labels to numeric
-        data['label'] = data['label'].replace({'claim': 1, 'noclaim': 0})
+        data['label'] = data['label'].replace(label_mapping)
 
-        data.dropna(inplace=True)
+        data.dropna(subset=[partition, 'label', 'time'], inplace=True)
         data.time = pd.to_datetime(data.time)
         data.reset_index(inplace=True, drop=True)
 
@@ -309,7 +308,8 @@ def convert_times(time, name, begin_date=None):
     elif name == 'reddit':
         return time - 9
 
-    elif name == 'debatenet':
+    #elif name == 'debate':
+    else:
         return abs(time.date() - begin_date).days
         #return abs(time.date().month - begin_date.month)
 

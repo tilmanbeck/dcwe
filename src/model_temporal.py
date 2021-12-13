@@ -18,13 +18,15 @@ class TemporalClassificationModel(nn.Module):
 
         super(TemporalClassificationModel, self).__init__()
 
+        self.nr_classes = nr_classes
+
         self.bert = BertModel.from_pretrained(lm_model)
         self.bert_emb_layer = self.bert.get_input_embeddings()
         self.offset_components = nn.ModuleList([OffsetComponent() for _ in range(n_times)])
         #self.social_components = nn.ModuleList([SocialComponent(social_dim, gnn) for _ in range(n_times)])
         self.linear_1 = nn.Linear(768, 100)
-        self.linear_2 = nn.Linear(100, nr_classes-1)
         self.dropout = nn.Dropout(0.2)
+        self.linear_2 = nn.Linear(100, nr_classes)
 
     def forward(self, reviews, masks, segs, times, vocab_filter, embs_only=False):
         """Perform forward pass.
@@ -61,7 +63,9 @@ class TemporalClassificationModel(nn.Module):
         # Pass through contextualizing component
         output_bert = self.dropout(self.bert(inputs_embeds=input_embs, attention_mask=masks, token_type_ids=segs)[1])
         h = self.dropout(torch.tanh(self.linear_1(output_bert)))
-        output = torch.sigmoid(self.linear_2(h)).squeeze(-1)
+        # we dont use the sigmoid function as we potentially deal with non-binary classification problems
+        # output = torch.sigmoid(self.linear_2(h)).squeeze(-1)
+        output = self.linear_2(h).view(-1, self.nr_classes)
 
         return offset_last, offset_now, output
 
