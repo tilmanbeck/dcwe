@@ -15,14 +15,9 @@ label_maps = {
     'debate': {'claim': 1, 'noclaim': 0},
     'sandy': {'y': 1, 'n': 0},
     'rumours':  {'comment': 0, 'deny': 1, 'support': 2, 'query': 3},
-    'clex': {} #TODO
+    'clex': {'Related - but not informative': 0, 'Not related': 1,
+             'Related and informative': 2, 'Not applicable': 3}
 }
-#
-# date_maps = {
-#     'debate': 'date',
-#     ''
-# }
-
 
 
 def main():
@@ -57,7 +52,7 @@ def main():
     label_field = 'tag'
     dataframe = pd.read_csv(args.data_dir, parse_dates=[time_field], encoding='utf-8')
     nr_classes = len(set(dataframe[label_field].values))
-    begin_date = dataframe[time_field].min().to_pydatetime().date() # debatenet begin date
+    begin_date = dataframe[time_field].min().to_pydatetime().date()
 
     train_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'train', begin_date=begin_date,
                                                   partition=args.partition, label_mapping=label_maps[args.data_name],
