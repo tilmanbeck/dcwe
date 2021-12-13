@@ -153,6 +153,7 @@ def main():
                 # y_pred.extend(torch.round(output).tolist())
                 y_pred.extend(torch.argmax(output, axis=-1).tolist())
 
+        f1_dev_binary = f1_score(y_true, y_pred, average='binary')
         f1_dev_macro = f1_score(y_true, y_pred, average='macro')
         f1_dev_micro = f1_score(y_true, y_pred, average='micro')
 
@@ -178,13 +179,15 @@ def main():
                 # y_pred.extend(torch.round(output).tolist())
                 y_pred.extend(torch.argmax(output, axis=-1).tolist())
 
+        f1_test_binary = f1_score(y_true, y_pred, average='binary')
         f1_test_macro = f1_score(y_true, y_pred, average='macro')
         f1_test_micro = f1_score(y_true, y_pred, average='micro')
 
 
         with open('{}/{}.txt'.format(args.results_dir, filename), 'w') as f:
-            f.write('macro-F1 dev\tmicro-F1 dev\tmacro-F1 test\tmicro-F1 test\tlr\tlambda_a\tlambda_w\n')
-            f.write('{}\t{}\t{}\t{}\t{:.0e}\t{:.0e}\t{:.0e}\n'.format(f1_dev_macro, f1_dev_micro, f1_test_macro, f1_test_micro,
+            f.write('binary-F1 dev\tmacro-F1 dev\tmicro-F1 dev\tbinary-F1 test\tmacro-F1 test\tmicro-F1 test\tlr\tlambda_a\tlambda_w\n')
+            f.write('{}\t{}\t{}\t{}\t{}\t{}\t{:.0e}\t{:.0e}\t{:.0e}\n'.format(f1_dev_binary,f1_dev_macro, f1_dev_micro,
+                                                                      f1_test_binary, f1_test_macro, f1_test_micro,
                                                               args.lr, args.lambda_a, args.lambda_w))
 
         # if best_f1 is None or f1_dev > best_f1:
