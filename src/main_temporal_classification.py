@@ -153,7 +153,9 @@ def main():
                 # y_pred.extend(torch.round(output).tolist())
                 y_pred.extend(torch.argmax(output, axis=-1).tolist())
 
-        f1_dev_binary = f1_score(y_true, y_pred, average='binary')
+        f1_dev_binary = -1.0
+        if nr_classes == 2:
+            f1_dev_binary = f1_score(y_true, y_pred, average='binary')
         f1_dev_macro = f1_score(y_true, y_pred, average='macro')
         f1_dev_micro = f1_score(y_true, y_pred, average='micro')
         print('Epoch: {}, F1-binary: {:.2f}, F1-macro: {:.2f}, F1-micro: {:.2f}'.format(epoch,
@@ -183,7 +185,9 @@ def main():
             # y_pred.extend(torch.round(output).tolist())
             y_pred.extend(torch.argmax(output, axis=-1).tolist())
 
-    f1_test_binary = f1_score(y_true, y_pred, average='binary')
+    f1_test_binary = -1.0
+    if nr_classes == 2:
+        f1_test_binary = f1_score(y_true, y_pred, average='binary')
     f1_test_macro = f1_score(y_true, y_pred, average='macro')
     f1_test_micro = f1_score(y_true, y_pred, average='micro')
 
