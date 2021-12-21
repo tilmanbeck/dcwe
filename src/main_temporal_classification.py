@@ -19,6 +19,14 @@ label_maps = {
              'Related and informative': 2, 'Not applicable': 3}
 }
 
+label_maps_inverse = {
+    'debate': {1: 'claim', 0: 'noclaim'},
+    'sandy': {1: 'y', 0:'n'},
+    'rumours':  {0: 'comment', 1: 'deny', 2:'support', 3:'query'},
+    'clex': {0: 'Related - but not informative', 1: 'Not related',
+             2: 'Related and informative', 3:'Not applicable'}
+}
+
 
 def main():
 
@@ -39,7 +47,6 @@ def main():
     parser.add_argument('--lr', default=0.0003, type=float, help='Learning rate.')
     parser.add_argument('--n_epochs', default=2, type=int, help='Number of epochs.')
     parser.add_argument('--lambda_a', default=0.1, type=float, help='Regularization constant a.')
-    parser.add_argument('--lambda_w', default=0, type=float, help='Regularization constant w.')
     parser.add_argument('--device', default=0, type=int, help='Selected CUDA device.')
     parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
     args = parser.parse_args()
@@ -53,19 +60,23 @@ def main():
     dataframe = pd.read_csv(args.data_dir, parse_dates=[time_field], encoding='utf-8')
     nr_classes = len(set(dataframe[label_field].values))
     begin_date = dataframe[time_field].min().to_pydatetime().date()
+    task_label_map = label_maps[args.data_name]
+    inverse_task_label_map = label_maps_inverse[args.data_name]
 
     train_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'train', begin_date=begin_date,
-                                                  partition=args.partition, label_mapping=label_maps[args.data_name],
+                                                  partition=args.partition, label_mapping=task_label_map,
                                                   label_field=label_field, time_field=time_field, lm_model=lm_model)
     dev_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'dev', begin_date, partition=args.partition,
-                                                label_mapping=label_maps[args.data_name],
+                                                label_mapping=task_label_map,
                                                 label_field=label_field, time_field=time_field, lm_model=lm_model)
     test_dataset = TemporalClassificationDataset(args.data_name, dataframe, 'test', begin_date,
-                                                 partition=args.partition, label_mapping=label_maps[args.data_name],
+                                                 partition=args.partition, label_mapping=task_label_map,
                                                  label_field=label_field, time_field=time_field, lm_model=lm_model)
 
-    print('Lambda a: {:.0e}'.format(args.lambda_a))
-    print('Lambda w: {:.0e}'.format(args.lambda_w))
+    lambda_a = args.lambda_a
+    lambda_w = lambda_a / 0.001 # see paper by Hofmann et al. ACL 2021
+    print('Lambda a: {:.0e}'.format(lambda_a))
+    print('Lambda w: {:.0e}'.format(lambda_w))
     print('Number of time units: {}'.format(train_dataset.n_times))
     print('Number of vocabulary items: {}'.format(len(train_dataset.filter_tensor)))
 
@@ -81,7 +92,8 @@ def main():
 
     model = TemporalClassificationModel(
         #n_times=train_dataset.n_times,
-        n_times=max(train_dataset.times + dev_dataset.times + test_dataset.times) + 1, # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
+        n_times=max(train_dataset.times + dev_dataset.times + test_dataset.times) + 1,
+        # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
         nr_classes=nr_classes,
         lm_model=lm_model
     )
@@ -122,8 +134,11 @@ def main():
             offset_t0, offset_t1, output = model(reviews, masks, segs, times, vocab_filter)
 
             loss = criterion(output, labels.long().view(-1))
-            loss += args.lambda_a * torch.norm(offset_t1, dim=-1).pow(2).mean()
-            loss += args.lambda_w * torch.norm(offset_t1 - offset_t0, dim=-1).pow(2).mean()
+            # print('Loss before offsetting: {:.5f}'.format(loss))
+            loss += lambda_a * torch.norm(offset_t1, dim=-1).pow(2).mean()
+            # print('Loss after offsetting: {:.5f}'.format(loss))
+            loss += lambda_w * torch.norm(offset_t1 - offset_t0, dim=-1).pow(2).mean()
+            # print('Loss after offsetting diff: {:.5f}'.format(loss))
 
             loss.backward()
 
@@ -158,10 +173,18 @@ def main():
             f1_dev_binary = f1_score(y_true, y_pred, average='binary')
         f1_dev_macro = f1_score(y_true, y_pred, average='macro')
         f1_dev_micro = f1_score(y_true, y_pred, average='micro')
-        print('Epoch: {}, F1-binary: {:.2f}, F1-macro: {:.2f}, F1-micro: {:.2f}'.format(epoch,
+        print('Epoch: {}, F1-binary: {:.4f}, F1-macro: {:.4f}, F1-micro: {:.4f}'.format(epoch,
                                                                                         f1_dev_binary,
                                                                                         f1_dev_macro,
                                                                                         f1_dev_micro))
+        with open('{}/{}.txt'.format(args.results_dir, "dev_epoch_" + str(epoch)), 'w') as f:
+            f.write('binary-F1 dev\tmacro-F1 dev\tmicro-F1 dev\tlr\tlambda_a\tlambda_w\n')
+            f.write('{}\t{}\t{}\t{:.0e}\t{:.0e}\t{:.0e}\n'.format(f1_dev_binary,f1_dev_macro, f1_dev_micro,
+                                                              args.lr, lambda_a, lambda_w))
+        with open('{}/{}_{}.txt'.format(args.results_dir, filename, "dev_epoch_" + str(epoch)), 'w') as f:
+            f.write('gold,pred' + '\n')
+            for y_t, y_p in zip(y_true, y_pred):
+                f.write(inverse_task_label_map[int(y_t)] + ',' + inverse_task_label_map[int(y_p)] + '\n')
 
     print('Test model...')
 
@@ -196,7 +219,7 @@ def main():
         f.write('binary-F1 dev\tmacro-F1 dev\tmicro-F1 dev\tbinary-F1 test\tmacro-F1 test\tmicro-F1 test\tlr\tlambda_a\tlambda_w\n')
         f.write('{}\t{}\t{}\t{}\t{}\t{}\t{:.0e}\t{:.0e}\t{:.0e}\n'.format(f1_dev_binary,f1_dev_macro, f1_dev_micro,
                                                                   f1_test_binary, f1_test_macro, f1_test_micro,
-                                                          args.lr, args.lambda_a, args.lambda_w))
+                                                          args.lr, lambda_a, lambda_w))
 
         # if best_f1 is None or f1_dev > best_f1:
         #

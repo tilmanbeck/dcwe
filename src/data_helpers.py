@@ -4,11 +4,12 @@ from collections import defaultdict, Counter
 import networkx as nx
 import numpy as np
 import pandas as pd
+pd.set_option('mode.chained_assignment','raise')
 import torch
 from nltk.corpus import stopwords
 from torch.utils.data import Dataset
 #from torch_geometric.data import Data
-from transformers import BertTokenizer
+from transformers import BertTokenizer, AutoTokenizer
 
 stops = set(stopwords.words('english'))
 
@@ -133,33 +134,34 @@ class TemporalClassificationDataset(Dataset):
     def __init__(self, name, data, split, begin_date, partition, label_mapping, label_field='label',
                  time_field='time', lm_model='bert-base-uncased'):
 
-        self.tok = BertTokenizer.from_pretrained(lm_model)
+        self.tok = AutoTokenizer.from_pretrained(lm_model, use_fast=False)
 
         # take the corresponding split (if it exists otherwise take random split)
-        data = data[data[partition] == split]
+        split_data = data[data[partition] == split]
+        filtered_data = pd.DataFrame(data.iloc[split_data.index])
         # rename data columns to common format
-        data.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
+        filtered_data.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
         # convert string labels to numeric
-        data['label'] = data['label'].replace(label_mapping)
+        filtered_data['label'] = filtered_data['label'].replace(label_mapping)
 
-        data.dropna(subset=[partition, 'label', 'time'], inplace=True)
-        data.time = pd.to_datetime(data.time)
-        data.reset_index(inplace=True, drop=True)
+        filtered_data.dropna(subset=[partition, 'label', 'time'], inplace=True)
+        filtered_data.time = pd.to_datetime(filtered_data.time)
+        filtered_data.reset_index(inplace=True, drop=True)
 
-        self.labels = list(data.label)
-        self.years = [i.year for i in data.time]
-        self.months = [i.month for i in data.time]
-        self.days = [i.day for i in data.time]
+        self.labels = list(filtered_data.label)
+        self.years = [i.year for i in filtered_data.time]
+        self.months = [i.month for i in filtered_data.time]
+        self.days = [i.day for i in filtered_data.time]
 
         #self.times = list(data.year.apply(convert_times, name=name, begin_date=begin_date))
-        self.times = [convert_times(i, name=name, begin_date=begin_date) for i in data.time]
+        self.times = [convert_times(i, name=name, begin_date=begin_date) for i in filtered_data.time]
         self.n_times = max(self.times) + 1#len(set(self.times))
         # because we have gaps in the data, we set it to the max instead of the unique count
         # otherwise it will lead to an IndexOutOfBound Error when accessing indices of days because the array
         # was not long enough
 
         vocab = defaultdict(Counter)
-        for text, time in zip(data.text, self.times):
+        for text, time in zip(filtered_data.text, self.times):
             vocab[time].update(text.strip().split())
         for time in vocab:
             total = sum(vocab[time].values())
@@ -172,7 +174,7 @@ class TemporalClassificationDataset(Dataset):
         filter_list = [w for w in w_top if w not in stops and w in self.tok.vocab and w.isalpha()]
         self.filter_tensor = torch.tensor([t for t in self.tok.encode(filter_list) if t >= 2100])
 
-        self.texts = list(data.text.apply(self.tok.encode, add_special_tokens=True))
+        self.texts = list(filtered_data.text.apply(self.tok.encode, add_special_tokens=True))
         self.texts = truncate(self.texts)
 
     def __len__(self):
@@ -399,3 +401,22 @@ def get_best(file, metric):
 
 def isin(ar1, ar2):
     return (ar1[..., None] == ar2).any(-1)
+
+def data_stats(path, split='train', partition='time_stratified_partition'):
+    time_field = 'date'
+    label_field = 'tag'
+    dataframe = pd.read_csv(path, parse_dates=[time_field], encoding='utf-8')
+    # take the corresponding split (if it exists otherwise take random split)
+    split_data = dataframe[dataframe[partition] == split]
+    filtered_data = pd.DataFrame(dataframe.iloc[split_data.index])
+    # rename data columns to common format
+    filtered_data.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
+    # convert string labels to numeric
+
+    filtered_data.dropna(subset=[partition, 'label', 'time'], inplace=True)
+    filtered_data.time = pd.to_datetime(filtered_data.time)
+    filtered_data.reset_index(inplace=True, drop=True)
+
+    from collections import Counter
+    print('Split:', split)
+    print(Counter(filtered_data['label'].values.tolist()))

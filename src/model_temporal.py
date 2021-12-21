@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
-from transformers import BertModel
+from transformers import BertModel, AutoModel
 
 from data_helpers import isin
 
@@ -20,7 +20,7 @@ class TemporalClassificationModel(nn.Module):
 
         self.nr_classes = nr_classes
 
-        self.bert = BertModel.from_pretrained(lm_model)
+        self.bert = AutoModel.from_pretrained(lm_model)
         self.bert_emb_layer = self.bert.get_input_embeddings()
         self.offset_components = nn.ModuleList([OffsetComponent() for _ in range(n_times)])
         #self.social_components = nn.ModuleList([SocialComponent(social_dim, gnn) for _ in range(n_times)])
