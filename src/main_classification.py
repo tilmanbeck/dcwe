@@ -9,7 +9,6 @@ from torch import optim, nn
 from torch.utils.data import DataLoader
 from transformers import AutoModelForSequenceClassification
 from data_helpers import *
-from model_temporal import ClassificationModel
 
 label_maps = {
     'debate': {'claim': 1, 'noclaim': 0},
