@@ -7,9 +7,9 @@ import datetime
 from sklearn.metrics import f1_score
 from torch import optim, nn
 from torch.utils.data import DataLoader
-
+from transformers import AutoModelForSequenceClassification
 from data_helpers import *
-from model_temporal import TemporalClassificationModel
+from model_temporal import ClassificationModel
 
 label_maps = {
     'debate': {'claim': 1, 'noclaim': 0},
@@ -32,9 +32,10 @@ def main():
 
     logging.disable(logging.WARNING)
 
-    random.seed(123)
-    np.random.seed(123)
-    torch.manual_seed(123)
+    seed = 666
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_name", default=None, type=str, required=True, help='Name of the dataset.',
@@ -90,21 +91,13 @@ def main():
 
     device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() else 'cpu')
 
-    model = TemporalClassificationModel(
-        #n_times=train_dataset.n_times,
-        n_times=max(train_dataset.times + dev_dataset.times + test_dataset.times) + 1,
-        # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
-        nr_classes=nr_classes,
-        lm_model=lm_model
-    )
-
+    model = AutoModelForSequenceClassification.from_pretrained(lm_model)
 
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
     # criterion = nn.BCELoss()
     criterion = nn.CrossEntropyLoss()
 
     model = model.to(device)
-    vocab_filter = train_dataset.filter_tensor.to(device)
 
     # best_result = get_best('{}/{}.txt'.format(args.results_dir, filename), metric='f1')
     # if best_result:
@@ -132,14 +125,9 @@ def main():
 
             optimizer.zero_grad()
 
-            offset_t0, offset_t1, output = model(reviews, masks, segs, times, vocab_filter)
+            output = model(reviews, masks, segs)[0]
 
             loss = criterion(output, labels.long().view(-1))
-            # print('Loss before offsetting: {:.5f}'.format(loss))
-            loss += lambda_a * torch.norm(offset_t1, dim=-1).pow(2).mean()
-            # # print('Loss after offsetting: {:.5f}'.format(loss))
-            loss += lambda_w * torch.norm(offset_t1 - offset_t0, dim=-1).pow(2).mean()
-            # # print('Loss after offsetting diff: {:.5f}'.format(loss))
 
             loss.backward()
 
@@ -162,7 +150,7 @@ def main():
                 masks = masks.to(device)
                 segs = segs.to(device)
 
-                offset_t0, offset_t1, output = model(reviews, masks, segs, times, vocab_filter)
+                output = model(reviews, masks, segs)[0]
 
                 y_true.extend(labels.tolist())
                 # old code for binary classification
@@ -179,9 +167,9 @@ def main():
                                                                                         f1_dev_macro,
                                                                                         f1_dev_micro))
         with open('{}/{}.txt'.format(args.results_dir, "dev_epoch_" + str(epoch)), 'w') as f:
-            f.write('binary-F1 dev\tmacro-F1 dev\tmicro-F1 dev\tlr\tlambda_a\tlambda_w\n')
-            f.write('{}\t{}\t{}\t{:.0e}\t{:.0e}\t{:.0e}\n'.format(f1_dev_binary,f1_dev_macro, f1_dev_micro,
-                                                              args.lr, lambda_a, lambda_w))
+            f.write('binary-F1 dev\tmacro-F1 dev\tmicro-F1 dev\tlr\n')
+            f.write('{}\t{}\t{}\t{:.0e}\n'.format(f1_dev_binary,f1_dev_macro, f1_dev_micro,
+                                                              args.lr))
         with open('{}/{}_{}.txt'.format(args.results_dir, filename, "dev_epoch_" + str(epoch)), 'w') as f:
             f.write('gold,pred' + '\n')
             for y_t, y_p in zip(y_true, y_pred):
@@ -203,7 +191,7 @@ def main():
             masks = masks.to(device)
             segs = segs.to(device)
 
-            offset_t0, offset_t1, output = model(reviews, masks, segs, times, vocab_filter)
+            output = model(reviews, masks, segs)[0]
 
             y_true.extend(labels.tolist())
             # y_pred.extend(torch.round(output).tolist())
@@ -216,17 +204,9 @@ def main():
     f1_test_micro = f1_score(y_true, y_pred, average='micro')
 
 
-    with open('{}/{}.txt'.format(args.results_dir, filename), 'w') as f:
-        f.write('binary-F1 dev\tmacro-F1 dev\tmicro-F1 dev\tbinary-F1 test\tmacro-F1 test\tmicro-F1 test\tlr\tlambda_a\tlambda_w\n')
-        f.write('{}\t{}\t{}\t{}\t{}\t{}\t{:.0e}\t{:.0e}\t{:.0e}\n'.format(f1_dev_binary,f1_dev_macro, f1_dev_micro,
-                                                                  f1_test_binary, f1_test_macro, f1_test_micro,
-                                                          args.lr, lambda_a, lambda_w))
-
-        # if best_f1 is None or f1_dev > best_f1:
-        #
-        #     best_f1 = f1_dev
-        #     torch.save(model.state_dict(), '{}/{}.torch'.format(args.trained_dir, filename))
-
+    with open('{}/{}_test.txt'.format(args.results_dir, filename ), 'w') as f:
+        f.write('binary-F1 test\tmacro-F1 test\tmicro-F1 test\tlr\n')
+        f.write('{}\t{}\t{}\t{:.0e}\n'.format(f1_test_binary, f1_test_macro, f1_test_micro, args.lr))
 
 if __name__ == '__main__':
 
