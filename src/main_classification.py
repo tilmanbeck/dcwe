@@ -7,7 +7,7 @@ import datetime
 from sklearn.metrics import f1_score
 from torch import optim, nn
 from torch.utils.data import DataLoader
-from transformers import AutoModelForSequenceClassification
+from transformers import AutoModelForSequenceClassification, AutoConfig
 from data_helpers import *
 
 label_maps = {
@@ -90,7 +90,8 @@ def main():
 
     device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() else 'cpu')
 
-    model = AutoModelForSequenceClassification.from_pretrained(lm_model)
+    config = AutoConfig.from_pretrained(lm_model, num_labels=nr_classes)
+    model = AutoModelForSequenceClassification.from_config(config)
 
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
     # criterion = nn.BCELoss()
