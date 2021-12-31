@@ -27,6 +27,13 @@ def convert_timediffs_to_timebins(time_diffs):
     return conversion
 
 
+def hp_space(trial):
+    return {
+        "learning_rate": trial.suggest_categorical("learning_rate", choices=[0.00001, 0.0001, 0.001]),
+        "num_train_epochs": trial.suggest_categorical("num_train_epochs", choices=[1,2,3,4]),
+
+    }
+
 label_maps = {
     'debate': {'claim': 1, 'noclaim': 0},
     'sandy': {'y': 1, 'n': 0},
@@ -47,33 +54,29 @@ def main():
 
     logging.disable(logging.WARNING)
 
-    seed = 666
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_name", default=None, type=str, required=True, help='Name of the dataset.',
                         choices=['debate', 'sandy', 'clex', 'rumours'])
     parser.add_argument('--data_dir', default=None, type=str, required=True, help='Data directory.')
     parser.add_argument('--partition', default='time_stratified_partition', type=str, help='The data partition.')
     parser.add_argument('--results_dir', default='../results_dir', type=str, help='Results directory.')
-    parser.add_argument('--trained_dir', default='../trained_dir', type=str, help='Trained model directory.')
     parser.add_argument('--batch_size', default=4, type=int, help='Batch size.')
     parser.add_argument('--lr', default=0.0001, type=float, help='Learning rate.')
     parser.add_argument('--warmup_ratio', default=0.1, type=float, help='Warmup ratio.')
     parser.add_argument('--weight_decay', default=0.01, type=float, help='Weight decay.')
-    parser.add_argument('--n_epochs', default=1, type=int, help='Number of epochs.')
+    parser.add_argument('--n_epochs', default=4, type=int, help='Number of epochs.')
     parser.add_argument('--lambda_a', default=0.1, type=float, help='Regularization constant a.')
     parser.add_argument('--device', default=0, type=int, help='Selected CUDA device.')
     parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
     parser.add_argument("--top_n_frequent_words", default=1000, type=int, help="")
+    parser.add_argument("--seed", default=666, type=int)
     args = parser.parse_args()
 
     if not os.path.exists(args.results_dir):
         os.makedirs(args.results_dir)
     output_dir = args.results_dir
 
+    seed = args.seed
     lm_model = args.lm_model
     label_map = label_maps[args.data_name]
     inverse_label_map = label_maps_inverse[args.data_name]
@@ -151,8 +154,6 @@ def main():
     print('Lambda w: {:.0e}'.format(lambda_w))
     print('Number of time units: {}'.format(n_times))
     print('Number of vocabulary items: {}'.format(len(filter_tensor)))
-
-    filename = 'dcwe_{}_{}'.format(args.data_name, args.partition)
 
     device = torch.device('cuda:{}'.format(args.device) if torch.cuda.is_available() else 'cpu')
     vocab_filter = filter_tensor.to(device)
