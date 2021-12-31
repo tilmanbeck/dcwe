@@ -7,11 +7,30 @@ import pandas as pd
 pd.set_option('mode.chained_assignment','raise')
 import torch
 from nltk.corpus import stopwords
-from torch.utils.data import Dataset
-#from torch_geometric.data import Data
-from transformers import BertTokenizer, AutoTokenizer
-
 stops = set(stopwords.words('english'))
+from torch.utils.data import Dataset as Dataset
+#from torch_geometric.data import Data
+from transformers import EvalPrediction
+from sklearn.metrics import f1_score
+from datasets import Dataset as HFDataset
+
+
+def convert_labels(data, label_map):
+    data['label'] = [label_map[i] for i in data['label']]
+    return data
+
+def compute_metrics(p: EvalPrediction):
+    preds = p.predictions[0] if isinstance(p.predictions, tuple) else p.predictions
+    preds = np.argmax(preds, axis=1)
+    if len(set(p.label_ids))==2:
+        f1_bin = f1_score(p.label_ids, preds, average='binary')
+    else:
+        f1_bin = -1
+    result = {"accuracy": (preds == p.label_ids).astype(np.float32).mean().item(),
+              'f1': f1_bin,
+              'f1_macro': f1_score(p.label_ids, preds, average='macro'),
+              'f1_micro': f1_score(p.label_ids, preds, average='micro')}
+    return result
 
 
 class MLMDataset(Dataset):
@@ -128,13 +147,17 @@ class SADataset(Dataset):
 
         return label, user, time, year, month, day, review
 
+# class HFTemporalClassificationDataset(HFDataset):
+
+
+
 class TemporalClassificationDataset(Dataset):
     """Dataset class for any temporal classification task."""
 
-    def __init__(self, name, data, split, begin_date, partition, label_mapping, label_field='label',
-                 time_field='time', lm_model='bert-base-uncased'):
+    def __init__(self, tokenizer, name, data, split, begin_date, partition, label_mapping, label_field='label',
+                 time_field='time', top_n_frequent_words=1000):
 
-        self.tok = AutoTokenizer.from_pretrained(lm_model, use_fast=False)
+        self.tok = tokenizer
 
         # take the corresponding split (if it exists otherwise take random split)
         split_data = data[data[partition] == split]
@@ -170,12 +193,13 @@ class TemporalClassificationDataset(Dataset):
         for time in vocab:
             for w in vocab[time]:
                 w_counts[w] = w_counts.get(w, 0) + vocab[time][w]
-        w_top = sorted(w_counts.keys(), key=lambda x: w_counts[x], reverse=True)[:100000]
+        w_top = sorted(w_counts.keys(), key=lambda x: w_counts[x], reverse=True)[:top_n_frequent_words]
         filter_list = [w for w in w_top if w not in stops and w in self.tok.vocab and w.isalpha()]
         self.filter_tensor = torch.tensor([t for t in self.tok.encode(filter_list) if t >= 2100])
 
         self.texts = list(filtered_data.text.apply(self.tok.encode, add_special_tokens=True))
         self.texts = truncate(self.texts)
+        # self.texts = truncate(filtered_data.text)
 
     def __len__(self):
         return len(self.texts)
@@ -275,7 +299,7 @@ class TemporalClassificationCollator:
     """Collator class for any temporal classification task."""
 
     def __call__(self, batch):
-
+        # return label, time, year, month, day, text
         batch_size = len(batch)
 
         labels = torch.tensor([l for l, _, _, _, _, _ in batch]).float()
@@ -296,7 +320,7 @@ class TemporalClassificationCollator:
 
         return labels, times, years, months, days, texts_pad, masks_pad, segs_pad
 
-def convert_times(time, name, begin_date=None):
+def convert_times(time, name, begin_date=None, temporal_granularity='day'):
 
     if name == 'arxiv':
         return time - 2001
@@ -309,11 +333,15 @@ def convert_times(time, name, begin_date=None):
 
     elif name == 'reddit':
         return time - 9
-
-    #elif name == 'debate':
     else:
-        return abs(time.date() - begin_date).days
-        #return abs(time.date().month - begin_date.month)
+        if temporal_granularity == 'day':
+            return abs(time.date() - begin_date).days
+        elif temporal_granularity == 'week':
+            return abs(time.date() - begin_date).weeks
+        elif temporal_granularity == 'month':
+            return abs(time.date() - begin_date).months
+        else: # default
+            return abs(time.date() - begin_date).days
 
 def truncate(reviews):
 
