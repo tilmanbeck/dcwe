@@ -1,3 +1,4 @@
+import json
 import os
 import argparse
 import logging
@@ -60,7 +61,7 @@ def main():
     parser.add_argument('--data_dir', default=None, type=str, required=True, help='Data directory.')
     parser.add_argument('--partition', default='time_stratified_partition', type=str, help='The data partition.')
     parser.add_argument('--results_dir', default='../results_dir', type=str, help='Results directory.')
-    parser.add_argument('--batch_size', default=4, type=int, help='Batch size.')
+    parser.add_argument('--batch_size', default=16, type=int, help='Batch size.')
     parser.add_argument('--lr', default=0.0001, type=float, help='Learning rate.')
     parser.add_argument('--warmup_ratio', default=0.1, type=float, help='Warmup ratio.')
     parser.add_argument('--weight_decay', default=0.01, type=float, help='Weight decay.')
@@ -84,7 +85,7 @@ def main():
     print('Loading data...')
     time_field = 'date'
     label_field = 'tag'
-    dataframe = pd.read_csv(args.data_dir)
+    dataframe = pd.read_csv(args.data_dir, nrows=5000)
     nr_classes = len(set(dataframe[label_field].values))
 
     ######## FORMAT DATA ############
@@ -204,15 +205,21 @@ def main():
     # evaluation
     print('Evaluate model..')
     eval_results = trainer.evaluate()
-    print(eval_results)
+    with open(os.path.join(output_dir, 'eval_results.json'), 'w') as fp:
+        json.dump(eval_results, fp)
 
     # test
     print('Test model..')
-    test_results = trainer.predict(test_dataset=test_dataset)
-    print(test_results)
+    test_results = trainer.predict(test_dataset=test_dataset, )
+    with open(os.path.join(output_dir, 'test_results.json'), 'w') as fp:
+        json.dump(test_results.metrics, fp)
     preds = test_results.predictions[0] if isinstance(test_results.predictions, tuple) else test_results.predictions
     preds =  [inverse_label_map[i] for i in list(np.argmax(preds, axis=1))]
     truth =  [inverse_label_map[i] for i in list(test_results.label_ids)]
+    with open(os.path.join(output_dir, 'test_predictions.csv'), 'w') as fp:
+        fp.write('truth,prediction\n')
+        for t,p in zip(truth, preds):
+            fp.write(t + ',' + p + '\n')
 
 
 if __name__ == '__main__':
