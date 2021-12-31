@@ -85,7 +85,7 @@ def main():
     print('Loading data...')
     time_field = 'date'
     label_field = 'tag'
-    dataframe = pd.read_csv(args.data_dir, nrows=5000)
+    dataframe = pd.read_csv(args.data_dir)
     nr_classes = len(set(dataframe[label_field].values))
 
     ######## FORMAT DATA ############
