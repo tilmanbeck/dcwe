@@ -66,7 +66,8 @@ def main():
 
     ######## FORMAT DATA ############
     # rename data columns to common format
-    dataframe.rename(columns={label_field: 'label', time_field: 'time', id_field: 'id'}, inplace=True)
+    dataframe['id'] = dataframe[id_field]
+    dataframe.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
     # convert string labels to numeric
     dataframe['label'] = dataframe['label'].replace(label_map)
     dataframe.dropna(subset=[args.partition, 'label', 'time'], inplace=True)
@@ -108,7 +109,8 @@ def main():
     features = datasets.Features({
         'label': datasets.Value("int64"),
         'text': datasets.Value("string"),
-        'timediff': datasets.Value("int64")
+        'timediff': datasets.Value("int64"),
+        'id': datasets.Value("int64")
     })
     train_data = dataframe[dataframe[args.partition] == "train"]
     train_data = pd.DataFrame(dataframe.iloc[train_data.index])
@@ -193,9 +195,9 @@ def main():
     preds =  [inverse_label_map[i] for i in list(np.argmax(preds, axis=1))]
     truth =  [inverse_label_map[i] for i in list(test_results.label_ids)]
     with open(os.path.join(output_dir, 'test_predictions.csv'), 'w') as fp:
-        fp.write('truth,prediction\n')
-        for t,p in zip(truth, preds):
-            fp.write(t + ',' + p + '\n')
+        fp.write('tweet_id,truth,prediction\n')
+        for idd,t,p in zip(list(test_data.id),truth, preds):
+            fp.write(str(idd) + ',' + t + ',' + p + '\n')
 
 
 if __name__ == '__main__':
