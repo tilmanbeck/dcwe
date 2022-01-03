@@ -14,19 +14,9 @@ from nltk.corpus import stopwords
 stops = set(stopwords.words('english'))
 
 from data_helpers import convert_times, compute_metrics
-from model_temporal import TemporalClassificationModelNew
-
-
-def convert_timediffs_to_timebins(time_diffs):
-    time_diffs = sorted(time_diffs)
-    start = 1 # we start at 1 because we need an initial bin (without data) for the offset computation in model.forward
-    conversion = {}
-    for i in time_diffs:
-        if i not in conversion.keys():
-            conversion[i]  = start
-            start += 1
-    return conversion
-
+from models import TemporalClassificationModel
+from utils import convert_timediffs_to_timebins
+from CONST import label_maps, label_maps_inverse, id_field_map, metrics_for_datasets
 
 def hp_space(trial):
     return {
@@ -35,21 +25,6 @@ def hp_space(trial):
 
     }
 
-label_maps = {
-    'debate': {'claim': 1, 'noclaim': 0},
-    'sandy': {'y': 1, 'n': 0},
-    'rumours':  {'comment': 0, 'deny': 1, 'support': 2, 'query': 3},
-    'clex': {'Related - but not informative': 0, 'Not related': 1,
-             'Related and informative': 2, 'Not applicable': 3}
-}
-
-label_maps_inverse = {
-    'debate': {1: 'claim', 0: 'noclaim'},
-    'sandy': {1: 'y', 0:'n'},
-    'rumours':  {0: 'comment', 1: 'deny', 2:'support', 3:'query'},
-    'clex': {0: 'Related - but not informative', 1: 'Not related',
-             2: 'Related and informative', 3:'Not applicable'}
-}
 
 def main():
 
@@ -85,12 +60,13 @@ def main():
     print('Loading data...')
     time_field = 'date'
     label_field = 'tag'
+    id_field = id_field_map[args.data_name]
     dataframe = pd.read_csv(args.data_dir)
     nr_classes = len(set(dataframe[label_field].values))
 
     ######## FORMAT DATA ############
     # rename data columns to common format
-    dataframe.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
+    dataframe.rename(columns={label_field: 'label', time_field: 'time', id_field: 'id'}, inplace=True)
     # convert string labels to numeric
     dataframe['label'] = dataframe['label'].replace(label_map)
     dataframe.dropna(subset=[args.partition, 'label', 'time'], inplace=True)
@@ -161,7 +137,7 @@ def main():
 
     # model preparation
     def model_init():
-        model = TemporalClassificationModelNew(
+        model = TemporalClassificationModel(
             n_times=n_times + 1,
             # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
             vocab_filter=vocab_filter,
@@ -180,7 +156,7 @@ def main():
         evaluation_strategy=IntervalStrategy.EPOCH,
         save_strategy=IntervalStrategy.EPOCH,
         load_best_model_at_end=True,
-        metric_for_best_model='f1',
+        metric_for_best_model=metrics_for_datasets[args.data_name],
         save_total_limit=1,
         seed=seed
     )
