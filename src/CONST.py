@@ -15,7 +15,7 @@ label_maps_inverse = {
 }
 
 id_field_map = {
-    'debate': 'id',
+    'debate': 'tweet_id',
     'sandy': 'tweet_id',
     'rumours':  'id',
     'clex': 'tweet_id'
