@@ -45,6 +45,7 @@ def main():
     parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
     parser.add_argument("--top_n_frequent_words", default=1000, type=int, help="")
     parser.add_argument("--seed", default=666, type=int)
+    parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
     args = parser.parse_args()
 
     output_dir = args.results_dir
@@ -71,7 +72,6 @@ def main():
     dataframe.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
     # convert string labels to numeric
     dataframe['label'] = dataframe['label'].replace(label_map)
-    dataframe.dropna(subset=[partition, 'label', 'time'], inplace=True)
     dataframe.time = pd.to_datetime(dataframe.time)
     dataframe.reset_index(inplace=True, drop=True)
     begin_date = dataframe['time'].min().to_pydatetime().date()
@@ -138,11 +138,6 @@ def main():
         validation_dataset = datasets.Dataset.from_pandas(validation_data, features=features).map(
             lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
 
-        test_data = dataframe[dataframe[partition].isin(test_bins)]
-        test_data = pd.DataFrame(dataframe.iloc[test_data.index])
-        test_dataset = datasets.Dataset.from_pandas(test_data, features=features).map(
-            lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
-
         lambda_a = args.lambda_a
         lambda_w = lambda_a / 0.001 # see paper by Hofmann et al. ACL 2021
         print('Lambda a: {:.0e}'.format(lambda_a))
@@ -157,7 +152,6 @@ def main():
         def model_init():
             model = TemporalClassificationModel(
                 n_times=n_times + 1,
-                # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
                 vocab_filter=vocab_filter,
                 nr_classes=nr_classes,
                 lm_model=lm_model
@@ -185,12 +179,8 @@ def main():
             train_dataset=train_dataset,         # training dataset
             eval_dataset=validation_dataset,      # evaluation dataset
             compute_metrics=compute_metrics,
-            callbacks=[EarlyStoppingCallback(early_stopping_patience=3)],
+            callbacks=[EarlyStoppingCallback(early_stopping_patience=args.early_stopping_patience)],
         )
-
-        # evaluate before training
-        eval_results_before = trainer.evaluate()
-        print(eval_results_before)
 
         # training
         print('Train model..')
@@ -204,16 +194,22 @@ def main():
 
         # test
         print('Test model..')
-        test_results = trainer.predict(test_dataset=test_dataset, )
-        with open(os.path.join(progressive_output_dir, 'test_results.json'), 'w') as fp:
-            json.dump(test_results.metrics, fp)
-        preds = test_results.predictions[0] if isinstance(test_results.predictions, tuple) else test_results.predictions
-        preds =  [inverse_label_map[i] for i in list(np.argmax(preds, axis=1))]
-        truth =  [inverse_label_map[i] for i in list(test_results.label_ids)]
-        with open(os.path.join(progressive_output_dir, 'test_predictions.csv'), 'w') as fp:
-            fp.write('tweet_id,truth,prediction\n')
-            for idd,t,p in zip(list(test_data.id),truth, preds):
-                fp.write(str(idd) + ',' + t + ',' + p + '\n')
+        for test_bin in test_bins:
+            # progressive setting: use the subsequent bin as test bin; do it for each bin
+            test_data = dataframe[dataframe[partition].isin([test_bin])]
+            test_data = pd.DataFrame(dataframe.iloc[test_data.index])
+            test_dataset = datasets.Dataset.from_pandas(test_data, features=features).map(
+                lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+            test_results = trainer.predict(test_dataset=test_dataset)
+            with open(os.path.join(progressive_output_dir, str(int(test_bin)) + '_test_results.json'), 'w') as fp:
+                json.dump(test_results.metrics, fp)
+            preds = test_results.predictions[0] if isinstance(test_results.predictions, tuple) else test_results.predictions
+            preds =  [inverse_label_map[i] for i in list(np.argmax(preds, axis=1))]
+            truth =  [inverse_label_map[i] for i in list(test_results.label_ids)]
+            with open(os.path.join(progressive_output_dir, str(int(test_bin)) + '_test_predictions.csv'), 'w') as fp:
+                fp.write('tweet_id,truth,prediction\n')
+                for idd,t,p in zip(list(test_data.id),truth, preds):
+                    fp.write(str(idd) + ',' + t + ',' + p + '\n')
 
 
 if __name__ == '__main__':

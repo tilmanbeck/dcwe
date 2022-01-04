@@ -2,7 +2,6 @@ import json
 import os
 import argparse
 import logging
-import random
 import time
 import torch
 import numpy as np
@@ -46,6 +45,7 @@ def main():
     parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
     parser.add_argument("--top_n_frequent_words", default=1000, type=int, help="")
     parser.add_argument("--seed", default=666, type=int)
+    parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
     args = parser.parse_args()
 
     if not os.path.exists(args.results_dir):
@@ -70,7 +70,6 @@ def main():
     dataframe.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
     # convert string labels to numeric
     dataframe['label'] = dataframe['label'].replace(label_map)
-    dataframe.dropna(subset=[args.partition, 'label', 'time'], inplace=True)
     dataframe.time = pd.to_datetime(dataframe.time)
     dataframe.reset_index(inplace=True, drop=True)
     begin_date = dataframe['time'].min().to_pydatetime().date()
@@ -142,7 +141,6 @@ def main():
     def model_init():
         model = TemporalClassificationModel(
             n_times=n_times + 1,
-            # we have to use the test_dataset here because we do a temporal split and the oldest dates are in the test split
             vocab_filter=vocab_filter,
             nr_classes=nr_classes,
             lm_model=lm_model
@@ -170,7 +168,7 @@ def main():
         train_dataset=train_dataset,         # training dataset
         eval_dataset=validation_dataset,      # evaluation dataset
         compute_metrics=compute_metrics,
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=3)],
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=args.early_stopping_patience)],
     )
 
     # evaluate before training

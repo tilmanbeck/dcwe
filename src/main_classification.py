@@ -1,33 +1,15 @@
+import json
 import os
 import argparse
 import logging
-import random
 import time
-
-from torch import optim, nn
-from torch.utils.data import DataLoader
 from transformers import AutoModelForSequenceClassification, AutoConfig, Trainer, TrainingArguments, IntervalStrategy, \
-    EarlyStoppingCallback, EvalPrediction, AutoTokenizer
-from data_helpers import *
-from datasets import Dataset
-
-
-
-label_maps = {
-    'debate': {'claim': 1, 'noclaim': 0},
-    'sandy': {'y': 1, 'n': 0},
-    'rumours':  {'comment': 2, 'deny': 1, 'support': 3, 'query': 0},
-    'clex': {'Related - but not informative': 2, 'Not related': 1,
-             'Related and informative': 3, 'Not applicable': 0}
-}
-
-label_maps_inverse = {
-    'debate': {1: 'claim', 0: 'noclaim'},
-    'sandy': {1: 'y', 0:'n'},
-    'rumours':  {0: 'query', 1: 'deny', 2:'comment', 3:'support'},
-    'clex': {2: 'Related - but not informative', 1: 'Not related',
-             3: 'Related and informative', 0:'Not applicable'}
-}
+    EarlyStoppingCallback, AutoTokenizer
+import pandas as pd
+import numpy as np
+from data_helpers import compute_metrics
+import datasets
+from CONST import label_maps, label_maps_inverse, id_field_map, metrics_for_datasets
 
 
 def main():
@@ -40,66 +22,69 @@ def main():
     parser.add_argument('--data_dir', default=None, type=str, required=True, help='Data directory.')
     parser.add_argument('--partition', default='time_stratified_partition', type=str, help='The data partition.')
     parser.add_argument('--results_dir', default='../results_dir', type=str, help='Results directory.')
-    parser.add_argument('--trained_dir', default='../trained_dir', type=str, help='Trained model directory.')
     parser.add_argument('--batch_size', default=4, type=int, help='Batch size.')
     parser.add_argument('--lr', default=0.0001, type=float, help='Learning rate.')
     parser.add_argument('--warmup_ratio', default=0.1, type=float, help='Warmup ratio.')
     parser.add_argument('--weight_decay', default=0.01, type=float, help='Weight decay.')
     parser.add_argument('--n_epochs', default=2, type=int, help='Number of epochs.')
     parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
+    parser.add_argument("--seed", default=666, type=int)
     args = parser.parse_args()
 
-    seed = 666
-
-    lm_model = args.lm_model
+    if not os.path.exists(args.results_dir):
+        os.makedirs(args.results_dir)
     output_dir = args.results_dir
+
+    seed = args.seed
+    lm_model = args.lm_model
     label_map = label_maps[args.data_name]
     inverse_label_map = label_maps_inverse[args.data_name]
 
     print('Loading data...')
     time_field = 'date'
     label_field = 'tag'
-    dataframe = pd.read_csv(args.data_dir)
-    n_labels = len(set(dataframe[label_field].values))
-    # take the corresponding split (if it exists otherwise take random split)
+    id_field = id_field_map[args.data_name]
+    dataframe = pd.read_csv(args.data_dir).sample(frac=0.2)
+    nr_classes = len(set(dataframe[label_field].values))
 
+    ######## FORMAT DATA ############
     # rename data columns to common format
+    dataframe['id'] = dataframe[id_field].astype(str)
     dataframe.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
     # convert string labels to numeric
     dataframe['label'] = dataframe['label'].replace(label_map)
-
-    dataframe.dropna(subset=[args.partition, 'label', 'time'], inplace=True)
-    dataframe.time = pd.to_datetime(dataframe.time)
     dataframe.reset_index(inplace=True, drop=True)
+    #################################
 
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-    output_dir = output_dir
+        # load split data
+    features = datasets.Features({
+        'label': datasets.Value("int64"),
+        'text': datasets.Value("string"),
+        'id': datasets.Value("string")
+    })
 
     tokenizer = AutoTokenizer.from_pretrained(lm_model)
-    # load split data
+
     train_data = dataframe[dataframe[args.partition] == "train"]
     train_data = pd.DataFrame(dataframe.iloc[train_data.index])
-    train_dataset = Dataset.from_pandas(train_data).map(
+    train_dataset = datasets.Dataset.from_pandas(train_data, features=features).map(
         lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
 
     validation_data = dataframe[dataframe[args.partition] == "dev"]
     validation_data = pd.DataFrame(dataframe.iloc[validation_data.index])
-    validation_dataset = Dataset.from_pandas(validation_data).map(
+    validation_dataset = datasets.Dataset.from_pandas(validation_data, features=features).map(
         lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
 
     test_data = dataframe[dataframe[args.partition] == "test"]
     test_data = pd.DataFrame(dataframe.iloc[test_data.index])
-    test_dataset = Dataset.from_pandas(test_data).map(
+    test_dataset = datasets.Dataset.from_pandas(test_data, features=features).map(
         lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
-
-    filename = 'dcwe_{}_{}'.format(args.data_name, args.partition)
 
     # model preparation
     def model_init():
         config = AutoConfig.from_pretrained(
             lm_model,
-            num_labels=n_labels
+            num_labels=nr_classes
         )
         model = AutoModelForSequenceClassification.from_pretrained(lm_model, config=config)
         return model
@@ -114,7 +99,7 @@ def main():
         evaluation_strategy=IntervalStrategy.EPOCH,
         save_strategy=IntervalStrategy.EPOCH,
         load_best_model_at_end=True,
-        metric_for_best_model='f1',
+        metric_for_best_model=metrics_for_datasets[args.data_name],
         save_total_limit=1,
         seed=seed
     )
@@ -127,6 +112,7 @@ def main():
         compute_metrics=compute_metrics,
         callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
     )
+
     # evaluate before training
     eval_results_before = trainer.evaluate()
     print(eval_results_before)
@@ -139,11 +125,17 @@ def main():
     print(eval_results)
 
     # test
-    test_results = trainer.predict(test_dataset=test_dataset)
-    print(test_results)
+    print('Test model..')
+    test_results = trainer.predict(test_dataset=test_dataset, )
+    with open(os.path.join(output_dir, 'test_results.json'), 'w') as fp:
+        json.dump(test_results.metrics, fp)
     preds = test_results.predictions[0] if isinstance(test_results.predictions, tuple) else test_results.predictions
     preds =  [inverse_label_map[i] for i in list(np.argmax(preds, axis=1))]
     truth =  [inverse_label_map[i] for i in list(test_results.label_ids)]
+    with open(os.path.join(output_dir, 'test_predictions.csv'), 'w') as fp:
+        fp.write('tweet_id,truth,prediction\n')
+        for idd,t,p in zip(list(test_data.id),truth, preds):
+            fp.write(str(idd) + ',' + t + ',' + p + '\n')
 
 if __name__ == '__main__':
 
