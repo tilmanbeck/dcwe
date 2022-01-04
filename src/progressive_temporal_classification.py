@@ -67,7 +67,7 @@ def main():
 
     ######## FORMAT DATA ############
     # rename data columns to common format
-    dataframe['id'] = dataframe[id_field]
+    dataframe['id'] = dataframe[id_field].astype(str)
     dataframe.rename(columns={label_field: 'label', time_field: 'time'}, inplace=True)
     # convert string labels to numeric
     dataframe['label'] = dataframe['label'].replace(label_map)
@@ -111,7 +111,7 @@ def main():
         'label': datasets.Value("int64"),
         'text': datasets.Value("string"),
         'timediff': datasets.Value("int64"),
-        'id': datasets.Value("int64")
+        'id': datasets.Value("string")
     })
 
     # progressive setup
