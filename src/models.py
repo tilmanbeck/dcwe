@@ -1,4 +1,4 @@
-from transformers import AutoConfig, PreTrainedModel
+from transformers import BertPreTrainedModel, BertModel, BertConfig
 
 import torch
 from torch import nn
@@ -139,7 +139,7 @@ class TemporalPredictionHead(nn.Module):
 
     def __init__(self, config):
         super().__init__()
-        self.decoder = nn.Linear(config.hidden_size, config.num_topic_labels)
+        self.decoder = nn.Linear(config.hidden_size, config.num_temporal_classes)
         self.alpha = config.alpha # in literature it is called lambda but that is reserved in python
 
     def forward(self, sequence_output):
@@ -147,33 +147,34 @@ class TemporalPredictionHead(nn.Module):
         output = self.decoder(reversed_sequence_output)
         return output
 
-class ModelForSequenceClassificationAndDomainAdaptationConfig(AutoConfig):
+class BertForSequenceClassificationAndDomainAdaptationConfig(BertConfig):
 
     def __init__(self, **kwargs):
-        super(ModelForSequenceClassificationAndDomainAdaptationConfig).__init__(**kwargs)
+        super().__init__(**kwargs)
         self.num_temporal_classes = kwargs.get('num_temporal_classes')
         self.alpha = kwargs.get('alpha')
 
-class ModelForSequenceClassificationAndDomainAdaptation(PreTrainedModel):
+class BertForSequenceClassificationAndDomainAdaptation(BertPreTrainedModel):
 
     def __init__(self, config):
-        super(ModelForSequenceClassificationAndDomainAdaptation).__init__(config)
+        super().__init__(config)
         self.num_labels = config.num_labels
-        self.num_topic_labels = config.num_topic_labels
+        self.num_temporal_classes = config.num_temporal_classes
         self.config = config
 
-        self.bert = PreTrainedModel(config)
+        self.bert = BertModel(config)
         classifier_dropout = (
             config.classifier_dropout if config.classifier_dropout is not None else config.hidden_dropout_prob
         )
+
         self.dropout = nn.Dropout(classifier_dropout)
         self.class_classifier = nn.Linear(config.hidden_size, config.num_labels)
 
-        self.topic_classifier = TemporalPredictionHead(config)
+        self.time_classifier = TemporalPredictionHead(config)
 
     def forward(self, input_ids, attention_mask=None, token_type_ids=None,
-                position_ids=None, head_mask=None, inputs_embeds=None, class_labels=None,
-                topic_labels=None, output_attentions=None, output_hidden_states=None, return_dict=None):
+                position_ids=None, head_mask=None, inputs_embeds=None, labels=None,
+                time_labels=None, output_attentions=None, output_hidden_states=None, return_dict=None):
         # very important detail here: we need to define here the name of the labels to be expected by the model such
         # that they are not removed from the initial datasets (they have to match as they respective data column names
         # are read from the model.forward signature
@@ -187,16 +188,16 @@ class ModelForSequenceClassificationAndDomainAdaptation(PreTrainedModel):
 
         pooled_output = self.dropout(pooled_output)
         class_logits = self.class_classifier(pooled_output)
-        topic_logits = self.topic_classifier(pooled_output)
+        time_logits = self.time_classifier(pooled_output)
 
-        outputs = ([class_logits, topic_logits], ) + outputs[2:]
+        outputs = ([class_logits, time_logits], ) + outputs[2:]
 
-        if class_labels is not None and topic_labels is not None:
+        if labels is not None and time_labels is not None:
             loss_fct = nn.CrossEntropyLoss()
-            class_loss = loss_fct(class_logits.view(-1, self.num_labels), class_labels.view(-1))
-            topic_loss = loss_fct(topic_logits.view(-1, self.num_topic_labels), topic_labels.view(-1))
-            loss = class_loss + topic_loss
-            print('Loss: {:.2f}, Label Class Loss: {:.2f}, Temporal Class Loss: {:.2f}'.format(loss, class_loss, topic_loss))
+            class_loss = loss_fct(class_logits.view(-1, self.num_labels), labels.view(-1))
+            time_loss = loss_fct(time_logits.view(-1, self.num_temporal_classes), time_labels.view(-1))
+            loss = class_loss + time_loss
+            print('Loss: {:.2f}, Label Class Loss: {:.2f}, Temporal Class Loss: {:.2f}'.format(loss, class_loss, time_loss))
             outputs = (loss, ) + outputs
             # loss_fct_per_sample = nn.CrossEntropyLoss(reduction='none')
             # outputs = (loss,

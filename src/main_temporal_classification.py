@@ -197,6 +197,8 @@ def main():
         fp.write('tweet_id,truth,prediction\n')
         for idd,t,p in zip(list(test_data.id),truth, preds):
             fp.write(str(idd) + ',' + t + ',' + p + '\n')
+    with open(os.path.join(output_dir, 'training_args.json'), 'w') as fp:
+        json.dump(training_args.to_json_string(), fp)
 
 
 if __name__ == '__main__':

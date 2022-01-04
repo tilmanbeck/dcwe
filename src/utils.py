@@ -17,15 +17,15 @@ def compute_metrics_da(eval_pred):
     # logits[0] are class logits and logits[1] are topic logits
     class_predictions = np.argmax(logits[0], axis=-1)
     topic_predictions = np.argmax(logits[1], axis=-1)
-    class_f1_macro = f1_score(y_true=class_labels, y_pred=class_predictions, average='macro'),
-    # we need to add a 'f1_macro' named entry such that it is recognized by the trainer
+    f1_bin = f1_score(class_labels, class_predictions, average='binary', pos_label=1) if len(set(class_labels))==2 else None
     result = {
-        'f1_macro': class_f1_macro,
-        'class_f1_macro': class_f1_macro,
-        'class_f1_micro': f1_score(y_true=class_labels, y_pred=class_predictions, average='micro'),
+        'f1_binary': f1_bin,
+        'f1_macro': f1_score(y_true=class_labels, y_pred=class_predictions, average='macro'),
+        'f1_micro': f1_score(y_true=class_labels, y_pred=class_predictions, average='micro'),
         'topic_f1_macro': f1_score(y_true=topic_labels, y_pred=topic_predictions, average='macro'),
         'topic_f1_micro': f1_score(y_true=topic_labels, y_pred=topic_predictions, average='micro')
     }
+
     return result
 
 class DomainAdaptationTrainer(Trainer):
