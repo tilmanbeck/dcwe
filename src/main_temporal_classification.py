@@ -38,7 +38,7 @@ def main():
     parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
     parser.add_argument("--top_n_frequent_words", default=1000, type=int, help="")
     parser.add_argument("--seed", default=666, type=int)
-    parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
+#    parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
     args = parser.parse_args()
 
     output_dir = args.results_dir
@@ -165,7 +165,7 @@ def main():
         train_dataset=train_dataset,         # training dataset
         eval_dataset=validation_dataset,      # evaluation dataset
         compute_metrics=compute_metrics,
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=args.early_stopping_patience)],
+#        callbacks=[EarlyStoppingCallback(early_stopping_patience=args.early_stopping_patience)],
     )
 
     # evaluate before training
