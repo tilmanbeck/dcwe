@@ -47,7 +47,8 @@ def main():
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-        output_dir = os.path.join(output_dir, str(seed))
+    output_dir = os.path.join(output_dir, str(seed))
+    if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     partition = "progressive_bin"
 
