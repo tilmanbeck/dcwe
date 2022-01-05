@@ -17,14 +17,6 @@ from models import TemporalClassificationModel
 from utils import convert_timediffs_to_timebins
 from CONST import label_maps, label_maps_inverse, id_field_map, metrics_for_datasets
 
-def hp_space(trial):
-    return {
-        "learning_rate": trial.suggest_categorical("learning_rate", choices=[0.00001, 0.0001, 0.001]),
-        "num_train_epochs": trial.suggest_categorical("num_train_epochs", choices=[1,2,3,4]),
-
-    }
-
-
 
 def main():
 
@@ -49,12 +41,14 @@ def main():
     args = parser.parse_args()
 
     output_dir = args.results_dir
+    seed = args.seed
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
+        output_dir = os.path.join(output_dir, str(seed))
+        os.makedirs(output_dir)
     partition = "progressive_bin"
 
-    seed = args.seed
     lm_model = args.lm_model
     label_map = label_maps[args.data_name]
     inverse_label_map = label_maps_inverse[args.data_name]
@@ -131,12 +125,12 @@ def main():
         train_data = dataframe[dataframe[partition].isin(train_bins)]
         train_data = pd.DataFrame(dataframe.iloc[train_data.index])
         train_dataset = datasets.Dataset.from_pandas(train_data, features=features).map(
-            lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+            lambda ex: tokenizer(ex['text'], truncation=True, padding='longest'), batched=True)
 
         validation_data = dataframe[dataframe[partition].isin(dev_bin)]
         validation_data = pd.DataFrame(dataframe.iloc[validation_data.index])
         validation_dataset = datasets.Dataset.from_pandas(validation_data, features=features).map(
-            lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+            lambda ex: tokenizer(ex['text'], truncation=True, padding='longest'), batched=True)
 
         lambda_a = args.lambda_a
         lambda_w = lambda_a / 0.001 # see paper by Hofmann et al. ACL 2021
@@ -179,7 +173,7 @@ def main():
             train_dataset=train_dataset,         # training dataset
             eval_dataset=validation_dataset,      # evaluation dataset
             compute_metrics=compute_metrics,
-            callbacks=[EarlyStoppingCallback(early_stopping_patience=args.early_stopping_patience)],
+#            callbacks=[EarlyStoppingCallback(early_stopping_patience=args.early_stopping_patience)],
         )
 
         # training
@@ -199,7 +193,7 @@ def main():
             test_data = dataframe[dataframe[partition].isin([test_bin])]
             test_data = pd.DataFrame(dataframe.iloc[test_data.index])
             test_dataset = datasets.Dataset.from_pandas(test_data, features=features).map(
-                lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+                lambda ex: tokenizer(ex['text'], truncation=True, padding='longest'), batched=True)
             test_results = trainer.predict(test_dataset=test_dataset)
             with open(os.path.join(progressive_output_dir, str(int(test_bin)) + '_test_results.json'), 'w') as fp:
                 json.dump(test_results.metrics, fp)

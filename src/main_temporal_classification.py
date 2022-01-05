@@ -17,13 +17,6 @@ from models import TemporalClassificationModel
 from utils import convert_timediffs_to_timebins
 from CONST import label_maps, label_maps_inverse, id_field_map, metrics_for_datasets
 
-def hp_space(trial):
-    return {
-        "learning_rate": trial.suggest_categorical("learning_rate", choices=[0.00001, 0.0001, 0.001]),
-        "num_train_epochs": trial.suggest_categorical("num_train_epochs", choices=[1,2,3,4]),
-
-    }
-
 
 def main():
 
@@ -48,11 +41,15 @@ def main():
     parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
     args = parser.parse_args()
 
-    if not os.path.exists(args.results_dir):
-        os.makedirs(args.results_dir)
     output_dir = args.results_dir
-
     seed = args.seed
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    output_dir = os.path.join(output_dir, str(seed))
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
     lm_model = args.lm_model
     label_map = label_maps[args.data_name]
     inverse_label_map = label_maps_inverse[args.data_name]
@@ -115,17 +112,17 @@ def main():
     train_data = dataframe[dataframe[args.partition] == "train"]
     train_data = pd.DataFrame(dataframe.iloc[train_data.index])
     train_dataset = datasets.Dataset.from_pandas(train_data, features=features).map(
-        lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+        lambda ex: tokenizer(ex['text'], truncation=True, padding='longest'), batched=True)
 
     validation_data = dataframe[dataframe[args.partition] == "dev"]
     validation_data = pd.DataFrame(dataframe.iloc[validation_data.index])
     validation_dataset = datasets.Dataset.from_pandas(validation_data, features=features).map(
-        lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+        lambda ex: tokenizer(ex['text'], truncation=True, padding='longest'), batched=True)
 
     test_data = dataframe[dataframe[args.partition] == "test"]
     test_data = pd.DataFrame(dataframe.iloc[test_data.index])
     test_dataset = datasets.Dataset.from_pandas(test_data, features=features).map(
-        lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+        lambda ex: tokenizer(ex['text'], truncation=True, padding='longest'), batched=True)
 
     lambda_a = args.lambda_a
     lambda_w = lambda_a / 0.001 # see paper by Hofmann et al. ACL 2021
