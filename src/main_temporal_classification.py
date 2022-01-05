@@ -38,11 +38,13 @@ def main():
     parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
     parser.add_argument("--top_n_frequent_words", default=1000, type=int, help="")
     parser.add_argument("--seed", default=666, type=int)
+    parser.add_argument("--max_length", default=64, type=int, help="Maximum length for tokenizer.")
 #    parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
     args = parser.parse_args()
 
     output_dir = args.results_dir
     seed = args.seed
+    max_length = args.max_length
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
@@ -112,17 +114,17 @@ def main():
     train_data = dataframe[dataframe[args.partition] == "train"]
     train_data = pd.DataFrame(dataframe.iloc[train_data.index])
     train_dataset = datasets.Dataset.from_pandas(train_data, features=features).map(
-        lambda ex: tokenizer(ex['text'], truncation=True, padding='longest'), batched=True)
+        lambda ex: tokenizer(ex['text'], max_length=max_length, truncation=True, padding='max_length'), batched=True)
 
     validation_data = dataframe[dataframe[args.partition] == "dev"]
     validation_data = pd.DataFrame(dataframe.iloc[validation_data.index])
     validation_dataset = datasets.Dataset.from_pandas(validation_data, features=features).map(
-        lambda ex: tokenizer(ex['text'], truncation=True, padding='longest'), batched=True)
+        lambda ex: tokenizer(ex['text'], max_length=max_length, truncation=True, padding='max_length'), batched=True)
 
     test_data = dataframe[dataframe[args.partition] == "test"]
     test_data = pd.DataFrame(dataframe.iloc[test_data.index])
     test_dataset = datasets.Dataset.from_pandas(test_data, features=features).map(
-        lambda ex: tokenizer(ex['text'], truncation=True, padding='longest'), batched=True)
+        lambda ex: tokenizer(ex['text'], max_length=max_length, truncation=True, padding='max_length'), batched=True)
 
     lambda_a = args.lambda_a
     lambda_w = lambda_a / 0.001 # see paper by Hofmann et al. ACL 2021
