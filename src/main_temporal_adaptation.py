@@ -37,15 +37,15 @@ parser.add_argument('--n_epochs', default=4, type=int, help='Number of epochs.')
 parser.add_argument('--alpha', default=0.1, type=float, help='alpha value for secondary loss.')
 parser.add_argument('--device', default=0, type=int, help='Selected CUDA device.')
 parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
-parser.add_argument("--classifier_dropout", default=0.1, type=float, help="The dropout probability for the classification model.")
-parser.add_argument("--hidden_size", default=768, type=int, help="Size of the hidden layer.")
 parser.add_argument("--seed", default=666, type=int)
+parser.add_argument("--max_length", default=64, type=int, help="Maximum length for tokenizer.")
 parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
 args = parser.parse_args()
 
 if not os.path.exists(args.results_dir):
     os.makedirs(args.results_dir)
 output_dir = args.results_dir
+max_length = args.max_length
 
 seed = args.seed
 lm_model = args.lm_model
@@ -91,17 +91,17 @@ features = datasets.Features({
 train_data = dataframe[dataframe[args.partition] == "train"]
 train_data = pd.DataFrame(dataframe.iloc[train_data.index])
 train_dataset = datasets.Dataset.from_pandas(train_data, features=features).map(
-    lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+    lambda ex: tokenizer(ex['text'], max_length=max_length, truncation=True, padding='max_length'), batched=True)
 
 validation_data = dataframe[dataframe[args.partition] == "dev"]
 validation_data = pd.DataFrame(dataframe.iloc[validation_data.index])
 validation_dataset = datasets.Dataset.from_pandas(validation_data, features=features).map(
-    lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+    lambda ex: tokenizer(ex['text'], max_length=max_length, truncation=True, padding='max_length'), batched=True)
 
 test_data = dataframe[dataframe[args.partition] == "test"]
 test_data = pd.DataFrame(dataframe.iloc[test_data.index])
 test_dataset = datasets.Dataset.from_pandas(test_data, features=features).map(
-    lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+    lambda ex: tokenizer(ex['text'], max_length=max_length, truncation=True, padding='max_length'), batched=True)
 
 # model preparation
 def model_init():
@@ -145,10 +145,10 @@ eval_results = trainer.evaluate()
 test_results = trainer.predict(test_dataset=test_dataset)
 preds = test_results.predictions[0] if isinstance(test_results.predictions, tuple) else test_results.predictions
 # preds[0] contains class predictions, preds[0] contains topic predictions
-class_preds = [label_map[i] for i in list(np.argmax(preds[0], axis=1))]
-topic_preds = [i for i in list(np.argmax(preds[1], axis=1))]
+class_preds = [inverse_label_map[i] for i in list(np.argmax(preds[0], axis=1))]
+time_preds = [i for i in list(np.argmax(preds[1], axis=1))]
 # test_results.label_ids[0] contains class labels, test_results.label_ids[1] contains topic labels
-class_truth =  [label_map[i] for i in list(test_results.label_ids[0])]
+class_truth =  [inverse_label_map[i] for i in list(test_results.label_ids[0])]
 time_truth =  [i for i in list(test_results.label_ids[1])]
 
 with open(os.path.join(output_dir, 'training_args.json'), 'w') as fp:
@@ -156,10 +156,6 @@ with open(os.path.join(output_dir, 'training_args.json'), 'w') as fp:
 with open(os.path.join(output_dir, 'results.json'), 'w') as fp:
     json.dump({**test_results.metrics, **eval_results, 'best_model_checkpoint': trainer.state.best_model_checkpoint}, fp)
 with open(os.path.join(output_dir, 'class_predictions.csv'), 'w') as fp:
-    fp.write('time,label,prediction\n')
-    for topic, label,pred in zip(time_truth, class_truth, class_preds):
-        fp.write(topic + ',' + label + ',' + pred + '\n')
-with open(os.path.join(output_dir, 'topic_predictions.csv'), 'w') as fp:
-    fp.write('label,prediction\n')
-    for label,pred in zip(time_truth, topic_preds):
-        fp.write(label + ',' + pred + '\n')
+    fp.write('tweet_id,time_label,time_prediction,label,prediction\n')
+    for idd,time_label,time_pred,label,pred in zip(list(test_data.id), time_truth, time_preds, class_truth, class_preds):
+        fp.write(str(idd) + ',' + str(time_label) + ',' + str(time_pred) + ',' + str(label) + ',' + str(pred) + '\n')

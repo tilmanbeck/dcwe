@@ -38,7 +38,7 @@ def main():
     parser.add_argument("--top_n_frequent_words", default=1000, type=int, help="")
     parser.add_argument("--max_length", default=64, type=int, help="Maximum length for tokenizer.")
     parser.add_argument("--seed", default=666, type=int)
-    parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
+#    parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
     args = parser.parse_args()
 
     output_dir = args.results_dir

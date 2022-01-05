@@ -197,7 +197,7 @@ class BertForSequenceClassificationAndDomainAdaptation(BertPreTrainedModel):
             class_loss = loss_fct(class_logits.view(-1, self.num_labels), labels.view(-1))
             time_loss = loss_fct(time_logits.view(-1, self.num_temporal_classes), time_labels.view(-1))
             loss = class_loss + time_loss
-            print('Loss: {:.2f}, Label Class Loss: {:.2f}, Temporal Class Loss: {:.2f}'.format(loss, class_loss, time_loss))
+            #print('Loss: {:.2f}, Label Class Loss: {:.2f}, Temporal Class Loss: {:.2f}'.format(loss, class_loss, time_loss))
             outputs = (loss, ) + outputs
             # loss_fct_per_sample = nn.CrossEntropyLoss(reduction='none')
             # outputs = (loss,
