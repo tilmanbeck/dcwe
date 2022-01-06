@@ -55,5 +55,5 @@ def evaluate_seed_results():
 	print('test mean (std): {:.4f} ({:.4f})'.format(np.mean(test_results), np.std(test_results)))
 
 
-
-
+if __name__ == '__main__':
+	evaluate_seed_results()
