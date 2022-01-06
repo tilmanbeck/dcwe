@@ -33,15 +33,28 @@ def evaluate_progressive():
 	print('Results for: ', args.data_name)
 	print('Directory: ', args.dir)
 	print('Metric: ', metrics_for_datasets[args.data_name])
-	plot_data = np.zeros((len(list(results.values())[0]), len(results.keys())))
+	teb = [] # test bins
+	trb = [] # train bins
+	tmp = sorted(results.items())[0][1]
+	plot_data = np.zeros((len(tmp), len(results.keys())))
 	for idx_i, (dev_bin, test_preds) in enumerate(sorted(results.items())):
 		train_bins = [i for i in range(0, int(dev_bin.split('_')[-1]))]
+		if str(train_bins) not in trb:
+			trb.append(str(train_bins))
 		print('Training bins:', train_bins)
 		for idx_j, (k,test_results) in enumerate(sorted(test_preds.items())):
-			print('Test bin: ', k.split('_')[0])
+			test_bin = k.split('_')[0]
+			if test_bin not in teb:
+				teb.append(test_bin)
+			print('Test bin: ', test_bin)
 			print('test mean (std): {:.4f} ({:.4f})'.format(np.mean(test_results), np.std(test_results)))
-			plot_data[[idx_i, idx_j]] = np.mean(test_results)
-
+			plot_data[idx_i, idx_j] = np.mean(test_results)
+	assert plot_data.shape[0] == len(teb)
+	assert plot_data.shape[1] == len(trb)
+	print(teb)
+	print('---')
+	print(trb)
+	print('---')
 	print(plot_data)
 
 
