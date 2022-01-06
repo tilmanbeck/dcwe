@@ -33,11 +33,11 @@ def evaluate_progressive():
 	print('Results for: ', args.data_name)
 	print('Directory: ', args.dir)
 	print('Metric: ', metrics_for_datasets[args.data_name])
-	for dev_bin, test_preds in results.items():
+	for dev_bin, test_preds in sorted(results.items()):
 		train_bins = [i for i in range(0, int(dev_bin.split('_')[-1]))]
 		print('Training bins:', train_bins)
-		for k,test_results in test_preds.items():
-			print('Test bin: ', k.split('_')[-1])
+		for k,test_results in sorted(test_preds.items()):
+			print('Test bin: ', k.split('_')[0])
 			print('test mean (std): {:.4f} ({:.4f})'.format(np.mean(test_results), np.std(test_results)))
 
 
@@ -68,4 +68,5 @@ def evaluate_seed_results():
 
 
 if __name__ == '__main__':
-	evaluate_seed_results()
+	#evaluate_seed_results()
+	evaluate_progressive()
