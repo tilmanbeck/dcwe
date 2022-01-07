@@ -29,16 +29,17 @@ parser.add_argument("--data_name", default=None, type=str, required=True, help='
 parser.add_argument('--data_dir', default=None, type=str, required=True, help='Data directory.')
 parser.add_argument('--partition', default='time_stratified_partition', type=str, help='The data partition.')
 parser.add_argument('--results_dir', default='../results_dir', type=str, help='Results directory.')
-parser.add_argument('--batch_size', default=16, type=int, help='Batch size.')
+parser.add_argument('--batch_size', default=64, type=int, help='Batch size.')
 parser.add_argument('--lr', default=0.0001, type=float, help='Learning rate.')
-parser.add_argument('--warmup_ratio', default=0.1, type=float, help='Warmup ratio.')
-parser.add_argument('--weight_decay', default=0.01, type=float, help='Weight decay.')
-parser.add_argument('--n_epochs', default=4, type=int, help='Number of epochs.')
-parser.add_argument('--alpha', default=0.1, type=float, help='alpha value for secondary loss.')
+parser.add_argument('--warmup_ratio', default=0.0, type=float, help='Warmup ratio.')
+parser.add_argument('--weight_decay', default=0.001, type=float, help='Weight decay.')
+parser.add_argument('--n_epochs', default=3, type=int, help='Number of epochs.')
+parser.add_argument('--lambd', default=0.1, type=float, help='Lambda value for secondary loss.')
 parser.add_argument('--device', default=0, type=int, help='Selected CUDA device.')
 parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
 parser.add_argument("--seed", default=666, type=int)
 parser.add_argument("--max_length", default=64, type=int, help="Maximum length for tokenizer.")
+parser.add_argument("--timerange", default='day', choices=['day', 'bin'], help='How to bin the temporal label information.')
 parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
 args = parser.parse_args()
 
@@ -68,15 +69,20 @@ dataframe['label'] = dataframe['label'].replace(label_map)
 dataframe.time = pd.to_datetime(dataframe.time)
 dataframe.reset_index(inplace=True, drop=True)
 begin_date = dataframe['time'].min().to_pydatetime().date()
-# compute the difference between begin_date and current data for all datapoints
-time_diffs = [convert_times(i, name=args.data_name, begin_date=begin_date) for i in dataframe.time]
-n_times = len(set(time_diffs))
-# there might be missing dates in the data therefore we need to map the actual dates to time bins
-# we do take into account the missing dates; for t, the preceeding date t-1 is always the preceding data point in time (not the actual date before t)
-# therefore we create less parameters for the DCWE model and have more datapoints for a specific date
-timediffs_to_timebins = convert_timediffs_to_timebins(list(set(time_diffs)))
-dataframe['time_labels'] = dataframe['time'].map(lambda ex: convert_times(ex, name=args.data_name, begin_date=begin_date))
-dataframe['time_labels'] = dataframe['time_labels'].replace(timediffs_to_timebins)
+if args.timerange == 'bin':
+    time_diffs = list(dataframe['progressive_bin'].values)
+    dataframe['time_labels'] = time_diffs
+    n_times = len(dataframe['time_labels'].unique())
+else: # default='day'
+    # compute the difference between begin_date and current data for all datapoints
+    time_diffs = [convert_times(i, name=args.data_name, begin_date=begin_date) for i in dataframe.time]
+    n_times = len(set(time_diffs))
+    # there might be missing dates in the data therefore we need to map the actual dates to time bins
+    # we do take into account the missing dates; for t, the preceeding date t-1 is always the preceding data point in time (not the actual date before t)
+    # therefore we create less parameters for the DCWE model and have more datapoints for a specific date
+    timediffs_to_timebins = convert_timediffs_to_timebins(list(set(time_diffs)))
+    dataframe['time_labels'] = time_diffs
+    dataframe['time_labels'] = dataframe['time_labels'].replace(timediffs_to_timebins)
 #################################
 
 tokenizer = AutoTokenizer.from_pretrained(lm_model)
@@ -106,9 +112,10 @@ test_dataset = datasets.Dataset.from_pandas(test_data, features=features).map(
 # model preparation
 def model_init():
     config = BertForSequenceClassificationAndDomainAdaptationConfig(
+        lm_model=lm_model,
         num_labels=nr_classes,
         num_temporal_classes=n_times,
-        alpha=args.alpha
+        lambd=args.lambd
     )
     model = BertForSequenceClassificationAndDomainAdaptation(config)
     return model
@@ -130,12 +137,13 @@ training_args = TrainingArguments(
 )
 
 trainer = DomainAdaptationTrainer(
+# trainer = Trainer(
     model=model_init(),                   # the instantiated 🤗 Transformers model to be trained
     args=training_args,                  # training arguments, defined above
     train_dataset=train_dataset,         # training dataset
     eval_dataset=validation_dataset,      # evaluation dataset
     compute_metrics=compute_metrics_da,
-    callbacks=[EarlyStoppingCallback(early_stopping_patience=args.early_stopping_patience)]
+#    callbacks=[EarlyStoppingCallback(early_stopping_patience=args.early_stopping_patience)]
 )
 
 trainer.train()

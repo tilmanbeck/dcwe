@@ -122,16 +122,16 @@ class OffsetComponent(nn.Module):
 class GradientReversalFn(torch.autograd.Function):
 
     @staticmethod
-    def forward(ctx, x, alpha):
+    def forward(ctx, x, lambd):
         # store context for backprop
-        ctx.alpha = alpha
-
+        ctx.save_for_backward(lambd)
         # forward pass is a no-op
-        return x
+        return x.view_as(x)
 
     @staticmethod
     def backward(ctx, grad_output):
-        output = - ctx.alpha * grad_output
+        lambd = ctx.saved_tensors[0]
+        output = (grad_output * -lambd)
 
         return output, None
 
@@ -140,10 +140,10 @@ class TemporalPredictionHead(nn.Module):
     def __init__(self, config):
         super().__init__()
         self.decoder = nn.Linear(config.hidden_size, config.num_temporal_classes)
-        self.alpha = config.alpha # in literature it is called lambda but that is reserved in python
+        self.lambd = torch.tensor(config.lambd, requires_grad=False) # lambda parameter for control of gradient reversal
 
     def forward(self, sequence_output):
-        reversed_sequence_output = GradientReversalFn.apply(sequence_output, self.alpha)
+        reversed_sequence_output = GradientReversalFn.apply(sequence_output, self.lambd)
         output = self.decoder(reversed_sequence_output)
         return output
 
@@ -151,8 +151,9 @@ class BertForSequenceClassificationAndDomainAdaptationConfig(BertConfig):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        self.lm_model = kwargs.get('lm_model')
         self.num_temporal_classes = kwargs.get('num_temporal_classes')
-        self.alpha = kwargs.get('alpha')
+        self.lambd = kwargs.get('lambd')
 
 class BertForSequenceClassificationAndDomainAdaptation(BertPreTrainedModel):
 
@@ -162,7 +163,7 @@ class BertForSequenceClassificationAndDomainAdaptation(BertPreTrainedModel):
         self.num_temporal_classes = config.num_temporal_classes
         self.config = config
 
-        self.bert = BertModel(config)
+        self.bert = BertModel.from_pretrained(config.lm_model)
         classifier_dropout = (
             config.classifier_dropout if config.classifier_dropout is not None else config.hidden_dropout_prob
         )
@@ -179,11 +180,17 @@ class BertForSequenceClassificationAndDomainAdaptation(BertPreTrainedModel):
         # that they are not removed from the initial datasets (they have to match as they respective data column names
         # are read from the model.forward signature
 
-        outputs = self.bert(input_ids,
-                            attention_mask=attention_mask,
-                            token_type_ids=token_type_ids,
-                            position_ids=position_ids,
-                            head_mask=head_mask)
+        outputs = self.bert(
+            input_ids,
+            attention_mask=attention_mask,
+            token_type_ids=token_type_ids,
+            position_ids=position_ids,
+            head_mask=head_mask,
+            inputs_embeds=inputs_embeds,
+            output_attentions=output_attentions,
+            output_hidden_states=output_hidden_states,
+            return_dict=return_dict,
+        )
         pooled_output = outputs[1]
 
         pooled_output = self.dropout(pooled_output)
@@ -191,13 +198,15 @@ class BertForSequenceClassificationAndDomainAdaptation(BertPreTrainedModel):
         time_logits = self.time_classifier(pooled_output)
 
         outputs = ([class_logits, time_logits], ) + outputs[2:]
+        # outputs = ([class_logits], ) + outputs[2:]
 
-        if labels is not None and time_labels is not None:
-            loss_fct = nn.CrossEntropyLoss()
-            class_loss = loss_fct(class_logits.view(-1, self.num_labels), labels.view(-1))
-            time_loss = loss_fct(time_logits.view(-1, self.num_temporal_classes), time_labels.view(-1))
-            loss = class_loss + time_loss
-            #print('Loss: {:.2f}, Label Class Loss: {:.2f}, Temporal Class Loss: {:.2f}'.format(loss, class_loss, time_loss))
+        loss_fct = nn.CrossEntropyLoss()
+        if labels is not None:
+            loss = loss_fct(class_logits.view(-1, self.num_labels), labels.view(-1))
+            if time_labels is not None and self.config.lambd > 0.0:
+                time_loss = loss_fct(time_logits.view(-1, self.num_temporal_classes), time_labels.view(-1))
+                loss += time_loss
+            # print('Loss: {:.2f}, Label Class Loss: {:.2f}, Temporal Class Loss: {:.2f}'.format(loss, class_loss, time_loss))
             outputs = (loss, ) + outputs
             # loss_fct_per_sample = nn.CrossEntropyLoss(reduction='none')
             # outputs = (loss,
