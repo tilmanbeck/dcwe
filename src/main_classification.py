@@ -22,18 +22,25 @@ def main():
     parser.add_argument('--data_dir', default=None, type=str, required=True, help='Data directory.')
     parser.add_argument('--partition', default='time_stratified_partition', type=str, help='The data partition.')
     parser.add_argument('--results_dir', default='../results_dir', type=str, help='Results directory.')
-    parser.add_argument('--batch_size', default=4, type=int, help='Batch size.')
+    parser.add_argument('--batch_size', default=64, type=int, help='Batch size.')
     parser.add_argument('--lr', default=0.0001, type=float, help='Learning rate.')
-    parser.add_argument('--warmup_ratio', default=0.1, type=float, help='Warmup ratio.')
-    parser.add_argument('--weight_decay', default=0.01, type=float, help='Weight decay.')
-    parser.add_argument('--n_epochs', default=2, type=int, help='Number of epochs.')
+    parser.add_argument('--warmup_ratio', default=0.0, type=float, help='Warmup ratio.')
+    parser.add_argument('--weight_decay', default=0.001, type=float, help='Weight decay.')
+    parser.add_argument('--n_epochs', default=3, type=int, help='Number of epochs.')
     parser.add_argument("--lm_model", default='bert-base-cased', type=str, help='Identifier for pretrained language model.')
     parser.add_argument("--seed", default=666, type=int)
+    parser.add_argument("--max_length", default=64, type=int, help="Maximum length for tokenizer.")
     args = parser.parse_args()
 
-    if not os.path.exists(args.results_dir):
-        os.makedirs(args.results_dir)
     output_dir = args.results_dir
+    seed = args.seed
+    max_length = args.max_length
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    output_dir = os.path.join(output_dir, str(seed))
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     seed = args.seed
     lm_model = args.lm_model
@@ -44,7 +51,7 @@ def main():
     time_field = 'date'
     label_field = 'tag'
     id_field = id_field_map[args.data_name]
-    dataframe = pd.read_csv(args.data_dir).sample(frac=0.2)
+    dataframe = pd.read_csv(args.data_dir)
     nr_classes = len(set(dataframe[label_field].values))
 
     ######## FORMAT DATA ############
@@ -68,17 +75,17 @@ def main():
     train_data = dataframe[dataframe[args.partition] == "train"]
     train_data = pd.DataFrame(dataframe.iloc[train_data.index])
     train_dataset = datasets.Dataset.from_pandas(train_data, features=features).map(
-        lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+        lambda ex: tokenizer(ex['text'], max_length=max_length, truncation=True, padding='max_length'), batched=True)
 
     validation_data = dataframe[dataframe[args.partition] == "dev"]
     validation_data = pd.DataFrame(dataframe.iloc[validation_data.index])
     validation_dataset = datasets.Dataset.from_pandas(validation_data, features=features).map(
-        lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+        lambda ex: tokenizer(ex['text'], max_length=max_length, truncation=True, padding='max_length'), batched=True)
 
     test_data = dataframe[dataframe[args.partition] == "test"]
     test_data = pd.DataFrame(dataframe.iloc[test_data.index])
     test_dataset = datasets.Dataset.from_pandas(test_data, features=features).map(
-        lambda ex: tokenizer(ex['text'], truncation=True, padding='max_length'), batched=True)
+        lambda ex: tokenizer(ex['text'], max_length=max_length, truncation=True, padding='max_length'), batched=True)
 
     # model preparation
     def model_init():
@@ -110,19 +117,16 @@ def main():
         train_dataset=train_dataset,         # training dataset
         eval_dataset=validation_dataset,      # evaluation dataset
         compute_metrics=compute_metrics,
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
+        #callbacks=[EarlyStoppingCallback(early_stopping_patience=3)]
     )
-
-    # evaluate before training
-    eval_results_before = trainer.evaluate()
-    print(eval_results_before)
 
     # training
     trainer.train()
 
     # evaluation
     eval_results = trainer.evaluate()
-    print(eval_results)
+    with open(os.path.join(output_dir, 'eval_results.json'), 'w') as fp:
+        json.dump(eval_results, fp)
 
     # test
     print('Test model..')
@@ -136,6 +140,8 @@ def main():
         fp.write('tweet_id,truth,prediction\n')
         for idd,t,p in zip(list(test_data.id),truth, preds):
             fp.write(str(idd) + ',' + t + ',' + p + '\n')
+    with open(os.path.join(output_dir, 'training_args.json'), 'w') as fp:
+        json.dump(training_args.to_json_string(), fp)
 
 if __name__ == '__main__':
 
