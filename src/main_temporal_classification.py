@@ -39,6 +39,7 @@ def main():
     parser.add_argument("--top_n_frequent_words", default=1000, type=int, help="")
     parser.add_argument("--seed", default=666, type=int)
     parser.add_argument("--max_length", default=64, type=int, help="Maximum length for tokenizer.")
+    parser.add_argument("--timerange", default='day', choices=['day', 'bin'], help='How to bin the temporal label information.')
 #    parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
     args = parser.parse_args()
 
@@ -72,17 +73,21 @@ def main():
     dataframe.time = pd.to_datetime(dataframe.time)
     dataframe.reset_index(inplace=True, drop=True)
     begin_date = dataframe['time'].min().to_pydatetime().date()
-    # compute the difference between begin_date and current data for all datapoints
-    time_diffs = [convert_times(i, name=args.data_name, begin_date=begin_date) for i in dataframe.time]
-    n_times = len(set(time_diffs))
-    # there might be missing dates in the data therefore we need to map the actual dates to time bins
-    # we do take into account the missing dates; for t, the preceeding date t-1 is always the preceding data point in time (not the actual date before t)
-    # therefore we create less parameters for the DCWE model and have more datapoints for a specific date
-    timediffs_to_timebins = convert_timediffs_to_timebins(list(set(time_diffs)))
-    dataframe['timediff'] = dataframe['time'].map(lambda ex: convert_times(ex, name=args.data_name, begin_date=begin_date))
-    dataframe['timediff'] = dataframe['timediff'].replace(timediffs_to_timebins)
+    if args.timerange == 'bin':
+        time_diffs = list(dataframe['progressive_bin'].values)
+        dataframe['timediff'] = time_diffs
+        n_times = len(dataframe['timediff'].unique())
+    else: # default='day'
+        # compute the difference between begin_date and current data for all datapoints
+        time_diffs = [convert_times(i, name=args.data_name, begin_date=begin_date) for i in dataframe.time]
+        n_times = len(set(time_diffs))
+        # there might be missing dates in the data therefore we need to map the actual dates to time bins
+        # we do take into account the missing dates; for t, the preceeding date t-1 is always the preceding data point in time (not the actual date before t)
+        # therefore we create less parameters for the DCWE model and have more datapoints for a specific date
+        timediffs_to_timebins = convert_timediffs_to_timebins(list(set(time_diffs)))
+        dataframe['timediff'] = time_diffs
+        dataframe['timediff'] = dataframe['timediff'].replace(timediffs_to_timebins)
     #################################
-
 
     tokenizer = AutoTokenizer.from_pretrained(lm_model, use_fast=False)
 
