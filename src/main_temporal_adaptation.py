@@ -43,12 +43,16 @@ parser.add_argument("--timerange", default='day', choices=['day', 'bin'], help='
 parser.add_argument("--early_stopping_patience", default=3, type=int, help="Early stopping trials before stopping.")
 args = parser.parse_args()
 
-if not os.path.exists(args.results_dir):
-    os.makedirs(args.results_dir)
 output_dir = args.results_dir
 max_length = args.max_length
-
 seed = args.seed
+
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+output_dir = os.path.join(output_dir, str(seed))
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
 lm_model = args.lm_model
 label_map = label_maps[args.data_name]
 inverse_label_map = label_maps_inverse[args.data_name]
@@ -151,6 +155,8 @@ trainer.train()
 eval_results = trainer.evaluate()
 
 test_results = trainer.predict(test_dataset=test_dataset)
+with open(os.path.join(output_dir, 'test_results.json'), 'w') as fp:
+    json.dump(test_results.metrics, fp)
 preds = test_results.predictions[0] if isinstance(test_results.predictions, tuple) else test_results.predictions
 # preds[0] contains class predictions, preds[0] contains topic predictions
 class_preds = [inverse_label_map[i] for i in list(np.argmax(preds[0], axis=1))]
