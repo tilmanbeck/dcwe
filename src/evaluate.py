@@ -144,7 +144,11 @@ def evaluate_seed_results(data_name, dir):
 
 	for seed in os.listdir(dir):
 		seed_dir = os.path.join(dir, seed)
-		with open(os.path.join(seed_dir, 'eval_results.json')) as fp:
+		if os.path.exists(os.path.join(seed_dir, 'eval_results.json')):
+			eval_dir = os.path.join(seed_dir, 'eval_results.json')
+		else:
+			eval_dir = os.path.join(seed_dir, 'results.json')
+		with open(eval_dir) as fp:
 			eval_result = json.load(fp)
 			eval_results.append(eval_result['eval_' + metrics_for_datasets[data_name]])
 		with open(os.path.join(seed_dir, 'test_results.json')) as fp:
@@ -166,7 +170,7 @@ if __name__ == '__main__':
 	args = parser.parse_args()
 	data_name = args.data_name
 	dir = args.dir
-	# evaluate_seed_results(data_name, dir)
+	evaluate_seed_results(data_name, dir)
 	# prepare_data_progressive_heatmap(data_name, dir)
-	evaluate_progressive(data_name, dir)
+	# evaluate_progressive(data_name, dir)
 	# extract_progressive_results_by_seed(dir)
